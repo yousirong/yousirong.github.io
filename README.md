@@ -1,4 +1,4 @@
-# [yousirong CV](https://yousirong.github.io/))
+# [yousirong CV](https://yousirong.github.io/)
 
 ## Status
 
