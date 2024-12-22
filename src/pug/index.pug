@@ -1,150 +1,278 @@
 doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
-        title Resume - Start Bootstrap Theme
-        link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
-
-        // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
-
-        // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
-
-        // Core theme CSS (includes Bootstrap)
-        link(href='css/styles.css', rel='stylesheet')
-
-    body#page-top
-        // Navigation
-        nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
-            a.navbar-brand.js-scroll-trigger(href='#page-top')
-                span.d-block.d-lg-none JuneyongLee CV
-                span.d-none.d-lg-block
-                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='...')
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarResponsive.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#about') About
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#experience') Experience
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#education') Education
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#skills') Skills
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#interests') Research Project
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#awards') Awards
-
-        // Page Content
-        .container-fluid.p-0
-            // About
-            section#about.resume-section
-                .resume-section-content
-                    h1.mb-0
-                        | JUNEYONG
-                        span.text-primary LEE
-                    .subheading.mb-5
-                        | Dongjak-gu, Seoul, Republic of Korea · +82 10-5384-7822 · 
-                        a(href='mailto:diziyong@hufs.ac.kr') diziyong@hufs.ac.kr
-                    p.lead.mb-5
-                        | Hello, I am June-yong Lee, currently pursuing a master's degree in computer engineering at Hankuk University of Foreign Studies. 
-                        | I am interested in applying diffusion models to autonomous driving research, with a focus on deep learning computer vision, generative AI, and multimodal AI.
-                        | One of my research papers, titled "Lightweight Temporal Segment Network for Video Scene Understanding: Validation of Driver Assault Detection," was published in the Journal of the Korean Institute of Information Scientists and Engineers (KIISE).
-                        | I also have experience developing and deploying responsive web interfaces for web crawling servers, making me proficient in frontend, backend, and web crawling technologies.
-                        | My current research interests include transformer-based diffusion models.
-                    .social-icons
-                        a.social-icon(href='https://www.linkedin.com/in/juneyong-%E2%80%8Dlee-05b09733a/')
-                            i.fab.fa-linkedin-in
-                        a.social-icon(href='https://github.com/yousirong')
-                            i.fab.fa-github
-                        a.social-icon(href='https://www.instagram.com/juneyong_d.v/')
-                            i.fab.fa-instagram
-                        a.social-icon(href='https://scholar.google.com/citations?user=VAbPjjoAAAAJ')
-                            i.fa-solid.fa-graduation-cap
-
-            hr.m-0
-
-            // Experience
-            section#experience.resume-section
-                .resume-section-content
-                    h2.mb-5 Experience
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection
-                            .subheading.mb-3 Korean Institute of Information Scientists and Engineers - Journal of KIISE(JOK)
-                            p
-                                | Developed a lightweight CNN-based TSN model capable of real-time detection of driver assaults, enhancing safety in transportation systems.
-                            span.sreen
-                                a(href='https://github.com/HUFSuperman/HUFS_SavingDriver') https://github.com/HUFSuperman/HUFS_SavingDriver
-                            p
-                                span.badge.text-body.border.border-1 Temporal Segment Network
-                                span.badge.text-body.border.border-1 Lightweight CNN Architecture
-                                span.badge.text-body.border.border-1 Assault Recognition
-                                span.badge.text-body.border.border-1 Abnormal Behavior
-                        .flex-shrink-0
-                            span.text-primary 1st semester 2024
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Research on Developing a Responsive Web Interface for Small Businesses Using React
-                            .subheading.mb-3 Intelitec Solutions
-                            p
-                                | Developed a React-based responsive web interface to efficiently manage store data on crawling servers.
-                            span.sreen
-                                a(href='https://github.com/yousirong/CAPSTONE_AWS') https://github.com/yousirong/CAPSTONE_AWS
-                            p
-                                span.badge.text-body.border.border-1 Responsive Web Interface
-                                span.badge.text-body.border.border-1 React
-                                span.badge.text-body.border.border-1 Asynchronous Processing
-                                span.badge.text-body.border.border-1 Information Architecture Design
-                        .flex-shrink-0
-                            span.text-primary 2nd semester 2023
-
-            hr.m-0
-
-            // Education
-            section#education.resume-section
-                .resume-section-content
-                    h2.mb-5 Education
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Master course, Korea University of Foreign Studies
-                            .subheading.mb-3 Computer Science - AI Track
-                            p GPA: 4.33
-                        .flex-shrink-0
-                            span.text-primary March 2024 ~ present
-
-            hr.m-0
-
-            // Skills
-            section#skills.resume-section
-                .resume-section-content
-                    h2.mb-5 Skills
-                    .subheading.mb-3 Programming Languages & Tools
-                    ul.list-inline.dev-icons
-                        li.list-inline-item
-                            img(src='https://pytorch.org/assets/images/pytorch-logo.png', style='width:60px; height:60px;')
-                        li.list-inline-item: i.fab.fa-python
-                        li.list-inline-item: i.fab.fa-docker
-                        li.list-inline-item: i.fab.fa-react
-
-            hr.m-0
-
-            // Awards
-            section#awards.resume-section
-                .resume-section-content
-                    h2.mb-5 Awards & Certifications
-                    ul.fa-ul.mb-0
-                        li
-                            span.fa-li: i.fas.fa-trophy.text-warning
-                            | Capstone Design Project Excellence Award
-                            p Achieved outstanding performance in the Capstone Design Project organized by the AI Education Institute at the Korea University of Foreign Studies.
-                            p 팀명 : 각자의새벽
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  title yousirong CV
+  link(rel='icon' type='image/x-icon' href='assets/img/favicon.ico')
+  // Font Awesome icons (free version)
+  script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js' crossorigin='anonymous')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700' rel='stylesheet' type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i' rel='stylesheet' type='text/css')
+  // Core theme CSS (includes Bootstrap)
+  link(href='css/styles.css' rel='stylesheet')
+// Navigation
+nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+  a.navbar-brand.js-scroll-trigger(href='#page-top')
+    span.d-block.d-lg-none JuneyongLee CV
+    span.d-none.d-lg-block
+      img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg' alt='...')
+  button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarResponsive.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link.js-scroll-trigger(href='#about') About
+      li.nav-item
+        a.nav-link.js-scroll-trigger(href='#experience') Experience
+      li.nav-item
+        a.nav-link.js-scroll-trigger(href='#education') Education
+      li.nav-item
+        a.nav-link.js-scroll-trigger(href='#skills') Skills
+      li.nav-item
+        a.nav-link.js-scroll-trigger(href='#interests') Research project
+      li.nav-item
+        a.nav-link.js-scroll-trigger(href='#awards') Awards
+// Page Content
+.container-fluid.p-0
+  // About
+  section#about.resume-section
+    .resume-section-content
+      h1.mb-0
+        | JUNEYONG
+        span.text-primary LEE
+      .subheading.mb-5
+        | Dongjak-gu, Seoul, Republic of Korea  &middot; +82 10-5384-7822 &middot;
+        a(href='mailto:diziyong@hufs.ac.kr') diziyong@hufs.ac.kr
+      p.lead.mb-5
+        | Hello, I am June-yong Lee, currently pursuing a master&apos;s degree in computer engineering
+        | at Hankuk University of Foreign Studies. I am interested in applying diffusion models to autonomous driving research,
+        | with a particular focus on deep learning computer vision, generative AI, and multimodal AI.
+        | One of my research papers, titled &quot;Lightweight Temporal Segment Network for Video Scene Understanding:
+        | Validation of Driver Assault Detection,&quot;
+        | was published in the Journal of the Korean Institute of Information Scientists and Engineers (KIISE).
+        | I also have experience developing and deploying responsive web interfaces for web crawling servers,
+        | making me proficient in frontend, backend, and web crawling technologies.
+        | My current research interests include transformer-based diffusion models.
+      .social-icons
+        a.social-icon(href='https://www.linkedin.com/in/juneyong-%E2%80%8Dlee-05b09733a/')
+          i.fab.fa-linkedin-in
+        a.social-icon(href='https://github.com/yousirong')
+          i.fab.fa-github
+        a.social-icon(href='https://www.instagram.com/juneyong_d.v/')
+          i.fab.fa-instagram
+        a.social-icon(href='https://scholar.google.com/citations?hl=ko&view_op=list_works&authuser=2&gmla=AFix5MZtqvevqzAeIhXMiafiBydfjIGYBE9MqJrFJ-getmKb7ggOrjFXHU6xSQB1MwIpcABG6BxX8uDZHHWsysThrITyAy1KJ_3apoPWzonXcUobFA&user=VAbPjjoAAAAJ')
+          i.fa-solid.fa-graduation-cap
+  hr.m-0
+  // Experience
+  section#experience.resume-section
+    .resume-section-content
+      h2.mb-5 Experience
+      .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+        .flex-grow-1
+          h3.mb-0
+            | Lightweight Temporal Segment Network for Video Scene Understanding:
+            | Validation in Driver Assault Detection
+          .subheading.mb-3 Korean Institute of Information Scientists and Engineers - Journal of KIISE(JOK)
+          p
+            | There has been increasing number of driver assaults in transportation such as taxis and buses in the past years.
+            | It can be especially difficult to respond quickly to assaults on drivers by drunks late at night.
+            | To address this issue, our research team proposes a lightweight CNN-based Temporal Segment Network (TSN) model,
+            | which can detect driver assaults by passengers in real time.
+            | The TSN model efficiently processes videos by sampling a small number of image frames and is divided into two streams for learning:
+            | one for spatial information processing and the other for temporal information processing.
+            | Convolutional neural networks are employed in each stream. In this research,
+            | we apply a lightweight CNN architecture, MobileOne, significantly reducing the model size while demonstrating improved accuracy even with limited computing resources.
+            | The model is expected to contribute to rapid response and prevention of hazardous situations for drivers by being integrated into vehicular driver monitoring systems.
+          span.sreen
+            a(href='https://github.com/HUFSuperman/HUFS_SavingDriver') https://github.com/HUFSuperman/HUFS_SavingDriver
+          p
+            span.badge.text-body.border.border-1 Temporal Segment Network
+            span.badge.text-body.border.border-1 Lightweight CNN Architecture
+            span.badge.text-body.border.border-1 Assault Recognition
+            span.badge.text-body.border.border-1 Abnormal Behavior
+        .flex-shrink-0
+          span.text-primary 1st semester 2024
+      .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+        .flex-grow-1
+          h3.mb-0
+            | Research on Developing a Responsive Web Interface for Small Businesses Using React
+          .subheading.mb-3 Intelitec Solutions
+          p
+            | Although large corporations have established sales databases for efficient sales
+            | activities, small-scale entrepreneurs need a system that provides an interface that anyone
+            | can easily manage, offering diverse and complex information. This paper proposes the use
+            | of React technology, which can also operate on crawling servers that automatically collect
+            | store information.
+            | Furthermore, it suggests the development of a responsive web user interface that can be conveniently used in both mouse
+            | and keyboard-based desktop environments as well as touch-based smartphone environments,
+            | utilizing React technology for theeffective delivery of various data. The proposed methods anticipate rapid retrieval of large
+            | volumes of data due to the adoption of asynchronous function processing in React technology,
+            | an improvement over traditional JavaScript methods.
+          span.sreen
+            a(href='https://github.com/yousirong/CAPSTONE_AWS') https://github.com/yousirong/CAPSTONE_AWS
+          p
+            span.badge.text-body.border.border-1 Responsive Web Interface
+            span.badge.text-body.border.border-1 React
+            span.badge.text-body.border.border-1 Asynchronous Processing
+            span.badge.text-body.border.border-1
+              | Information Architecture Design
+        .flex-shrink-0
+          span.text-primary 2nd semester 2023
+      //
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="flex-grow-1">
+        <h3 class="mb-0">Junior Web Designer</h3>
+        <div class="subheading mb-3">Shout! Media Productions</div>
+        <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+        </div>
+        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="flex-grow-1">
+        <h3 class="mb-0">Web Design Intern</h3>
+        <div class="subheading mb-3">Shout! Media Productions</div>
+        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+        </div>
+        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
+        </div>
+  hr.m-0
+  // Education
+  section#education.resume-section
+    .resume-section-content
+      h2.mb-5 Education
+      .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+        .flex-grow-1
+          h3.mb-0 Master course, Korea University of Foreign Studies
+          .subheading.mb-3 Computer Science
+          div Computer Science - AI Track
+          p GPA: 4.33
+        .flex-shrink-0
+          span.text-primary March 2024 ~ present
+      .d-flex.flex-column.flex-md-row.justify-content-between
+        .flex-grow-1
+          h3.mb-0 Bachelor&apos;s degree, Korea University of Foreign Studies
+          .subheading.mb-3 Computer and Electronic Systems Engineering Major
+          p GPA: 3.50
+        .flex-shrink-0
+          span.text-primary March 2021 - February 2024
+      .d-flex.flex-column.flex-md-row.justify-content-between
+        .flex-grow-1
+          h3.mb-0 Bachelor course, Change of Major, University of Anyang
+          .subheading.mb-3 Computer Science Major
+        .flex-shrink-0
+          span.text-primary March 2018 - February 2019
+      .d-flex.flex-column.flex-md-row.justify-content-between
+        .flex-grow-1
+          h3.mb-0 Bachelor course, Admission, University of Anyang
+          .subheading.mb-3 Statistics and Data Science Major
+        .flex-shrink-0
+          span.text-primary March 2017 - February 2018
+  hr.m-0
+  // Skills
+  section#skills.resume-section
+    .resume-section-content
+      h2.mb-5 Skills
+      .subheading.mb-3 Programming Languages &amp; Tools
+      ul.list-inline.dev-icons
+        li.list-inline-item
+          a(href='https://pytorch.org/')
+            img(src='https://pytorch.org/assets/images/pytorch-logo.png' alt='PyTorch' style='width:60px; height:60px;')
+        li.list-inline-item
+          i.fab.fa-python
+        li.list-inline-item
+          a(href='https://www.tensorflow.org/' title='TensorFlow')
+            img(src='https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg' alt='TensorFlow' style='width:60px; height:60px;')
+        li.list-inline-item
+          i.fab.fa-docker
+        li.list-inline-item
+          i.fab.fa-react
+        li.list-inline-item
+          a(href='https://redux.js.org/' title='Redux')
+            img(src='https://redux.js.org/img/redux.svg' alt='Redux' style='width:60px; height:60px;')
+        li.list-inline-item
+          a(href='https://www.selenium.dev/' title='Selenium')
+            img(src='https://www.selenium.dev/images/selenium_logo_square_green.png' alt='Selenium' style='width:60px; height:60px;')
+        li.list-inline-item
+          a(href='https://www.mysql.com/' title='MySQL')
+            img(src='https://www.mysql.com/common/logos/logo-mysql-170x115.png' alt='MySQL' style='width:60px; height:60px;')
+      .subheading.mb-3 Workspace
+      ul.fa-ul.mb-0
+        li
+          span.fa-li
+            i.fas.fa-check
+          |                             Notion, Slack
+        li
+          span.fa-li
+            i.fas.fa-check
+          |                             Vscode, Vscode Extension
+        li
+          span.fa-li
+            i.fas.fa-check
+          |                             Github, Git
+  hr.m-0
+  // Interests
+  section#interests.resume-section
+    .resume-section-content
+      h2.mb-5 Research Projects
+      .mb-4
+        h3 Conversion of Restored Rrs Data to Chl-a and Generation of Difference Map
+        h4.fs-4.fw-normal Objective:
+        p
+          | Convert restored Remote Sensing Reflectance (Rrs) data into Chlorophyll-a (Chl-a) and visualize spatial distribution errors through a Difference Map using composite data.
+        h4.fs-4.fw-normal Main Tasks:
+        ul
+          li
+            | Process GOCI data captured 8 times a day into a single daily dataset by averaging pixel values.
+          li
+            | Select specific coordinates in the Saemangeum or Nakdong River region to convert restored Rrs data to Chl-a and analyze results.
+          li
+            | Calculate the difference between restored results and actual GOCI data, visualizing it using MinMaxScaler with a range of -20 to +20, represented in color scale.
+        h4.fs-4.fw-normal Outcome:
+        p
+          | While successful synthesis results from Rrs to Chl-a are rare globally, the study introduced a quantitative evaluation method using Difference Maps to assess restoration performance.
+      .mb-4
+        h3
+          | Development of a Supervised Learning Model for Restoring Gaps in Chl-a Composite Data
+        h4.fs-4.fw-normal Objective:
+        p
+          | Develop a deep learning model to restore missing regions in Chl-a composite data, averaged over 8 days.
+        h4.fs-4.fw-normal Main Tasks:
+        ul
+          li
+            | Convert UST21 dataset into 8-day moving averages for model training. For example, calculate averages for January 1&ndash;8 and January 2&ndash;9, and so on.
+          li
+            | Focus on central regions around Saemangeum and Nakdong River but adjust the area towards the open sea if data availability is limited.
+          li Train the RFRNet model with masked data for restoration tasks.
+        h4.fs-4.fw-normal Validation:
+        ul
+          li Compare restored results with MODIS 8-day average data to evaluate performance.
+          li
+            | Conduct quantitative analysis of restoration results for Nakdong River and Saemangeum regions using RMSE, MAE, and R&sup2; metrics.
+          li
+            | Apply smoothing techniques for missing data when testing images larger than the traditional 256x256 patch size.
+  hr.m-0
+  // Awards
+  section#awards.resume-section
+    .resume-section-content
+      h2.mb-5 Awards &amp; Certifications
+      ul.fa-ul.mb-0
+        li
+          span.fa-li
+            i.fas.fa-trophy.text-warning
+          |                             Capstone Design Project Excellence Award
+          p
+            | Achieved outstanding performance in the Capstone Design Project organized by the AI Education Institute at the Korea University of Foreign Studies.
+          p &#xD300;&#xBA85; : &#xAC01;&#xC790;&#xC758;&#xC0C8;&#xBCBD;
+        li
+          span.fa-li
+            i.fas.fa-trophy.text-warning
+          |                             Lg Aimers 5th class
+          p Ranked 43rd out of 740 teams in the product defect determination project.
+          p &#xD300;&#xBA85; : &#xAC01;&#xC790;&#xC758;&#xC0C8;&#xBCBD;
+// Bootstrap core JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+// Core theme JS
+script(src='js/scripts.js')
