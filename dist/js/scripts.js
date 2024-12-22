@@ -1,5 +1,5 @@
 /*!
-* Start Bootstrap - yousirong_CV v7.0.6 (https://yousirong.github.io/yousirong_CV/)
+* Start Bootstrap - yousirong_CV v7.0.6 (https://yousirong.github.io/)
 * Copyright 2013-2024 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
