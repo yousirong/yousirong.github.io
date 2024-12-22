@@ -1,5 +1,5 @@
 {
-    "title": "Resume",
+    "title": "yousirong_CV",
     "name": "startbootstrap-resume",
     "version": "7.0.6",
     "scripts": {
@@ -10,7 +10,8 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "deploy": "npm run build && gh-pages -d dist"
     },
     "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
     "keywords": [
@@ -21,9 +22,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/resume",
+    "homepage": "https://yousirong.github.io/yousirong_CV/",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume/issues",
+        "url": "https://github.com/yousirong/yousirong_CV/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -33,7 +34,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume.git"
+        "url": "https://github.com/yousirong/yousirong_CV.git"
     },
     "dependencies": {
         "bootstrap": "5.2.3"
@@ -43,6 +44,7 @@
         "browser-sync": "2.29.1",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
+        "gh-pages": "^5.0.0",
         "postcss": "8.4.21",
         "prettier": "2.8.6",
         "pug": "3.0.2",
