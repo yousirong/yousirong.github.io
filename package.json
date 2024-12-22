@@ -5,7 +5,7 @@
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
+        "build:pug": "pug src/pug/index.pug -o dist --pretty",
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
