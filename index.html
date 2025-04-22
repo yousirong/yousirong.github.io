@@ -213,6 +213,34 @@
           <li>Apply smoothing techniques for missing data when testing images larger than the traditional 256x256 patch size.</li>
         </ul>
       </div>
+      <div class="mb-4">
+        <h3>Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack</h3>
+        <h4 class="fs-4 fw-normal">Objective:</h4>
+        <p>Upgrade the detection model from YOLO v7 to YOLO v9 on both a frontal hydraulic model overtopping dataset and a real breakwater overtopping region, then replace the IOU Tracker with ByteTrack to compare and analyze detection and tracking performance.</p>
+        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
+        <ul>
+          <li>Train and validate YOLO v7 and YOLO v9 on the same dataset.</li>
+          <li>Compare detection metrics (accuracy, recall, mAP, etc.) and analyze results.</li>
+          <li>Swap IOU Tracker for ByteTrack and evaluate ID persistence and tracking accuracy.</li>
+          <li>Visualize and quantitatively compare detection/tracking outputs in both model and real-world settings.</li>
+        </ul>
+        <h4 class="fs-4 fw-normal">Outcome:</h4>
+        <p>Demonstrated significant improvements in overtopping detection and tracking accuracy with YOLO v9 and ByteTrack, and presented quantitative performance differences arising from the model upgrades.</p>
+      </div>
+      <div class="mb-4">
+        <h3>Application & Evaluation of DiffusionDet for Wave Overtopping Detection</h3>
+        <h4 class="fs-4 fw-normal">Objective:</h4>
+        <p>Apply the diffusion-based detection model DiffusionDet to real breakwater overtopping data instead of the conventional YOLO model and evaluate its detection performance.</p>
+        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
+        <ul>
+          <li>Understand the DiffusionDet architecture and fine‑tune it for real-world overtopping data.</li>
+          <li>Analyze detection performance with precision, recall, mAP, etc.</li>
+          <li>Compare results against the existing YOLO model to assess performance gains.</li>
+          <li>Visualize detection outputs in the real environment and evaluate quantitatively using RMSE and MAE.</li>
+        </ul>
+        <h4 class="fs-4 fw-normal">Outcome:</h4>
+        <p>Confirmed that DiffusionDet enhances overtopping detection under varying resolution and lighting conditions, demonstrating superior robustness and accuracy compared to YOLO.</p>
+      </div>      
     </div>
   </section>
   <hr class="m-0">
