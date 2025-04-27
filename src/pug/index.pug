@@ -44,7 +44,7 @@ nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         | JUNEYONG
         span.text-primary LEE
       .subheading.mb-5
-        | Dongjak-gu, Seoul, Republic of Korea  &middot; +82 10-5384-7822 &middot;
+        | Seoul, Republic of Korea  &middot; +82 10-5384-7822 &middot;
         a(href='mailto:diziyong@hufs.ac.kr') diziyong@hufs.ac.kr
       p.lead.mb-5
         | Hello, I am June-yong Lee, currently pursuing a master&apos;s degree in computer engineering
@@ -221,38 +221,75 @@ nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         h3 Conversion of Restored Rrs Data to Chl-a and Generation of Difference Map
         h4.fs-4.fw-normal Objective:
         p
-          | Convert restored Remote Sensing Reflectance (Rrs) data into Chlorophyll-a (Chl-a) and visualize spatial distribution errors through a Difference Map using composite data.
+          | Convert restored Remote Sensing Reflectance (Rrs) data into Chlorophyll-a (Chl‑a) and visualize spatial distribution errors through a Difference Map using composite data.
         h4.fs-4.fw-normal Main Tasks:
         ul
           li
             | Process GOCI data captured 8 times a day into a single daily dataset by averaging pixel values.
           li
-            | Select specific coordinates in the Saemangeum or Nakdong River region to convert restored Rrs data to Chl-a and analyze results.
+            | Select specific coordinates in the Saemangeum or Nakdong River region to convert restored Rrs data to Chl‑a and analyze results.
           li
-            | Calculate the difference between restored results and actual GOCI data, visualizing it using MinMaxScaler with a range of -20 to +20, represented in color scale.
+            | Calculate the difference between restored results and actual GOCI data, visualizing it using MinMaxScaler with a range of ‑20 to +20, represented in color scale.
         h4.fs-4.fw-normal Outcome:
         p
-          | While successful synthesis results from Rrs to Chl-a are rare globally, the study introduced a quantitative evaluation method using Difference Maps to assess restoration performance.
+          | While successful synthesis results from Rrs to Chl‑a are rare globally, the study introduced a quantitative evaluation method using Difference Maps to assess restoration performance.
       .mb-4
-        h3
-          | Development of a Supervised Learning Model for Restoring Gaps in Chl-a Composite Data
+        h3 Development of a Supervised Learning Model for Restoring Gaps in Chl‑a Composite Data
         h4.fs-4.fw-normal Objective:
         p
-          | Develop a deep learning model to restore missing regions in Chl-a composite data, averaged over 8 days.
+          | Develop a deep learning model to restore missing regions in Chl‑a composite data, averaged over 8 days.
         h4.fs-4.fw-normal Main Tasks:
         ul
           li
-            | Convert UST21 dataset into 8-day moving averages for model training. For example, calculate averages for January 1&ndash;8 and January 2&ndash;9, and so on.
+            | Convert UST21 dataset into 8‑day moving averages for model training. For example, calculate averages for January 1–8 and January 2–9, and so on.
           li
             | Focus on central regions around Saemangeum and Nakdong River but adjust the area towards the open sea if data availability is limited.
-          li Train the RFRNet model with masked data for restoration tasks.
+          li
+            | Train the RFRNet model with masked data for restoration tasks.
         h4.fs-4.fw-normal Validation:
         ul
-          li Compare restored results with MODIS 8-day average data to evaluate performance.
           li
-            | Conduct quantitative analysis of restoration results for Nakdong River and Saemangeum regions using RMSE, MAE, and R&sup2; metrics.
+            | Compare restored results with MODIS 8‑day average data to evaluate performance.
           li
-            | Apply smoothing techniques for missing data when testing images larger than the traditional 256x256 patch size.
+            | Conduct quantitative analysis of restoration results for Nakdong River and Saemangeum regions using RMSE, MAE, and R² metrics.
+          li
+            | Apply smoothing techniques for missing data when testing images larger than the traditional 256×256 patch size.
+      .mb-4
+        h3 Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack
+        h4.fs-4.fw-normal Objective:
+        p
+          | Upgrade the detection model from YOLO v7 to YOLO v9 on both a frontal hydraulic model overtopping dataset and a real breakwater overtopping region, then replace the IOU Tracker with ByteTrack to compare and analyze detection and tracking performance.
+        h4.fs-4.fw-normal Main Tasks:
+        ul
+          li
+            | Train and validate YOLO v7 and YOLO v9 on the same dataset.
+          li
+            | Compare detection metrics (accuracy, recall, mAP, etc.) and analyze results.
+          li
+            | Swap IOU Tracker for ByteTrack and evaluate ID persistence and tracking accuracy.
+          li
+            | Visualize and quantitatively compare detection/tracking outputs in both model and real-world settings.
+        h4.fs-4.fw-normal Outcome:
+        p
+          | Demonstrated significant improvements in overtopping detection and tracking accuracy with YOLO v9 and ByteTrack, and presented quantitative performance differences arising from the model upgrades.
+      .mb-4
+        h3 Application & Evaluation of DiffusionDet for Wave Overtopping Detection
+        h4.fs-4.fw-normal Objective:
+        p
+          | Apply the diffusion‑based detection model DiffusionDet to real breakwater overtopping data instead of the conventional YOLO model and evaluate its detection performance.
+        h4.fs-4.fw-normal Main Tasks:
+        ul
+          li
+            | Understand the DiffusionDet architecture and fine‑tune it for real‑world overtopping data.
+          li
+            | Analyze detection performance with precision, recall, mAP, etc.
+          li
+            | Compare results against the existing YOLO model to assess performance gains.
+          li
+            | Visualize detection outputs in the real environment and evaluate quantitatively using RMSE and MAE.
+        h4.fs-4.fw-normal Outcome:
+        p
+          | Confirmed that DiffusionDet enhances overtopping detection under varying resolution and lighting conditions, demonstrating superior robustness and accuracy compared to YOLO.
   hr.m-0
   // Awards
   section#awards.resume-section
