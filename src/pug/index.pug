@@ -249,7 +249,7 @@ nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
             | Focus on central regions around Saemangeum and Nakdong River but adjust the area towards the open sea if data availability is limited.
           li
             | Train the RFRNet model with masked data for restoration tasks.
-        h4.fs-4.fw-normal Validation:
+        h4.fs-4.fw-normal Outcome:
         ul
           li
             | Compare restored results with MODIS 8‑day average data to evaluate performance.
@@ -293,6 +293,27 @@ nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         h4.fs-4.fw-normal Outcome:
         p
           | Confirmed that DiffusionDet enhances overtopping detection under varying resolution and lighting conditions, demonstrating superior robustness and accuracy compared to YOLO.
+      .mb-4
+        h3 Ultrasound Blind Zone Restoration using Lightweight U-Net-based Deep Learning
+        h4.fs-4.fw-normal Objective:
+        p
+          | Replace conventional filtering techniques with a lightweight U-Net-based deep learning model to restore blind zones in ultrasound images, aiming for high perceptual quality and real-time inference capability.
+        h4.fs-4.fw-normal Main Tasks:
+        ul
+          li
+            | Design and implement a U-Net-based architecture tailored for blind zone restoration in ultrasound imaging.
+          li
+            | Apply model pruning and lightweight module design to enable inference under 15 ms on edge devices.
+          li
+            | Evaluate restoration performance using SSIM, PSNR, and clinical interpretability under various masking patterns.
+          li 
+            | Compare restoration quality and speed with traditional filtering methods and GAN-based approaches.
+          li 
+            | Validate the model on real ultrasound datasets and optimize for integration into portable diagnostic systems.
+        h4.fs-4.fw-normal Outcome:
+        p
+          | Confirmed that the proposed lightweight U-Net model outperforms traditional filtering methods, achieving fast (<15 ms) and high-quality restoration in blind zones with improved SSIM and PSNR metrics.
+
   hr.m-0
   // Awards
   section#awards.resume-section
@@ -312,6 +333,13 @@ nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
           |                             Lg Aimers 5th class
           p Ranked 43rd out of 740 teams in the product defect determination project.
           p &#xD300;&#xBA85; : &#xAC01;&#xC790;&#xC758;&#xC0C8;&#xBCBD;
+        li
+          span.fa-li
+            i.fas.fa-trophy.text-warning
+          |                              HAI(하이)! - Hecto AI Challenge : 2025 상반기 헥토 채용 AI 경진대회
+          p Ranked 21st out of 748 teams in a competition to develop an AI model for classifying car models based on real used car images.
+          p &#xD300;&#xBA85; : &#xAC01;&#xC790;&#xC758;&#xC0C8;&#xBCBD;
+
 // Bootstrap core JS
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
 // Core theme JS
