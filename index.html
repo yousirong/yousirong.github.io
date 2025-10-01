@@ -29,21 +29,15 @@
   </div>
 </nav>
 <!-- Page Content-->
-<div class="container-fluid p-0">
-  <!-- About-->
-  <section class="resume-section" id="about">
-    <div class="resume-section-content">
-      <h1 class="mb-0">JUNEYONG<span class="text-primary">LEE</span></h1>
-      <div class="subheading mb-5">Seoul, Republic of Korea  &middot; +82 10-5384-7822 &middot;<a href="mailto:diziyong@hufs.ac.kr">diziyong@hufs.ac.kr</a></div>
-      <p class="lead mb-5">
-        Hello, I am June-yong Lee, a master's student in Computer Engineering at Hankuk University of Foreign Studies.
-        My research focuses on developing transformer-based diffusion models for autonomous driving applications, with expertise in deep learning, computer vision, generative AI, and multimodal learning.
-        I have published research on video scene understanding using lightweight CNN-based models, particularly in driver assault detection, featured in the Journal of the Korean Institute of Information Scientists and Engineers (KIISE). Additionally, I have extensive experience in developing responsive web interfaces, frontend and backend development, and web crawling technologies.
-        Currently, I am actively researching multimodal diffusion transformers, aiming to enhance AI-driven solutions for precision medicine, environmental monitoring, and real-time detection and tracking systems.
-      </p>
-      <div class="social-icons"><a class="social-icon" href="https://github.com/yousirong"><i class="fab fa-github"></i></a><a class="social-icon" href="https://scholar.google.com/citations?hl=ko&amp;view_op=list_works&amp;authuser=2&amp;gmla=AFix5MZtqvevqzAeIhXMiafiBydfjIGYBE9MqJrFJ-getmKb7ggOrjFXHU6xSQB1MwIpcABG6BxX8uDZHHWsysThrITyAy1KJ_3apoPWzonXcUobFA&amp;user=VAbPjjoAAAAJ"><i class="fa-solid fa-graduation-cap"></i></a><a class="social-icon" href="https://www.instagram.com/juneyong_d.v/"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.linkedin.com/in/juneyong-%E2%80%8Dlee-05b09733a/"><i class="fab fa-linkedin-in"></i></a></div>
-    </div>
-  </section>
+<div class="container-fluid p-0"></div>
+<!-- About-->
+<section class="resume-section" id="about">
+  <div class="resume-section-content">
+    <h1 class="mb-0">JUNEYONG <span class="text-primary">LEE</span></h1>
+    <div class="subheading mb-5">Seoul, Republic of Korea · +82 10-5384-7822 · <a href="mailto:diziyong@hufs.ac.kr">diziyong@hufs.ac.kr</a></div>
+    <p class="lead mb-5">I am a Master's student in Computer Science at Hankuk University of Foreign Studies, specializing in <strong>Multimodal Generative AI</strong> and <strong>Autonomous AI Agent</strong> systems. My expertise was demonstrated by securing <strong>3rd place</strong> in both the <strong>2025 Samsung AI Challenge</strong> and the <strong>2025 Samsung Collegiate Programming Challenge</strong>.<br><br>My core research focuses on developing a novel <strong>Multimodal Diffusion Transformer</strong> model that integrates MRI with clinical data to predict Alzheimer's disease progression and generate personalized brain imagery. Beyond this, I have hands-on experience applying AI to solve practical problems in diverse domains, including satellite data restoration and real-time video analysis.<br><br>I am passionate about building and advancing cutting-edge generative models and autonomous systems to tackle complex, real-world challenges.</p>
+    <div class="social-icons"><a class="social-icon" href="https://github.com/yousirong"><i class="fab fa-github"></i></a><a class="social-icon" href="https://scholar.google.com/citations?hl=ko&amp;view_op=list_works&amp;authuser=2&amp;gmla=AFix5MZtqvevqzAeIhXMiafiBydfjIGYBE9MqJrFJ-getmKb7ggOrjFXHU6xSQB1MwIpcABG6BxX8uDZHHWsysThrITyAy1KJ_3apoPWzonXcUobFA&amp;user=VAbPjjoAAAAJ"><i class="fa-solid fa-graduation-cap"></i></a><a class="social-icon" href="https://www.instagram.com/juneyong_d.v/"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.linkedin.com/in/juneyong-%E2%80%8Dlee-05b09733a/"><i class="fab fa-linkedin-in"></i></a></div>
+  </div>
   <hr class="m-0">
   <!-- Publications-->
   <section class="resume-section" id="publications">
@@ -54,15 +48,26 @@
           <h3 class="mb-0">ADPDiT: A Multimodal Diffusion Transformer for Predicting Alzheimer's Disease Progression and Generating Brain Image</h3>
           <div class="subheading mb-3">Journal undecided</div>
           <p>
-            ADPDiT (Alzheimer’s Disease Progression Diffusion Trans- former) is a novel multimodal framework that integrates brain MRI data with structured textual metadata to predict Alzheimer’s disease (AD) progression and generate personalized, progression-conditioned AD brain images. 
-            AD is a progressive neurodegenerative disorder with complex pathology, and conventional single-modality diagnostic approaches such as brain imaging or cognitive assessments fail to capture its full complex- ity.
-            To overcome these limitations, ADPDiT employs a diffusion transformer with cross-attention modules to effectively fuse patient-specific anatomical features with auxiliary metadata. 
-            The model also leverages a VAE-based latent space and incorporates Rotary Position Encoding (RoPE) to enhance the alignment between image and text embeddings, thereby accelerating convergence and improving accuracy.
-            In this study, brain MRI data from 1,171 participants in the Alzheimer’s Disease Neu- roimaging Initiative (ADNI) dataset, comprising 377 cognitively normal individuals, 540 mild cognitive impairment cases, and 254 AD patients, were used for training and evaluation.
-            The dataset was rigorously pre- processed with image alignment, normalization, spatial resolution adjustment, and histogram equalization to ensure high-quality inputs. 
-            Additionally, clinical metadata including cognitive test scores (MMSE, CDR, etc.) were embedded in the latent space to guide the generative process.
-            By combining multimodal conditioning with transformer-based diffusion modeling, ADPDiT offers a comprehensive approach to AD diagnosis and research, providing insights into disease progression and facilitating the development of precision medicine tools for neurodegenerative disorders.
-            This study demonstrates that ADPDiT, through its integration of dif- fusion processes and multimodal data, is a promising tool for advancing precision medicine in the diagnosis and management of AD.
+            ADPDiT (Alzheimer's Disease Progression Diffusion Transformer) is a novel multimodal framework 
+            that integrates brain MRI data with structured clinical metadata to predict Alzheimer's disease (AD) progression 
+            and generate personalized, progression-conditioned brain images.
+            AI-based AD diagnosis using MRI requires longitudinal imaging data capturing disease state transitions over time. 
+            However, clinical practice faces significant challenges: patients may skip scheduled MRI appointments,
+            and many datasets predominantly contain images from single disease states rather than progressive sequences. 
+            To address these limitations, ADPDiT employs predictive generation capabilities that can synthesize missing temporal MRI data,
+            potentially enhancing existing AD prediction systems by providing continuous disease progression visualization. 
+            The model addresses the limitations of conventional single-modality diagnostic approaches by employing a diffusion transformer architecture
+            with specialized cross-attention modules that effectively fuse patient-specific neuroimaging features with comprehensive clinical data. 
+            The core architecture features ADPDiTBlocks with self-attention, cross-attention, and feed-forward networks,
+            utilizing Flash Attention optimization and Query-Key normalization for enhanced computational efficiency.
+            The model incorporates 2D Rotary Position Encoding (RoPE) for spatial-aware image token processing 
+            and attention pooling mechanisms to integrate multi-scale clinical information.
+            The framework operates on 256×256 resolution brain MRI slices, which are processed into patch embeddings within a VAE-based latent space.
+            Training data comprises 619 unique patients from the Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset,
+            with 226,434 brain MRI slices distributed as: 341 mild cognitive impairment (MCI) patients, 141 AD patients,
+            and 137 cognitively normal (CN) individuals. Clinical metadata includes comprehensive neuropsychological assessments 
+            (CDRSB, ADAS11, ADAS13, MMSE, RAVLT, MOCA, FAQ) embedded through learned representations and integrated via attention pooling, 
+            making it a comprehensive tool for AD research and precision medicine applications in neurodegenerative disease management.
           </p><span class="sreen"><a href="https://github.com/Deep-Generative-Models-research">https://github.com/Deep-Generative-Models-research</a></span>
           <p><span class="badge text-body border border-1">Alzheimer’s Disease (AD)</span><span class="badge text-body border border-1">Text-Guided Image Generation</span><span class="badge text-body border border-1">Brain MRI Generation</span></p>
         </div>
@@ -127,6 +132,7 @@
       </div>
       <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
       </div>
+      
       -->
     </div>
   </section>
@@ -193,89 +199,42 @@
       </ul>
     </div>
   </section>
-  <hr class="m-0">
-  <!-- Interests-->
-  <section class="resume-section" id="interests">
-    <div class="resume-section-content">
-      <h2 class="mb-5">Research Projects</h2>
-      <div class="mb-4">
-        <h3>Ultrasound Blind Zone Restoration using Lightweight U-Net-based Deep Learning</h3>
-        <h4 class="fs-4 fw-normal">Objective:</h4>
-        <p>Replace conventional filtering techniques with a lightweight U-Net-based deep learning model to restore blind zones in ultrasound images, aiming for high perceptual quality and real-time inference capability.</p>
-        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
-        <ul>
-          <li>Design and implement a U-Net-based architecture tailored for blind zone restoration in ultrasound imaging.</li>
-          <li>Apply model pruning and lightweight module design to enable inference under 15 ms on edge devices.</li>
-          <li>Evaluate restoration performance using SSIM, PSNR, and clinical interpretability under various masking patterns.</li>
-          <li>
-             Compare restoration quality and speed with traditional filtering methods and GAN-based approaches.</li>
-          <li>
-             Validate the model on real ultrasound datasets and optimize for integration into portable diagnostic systems.</li>
-        </ul>
-        <h4 class="fs-4 fw-normal">Outcome:</h4>
-        <p>Confirmed that the proposed lightweight U-Net model outperforms traditional filtering methods, achieving fast (<15 ms) and high-quality restoration in blind zones with improved SSIM and PSNR metrics.</p>
-      </div>
-      <div class="mb-4">
-        <h3>Application & Evaluation of DiffusionDet for Wave Overtopping Detection</h3>
-        <h4 class="fs-4 fw-normal">Objective:</h4>
-        <p>Apply the diffusion‑based detection model DiffusionDet to real breakwater overtopping data instead of the conventional YOLO model and evaluate its detection performance.</p>
-        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
-        <ul>
-          <li>Understand the DiffusionDet architecture and fine‑tune it for real‑world overtopping data.</li>
-          <li>Analyze detection performance with precision, recall, mAP, etc.</li>
-          <li>Compare results against the existing YOLO model to assess performance gains.</li>
-          <li>Visualize detection outputs in the real environment and evaluate quantitatively using RMSE and MAE.</li>
-        </ul>
-        <h4 class="fs-4 fw-normal">Outcome:</h4>
-        <p>Confirmed that DiffusionDet enhances overtopping detection under varying resolution and lighting conditions, demonstrating superior robustness and accuracy compared to YOLO.</p>
-      </div>
-      <div class="mb-4">
-        <h3>Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack</h3>
-        <h4 class="fs-4 fw-normal">Objective:</h4>
-        <p>Upgrade the detection model from YOLO v7 to YOLO v9 on both a frontal hydraulic model overtopping dataset and a real breakwater overtopping region, then replace the IOU Tracker with ByteTrack to compare and analyze detection and tracking performance.</p>
-        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
-        <ul>
-          <li>Train and validate YOLO v7 and YOLO v9 on the same dataset.</li>
-          <li>Compare detection metrics (accuracy, recall, mAP, etc.) and analyze results.</li>
-          <li>Swap IOU Tracker for ByteTrack and evaluate ID persistence and tracking accuracy.</li>
-          <li>Visualize and quantitatively compare detection/tracking outputs in both model and real-world settings.</li>
-        </ul>
-        <h4 class="fs-4 fw-normal">Outcome:</h4>
-        <p>Demonstrated significant improvements in overtopping detection and tracking accuracy with YOLO v9 and ByteTrack, and presented quantitative performance differences arising from the model upgrades.</p>
-      </div>
-      <div class="mb-4">
-        <h3>Conversion of Restored Rrs Data to Chl-a and Generation of Difference Map</h3>
-        <h4 class="fs-4 fw-normal">Objective:</h4>
-        <p>Convert restored Remote Sensing Reflectance (Rrs) data into Chlorophyll-a (Chl‑a) and visualize spatial distribution errors through a Difference Map using composite data.</p>
-        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
-        <ul>
-          <li>Process GOCI data captured 8 times a day into a single daily dataset by averaging pixel values.</li>
-          <li>Select specific coordinates in the Saemangeum or Nakdong River region to convert restored Rrs data to Chl‑a and analyze results.</li>
-          <li>Calculate the difference between restored results and actual GOCI data, visualizing it using MinMaxScaler with a range of ‑20 to +20, represented in color scale.</li>
-        </ul>
-        <h4 class="fs-4 fw-normal">Outcome:</h4>
-        <p>While successful synthesis results from Rrs to Chl‑a are rare globally, the study introduced a quantitative evaluation method using Difference Maps to assess restoration performance.</p>
-      </div>
-      <div class="mb-4">
-        <h3>Development of a Supervised Learning Model for Restoring Gaps in Chl‑a Composite Data</h3>
-        <h4 class="fs-4 fw-normal">Objective:</h4>
-        <p>Develop a deep learning model to restore missing regions in Chl‑a composite data, averaged over 8 days.</p>
-        <h4 class="fs-4 fw-normal">Main Tasks:</h4>
-        <ul>
-          <li>Convert UST21 dataset into 8‑day moving averages for model training. For example, calculate averages for January 1–8 and January 2–9, and so on.</li>
-          <li>Focus on central regions around Saemangeum and Nakdong River but adjust the area towards the open sea if data availability is limited.</li>
-          <li>Train the RFRNet model with masked data for restoration tasks.</li>
-        </ul>
-        <h4 class="fs-4 fw-normal">Outcome:</h4>
-        <ul>
-          <li>Compare restored results with MODIS 8‑day average data to evaluate performance.</li>
-          <li>Conduct quantitative analysis of restoration results for Nakdong River and Saemangeum regions using RMSE, MAE, and R² metrics.</li>
-          <li>Apply smoothing techniques for missing data when testing images larger than the traditional 256×256 patch size.</li>
-        </ul>
+</section>
+<section class="resume-section" id="interests">
+  <div class="resume-section-content">
+    <h2 class="mb-5">Research Projects</h2>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Ultrasound Blind Zone Restoration using Lightweight U-Net-based Deep Learning</h3>
+        <p>Developed a <strong>lightweight U-Net model</strong> for <strong>real-time restoration</strong> of blind zones in ultrasound images (inference <15ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics compared to traditional filtering methods through model pruning and tailored architecture design.</p>
       </div>
     </div>
-  </section>
-</div>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Application & Evaluation of DiffusionDet for Wave Overtopping Detection</h3>
+        <p>Applied and fine-tuned the <strong>DiffusionDet</strong> model for real-world <strong>breakwater wave overtopping detection</strong>, demonstrating <strong>superior robustness and accuracy</strong> over the conventional YOLO model, especially under varying resolution and lighting conditions.</p>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack</h3>
+        <p>Upgraded object detection from YOLO v7 to <strong>YOLO v9</strong> and replaced IOU Tracker with <strong>ByteTrack</strong> for wave overtopping. Demonstrated significant improvements in both detection and <strong>tracking accuracy (ID persistence)</strong> through rigorous quantitative comparison.</p>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Conversion of Restored Rrs Data to Chl-a and Generation of Difference Map</h3>
+        <p>Developed a process to convert restored Remote Sensing Reflectance (Rrs) data from GOCI into <strong>Chlorophyll-a (Chl-a)</strong> composite maps. Introduced a quantitative evaluation method using a <strong>Difference Map</strong> visualized with MinMaxScaler to effectively assess spatial distribution errors.</p>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+      <div class="flex-grow-1">
+        <h3 class="mb-0">Development of a Supervised Learning Model for Restoring Gaps in Chl‑a Composite Data</h3>
+        <p>Designed and trained a supervised deep learning model (<strong>RFRNet</strong>) for <strong>restoring missing regions</strong> in 8-day averaged Chl-a composite data (Saemangeum/Nakdong River regions). Performance was quantitatively validated against MODIS data using RMSE, MAE, and R² metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <hr class="m-0">
 <!-- Awards-->
 <section class="resume-section" id="awards">
