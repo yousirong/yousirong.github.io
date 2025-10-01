@@ -40,8 +40,6 @@ html(lang='en')
             a.nav-link.js-scroll-trigger(href='#awards') Awards
 
     // Page Content
-    //- ★★★★★ 중요 ★★★★★
-    //- 아래의 모든 section 태그들은 반드시 .container-fluid.p-0 안에 있도록 들여쓰기 되어야 합니다.
     .container-fluid.p-0
 
       // About
@@ -208,32 +206,32 @@ html(lang='en')
       section#interests.resume-section
         .resume-section-content
           h2.mb-5 Research Projects
+          
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
             .flex-grow-1
-              h3.mb-0 Ultrasound Blind Zone Restoration using Lightweight U-Net-based Deep Learning
+              h3.mb-0 Lightweight Ultrasound Blind Zone Restoration using Denoising Diffusion Restoration Models (DDRM)
               p
-                | Developed a #[strong lightweight U-Net model] for #[strong real-time restoration] of blind zones in ultrasound images (inference <15ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics compared to traditional filtering methods through model pruning and tailored architecture design.
+                | Developed a #[strong lightweight Denoising Diffusion Restoration Model (DDRM)] for #[strong real-time restoration] of blind zones in ultrasound images (inference <15ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics by optimizing the diffusion process and model architecture for on-device efficiency.
+
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
+            .flex-grow-1
+              h3.mb-0 Large-Scale Oceanographic Data Restoration for East Asia using Recurrent Feature Reasoning (RFR)
+              p
+                | Successfully restored missing data in GOCI and UST21 satellite imagery across the #[strong entire East Asia region], expanding significantly beyond the initial Saemangeum and Nakdong River areas. Utilized a #[strong Recurrent Feature Reasoning (RFR) model] for high-fidelity inpainting of Chlorophyll-a composite maps, enabling comprehensive environmental monitoring on a large geographical scale.
+
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
             .flex-grow-1
               h3.mb-0 Application & Evaluation of DiffusionDet for Wave Overtopping Detection
               p
                 | Applied and fine-tuned the #[strong DiffusionDet] model for real-world #[strong breakwater wave overtopping detection], demonstrating #[strong superior robustness and accuracy] over the conventional YOLO model, especially under varying resolution and lighting conditions.
+
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
             .flex-grow-1
               h3.mb-0 Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack
               p
                 | Upgraded object detection from YOLO v7 to #[strong YOLO v9] and replaced IOU Tracker with #[strong ByteTrack] for wave overtopping. Demonstrated significant improvements in both detection and #[strong tracking accuracy (ID persistence)] through rigorous quantitative comparison.
-          .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
-            .flex-grow-1
-              h3.mb-0 Conversion of Restored Rrs Data to Chl-a and Generation of Difference Map
-              p
-                | Developed a process to convert restored Remote Sensing Reflectance (Rrs) data from GOCI into #[strong Chlorophyll-a (Chl-a)] composite maps. Introduced a quantitative evaluation method using a #[strong Difference Map] visualized with MinMaxScaler to effectively assess spatial distribution errors.
-          .d-flex.flex-column.flex-md-row.justify-content-between
-            .flex-grow-1
-              h3.mb-0 Development of a Supervised Learning Model for Restoring Gaps in Chl‑a Composite Data
-              p
-                | Designed and trained a supervised deep learning model (#[strong RFRNet]) for #[strong restoring missing regions] in 8-day averaged Chl-a composite data (Saemangeum/Nakdong River regions). Performance was quantitatively validated against MODIS data using RMSE, MAE, and R² metrics.
-
+            
+            
       hr.m-0
 
       // Awards
