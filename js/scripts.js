@@ -31,4 +31,10 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    const btnPrint = document.body.querySelector('#btnPrint');
+    btnPrint.addEventListener('click', event => {
+        event.preventDefault();
+        window.print();
+    });
+
 });
