@@ -1,504 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Juneyong Lee CV" />
-        <meta name="author" content="Juneyong Lee" />
-        <title>Juneyong Lee - CV</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Juneyong Lee</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile Image" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Research Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link" id="btnPrint" href="#">Print</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        JUNEYONG
-                        <span class="text-primary">LEE</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Seoul, Republic of Korea · +82 10-5384-7822 ·
-                        <a href="mailto:diziyong@hufs.ac.kr">diziyong@hufs.ac.kr</a>
-                    </div>
-                    <p class="lead mb-5">
-                        I am a Master's student in Computer Science at Hankuk University of Foreign Studies, specializing in
-                        <strong>Multimodal Generative AI</strong>
-                        and
-                        <strong>Autonomous AI Agent</strong>
-                        systems. My expertise was demonstrated by securing
-                        <strong>3rd place</strong>
-                        in both the
-                        <strong>2025 Samsung AI Challenge</strong>
-                        and the
-                        <strong>2025 Samsung Collegiate Programming Challenge</strong>
-                        .
-                        <br />
-                        <br />
-                        My core research focuses on developing a novel
-                        <strong>Multimodal Diffusion Transformer</strong>
-                        model that integrates MRI with clinical data to predict Alzheimer's disease progression and generate personalized brain imagery. Beyond this, I have hands-on experience applying AI to solve practical problems in diverse domains, including satellite data restoration and real-time video analysis.
-                        <br />
-                        <br />
-                        I am passionate about building and advancing cutting-edge generative models and autonomous systems to tackle complex, real-world challenges.
-                    </p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://github.com/yousirong" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="https://scholar.google.com/citations?user=VAbPjjoAAAAJ&amp;hl=ko" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-                        <a class="social-icon" href="https://www.instagram.com/juneyong_d.v/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a class="social-icon" href="www.linkedin.com/in/juneyong-‍lee-05b09733a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Publications-->
-            <section class="resume-section" id="publications">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Publications</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling</h3>
-                            <div class="subheading mb-3">IEEE Access Submitted</div>
-                            <p>
-                                Ultrasound imaging is inherently limited by speckle noise, which degrades resolution and contrast, thereby reducing diagnostic efficiency. Conventional filtering techniques often lead to over smoothing, while supervised deep learning approaches face the fundamental challenge of lacking high quality ground truth (GT) images in clinical environments. To overcome these limitations, this study proposes Wavelet-based Null-space Diffusion (WaND), a novel unsupervised learning framework that integrates linear-space adaptation with uncertainty-aware fusion. Specifically, to address the issue of background noise amplification common in diffusion models operating in the non-linear log-compressed domain, we adopt a new approach that enforces Data Consistency (DC) within the physical linear space. The proposed WaND framework robustly extracts signal envelopes in the linear domain by combining Speckle Reducing Anisotropic Diffusion (SRAD) filters with the Discrete
-                                Wavelet Transform (DWT). Based on this, it calculates adaptive weights representing pixel-wise reliability. This enables Adaptive Range-Null Decomposition, where tissue structures with high signal intensity (Range-Space) are preserved from the observed data, while weak background and noise regions (Null-Space) are precisely reconstructed using the diffusion model’s prior knowledge. Furthermore, to effectively control the stochastic nature of the diffusion model, we introduce an Uncertainty Aware Fusion strategy based on the pixel-wise variance of generated samples. This strategy suppresses noise by applying the Mean in regions of high uncertainty (speckle) and preserves fine anatomical structures by utilizing the Median in regions where uncertainty is low and tissue textures remain consistent. Experimental results using the PICMUS (Plane-Wave Imaging Challenge in Medical Ultrasound) benchmark and in-vivo datasets demonstrate that WaND outperforms
-                                existing methodologies across key quantitative metrics, including gCNR, SNR, and FWHM. Moreover, it qualitatively proves its efficacy in enhancing anatomical clarity while simultaneously suppressing background noise.
-                            </p>
-                            <div><a href="https://github.com/yousirong/WaND.git" target="_blank">https://github.com/yousirong/WaND</a></div>
-                            <p class="mt-3">
-                                <span class="badge text-bg-secondary me-2">Ultrasound Speckle Reduction</span>
-                                <span class="badge text-bg-secondary me-2">Denoising Diffusion Probabilistic Models</span>
-                                <span class="badge text-bg-secondary me-2">Range-Null Space Decomposition</span>
-                                <span class="badge text-bg-secondary me-2">Zero-Shot Image Restoration</span>
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2nd semester 2025</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer’s Disease Progression</h3>
-                            <div class="subheading mb-3">The International Conference on Pattern Recognition (ICPR)</div>
-                            <p>
-                                Alzheimer’s disease (AD) progresses heterogeneously across individuals, motivating subject-specific synthesis of follow-up magnetic resonance imaging (MRI) to support progression assessment. While Diffusion Transformers (DiT), an emerging transformer-based diffusion model, offer a scalable backbone for image synthesis, longitudinal AD MRI generation with clinically interpretable control over follow-up time and participant metadata remains underexplored. We present ADP-DiT, an interval-aware, clinically text-conditioned diffusion transformer for longitudinal AD MRI synthesis. ADP-DiT encodes follow-up interval together with multi-domain demographic, diagnostic (CN/MCI/AD), and neuropsychological information as a natural-language prompt, enabling time-specific control beyond coarse diagnostic stages. To inject this conditioning effectively, we use dual text encoders--OpenCLIP for vision–language alignment and T5 for richer clinical-language understanding.
-                                Their embeddings are fused into DiT through cross-attention for fine-grained guidance and adaptive layer normalization for global modulation. We further enhance anatomical fidelity by applying rotary positional embeddings to image tokens and performing diffusion in a pretrained SDXL-VAE latent space to enable efficient high-resolution reconstruction. On 3,321 longitudinal 3T T1-weighted scans from 712 participants (259,038 image slices), ADP-DiT achieves SSIM 0.8739 and PSNR 29.32 dB, improving over a DiT baseline by +0.1087 SSIM and +6.08 dB PSNR while capturing progression-related changes such as ventricular enlargement and shrinking hippocampus. These results suggest that integrating comprehensive, subject-specific clinical conditions with architectures can improve longitudinal AD MRI synthesis.
-                            </p>
-                            <div><a href="https://github.com/Deep-Generative-Models-research" target="_blank">https://github.com/Deep-Generative-Models-research</a></div>
-                            <p class="mt-3">
-                                <span class="badge text-bg-secondary me-2">Alzheimer's Disease</span>
-                                <span class="badge text-bg-secondary me-2">Disease Progression</span>
-                                <span class="badge text-bg-secondary me-2">Text-Guided Image Generation</span>
-                                <span class="badge text-bg-secondary me-2">Diffusion Transformer</span>
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">1st semester 2025</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection</h3>
-                            <div class="subheading mb-3">Korean Institute of Information Scientists and Engineers - Journal of KIISE(JOK)</div>
-                            <p>
-                                There has been an increasing number of driver assaults in transportation such as taxis and buses in the past years. It can be especially difficult to respond quickly to assaults on drivers by drunks late at night. To address this issue, our research team proposes a lightweight CNN-based Temporal Segment Network (TSN) model, which can detect driver assaults by passengers in real time. The TSN model efficiently processes videos by sampling a small number of image frames and is divided into two streams for learning: one for spatial information processing and the other for temporal information processing. Convolutional neural networks are employed in each stream. In this research, we apply a lightweight CNN architecture, MobileOne, significantly reducing the model size while demonstrating improved accuracy even with limited computing resources. The model is expected to contribute to a rapid response and prevention of hazardous situations for drivers by being
-                                integrated into vehicular driver monitoring systems.
-                            </p>
-                            <div><a href="https://github.com/HUFSuperman/HUFS_SavingDriver" target="_blank">https://github.com/HUFSuperman/HUFS_SavingDriver</a></div>
-                            <p class="mt-3">
-                                <span class="badge text-bg-secondary me-2">Temporal Segment Network</span>
-                                <span class="badge text-bg-secondary me-2">Lightweight CNN Architecture</span>
-                                <span class="badge text-bg-secondary me-2">Assault Recognition</span>
-                                <span class="badge text-bg-secondary me-2">Abnormal Behavior</span>
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">1st semester 2024</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Research on Developing a Responsive Web Interface for Small Businesses Using React</h3>
-                            <div class="subheading mb-3">Collaboration with PeopleCat Co., Ltd.</div>
-                            <p>Although large corporations have established sales databases for efficient sales activities, small-scale entrepreneurs need a system that provides an interface that anyone can easily manage, offering diverse and complex information. This paper proposes the use of React technology, which can also operate on crawling servers that automatically collect store information. Furthermore, it suggests the development of a responsive web user interface that can be conveniently used in both mouse and keyboard-based desktop environments as well as touch-based smartphone environments, utilizing React technology for the effective delivery of various data. The proposed methods anticipate rapid retrieval of large volumes of data due to the adoption of asynchronous function processing in React technology, an improvement over traditional JavaScript methods.</p>
-                            <div><a href="https://github.com/yousirong/CAPSTONE_AWS" target="_blank">https://github.com/yousirong/CAPSTONE_AWS</a></div>
-                            <p class="mt-3">
-                                <span class="badge text-bg-secondary me-2">Responsive Web Interface</span>
-                                <span class="badge text-bg-secondary me-2">React</span>
-                                <span class="badge text-bg-secondary me-2">Asynchronous Processing</span>
-                                <span class="badge text-bg-secondary me-2">Information Architecture Design</span>
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2nd semester 2023</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Hankuk University of Foreign Studies</h3>
-                            <div class="subheading mb-3">Master's course, Computer Science - AI Track</div>
-                            <p>GPA: 4.37 / 4.5</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2024 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Hankuk University of Foreign Studies</h3>
-                            <div class="subheading mb-3">Bachelor's degree, Computer and Electronic Systems Engineering</div>
-                            <p>GPA: 3.50 / 4.5</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2017 - February 2024</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1"><h3 class="mb-0">SEOUL HIGH SCHOOL</h3></div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2014 - February 2017</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item">
-                            <a href="https://www.python.org/" title="Python" target="_blank"><img src="https://skillicons.dev/icons?i=py" alt="Python" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://pytorch.org/" title="PyTorch" target="_blank"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.linux.org/" title="Linux" target="_blank"><img src="https://skillicons.dev/icons?i=linux" alt="Linux" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.docker.com/" title="Docker" target="_blank"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://kubernetes.io/" title="Kubernetes" target="_blank"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.latex-project.org/" title="LaTeX" target="_blank"><img src="https://skillicons.dev/icons?i=latex" alt="LaTeX" style="width: 60px; height: 60px" /></a>
-                        </li>
-                    </ul>
-                    <div class="subheading mb-3">Workspace</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item">
-                            <a href="https://git-scm.com/" title="Git" target="_blank"><img src="https://skillicons.dev/icons?i=git" alt="Git" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://code.visualstudio.com/" title="VSCode" target="_blank"><img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://aws.amazon.com/" title="AWS" target="_blank"><img src="https://skillicons.dev/icons?i=aws" alt="AWS" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.figma.com/" title="Figma" target="_blank"><img src="https://skillicons.dev/icons?i=figma" alt="Figma" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.notion.so/" title="Notion" target="_blank"><img src="https://skillicons.dev/icons?i=notion" alt="Notion" style="width: 60px; height: 60px" /></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://discord.com/" title="Discord" target="_blank"><img src="https://skillicons.dev/icons?i=discord" alt="Discord" style="width: 60px; height: 60px" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Research Projects</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lightweight Ultrasound Blind Zone Restoration using Denoising Diffusion Restoration Models (DDRM)</h3>
-                            <p>
-                                Developed a
-                                <strong>lightweight Denoising Diffusion Restoration Model (DDRM)</strong>
-                                for
-                                <strong>real-time restoration</strong>
-                                of blind zones in ultrasound images (inference <15ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics by optimizing the diffusion process and model architecture for on-device efficiency.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Large-Scale Oceanographic Data Restoration for East Asia using Recurrent Feature Reasoning (RFR)</h3>
-                            <p>
-                                Successfully restored missing data in GOCI and UST21 satellite imagery across the
-                                <strong>entire East Asia region</strong>
-                                , expanding significantly beyond the initial Saemangeum and Nakdong River areas. Utilized a
-                                <strong>Recurrent Feature Reasoning (RFR) model</strong>
-                                for high-fidelity inpainting of Chlorophyll-a composite maps, enabling comprehensive environmental monitoring on a large geographical scale.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Application & Evaluation of DiffusionDet for Wave Overtopping Detection</h3>
-                            <p>
-                                Applied and fine-tuned the
-                                <strong>DiffusionDet</strong>
-                                model for real-world
-                                <strong>breakwater wave overtopping detection</strong>
-                                , demonstrating
-                                <strong>superior robustness and accuracy</strong>
-                                over the conventional YOLO model, especially under varying resolution and lighting conditions.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack</h3>
-                            <p>
-                                Upgraded object detection from YOLO v7 to
-                                <strong>YOLO v9</strong>
-                                and replaced IOU Tracker with
-                                <strong>ByteTrack</strong>
-                                for wave overtopping. Demonstrated significant improvements in both detection and
-                                <strong>tracking accuracy (ID persistence)</strong>
-                                through rigorous quantitative comparison.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li class="mb-4">
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <h4 class="mb-1"><strong>2025 Samsung AI Challenge - 3rd place</strong></h4>
-                            <div class="text-muted mb-1">Multi-AI Agent Collaboration (AI Co-Scientist)</div>
-                            <div class="text-muted small mb-2">Team: 각자의 새벽</div>
-                            <a href="https://github.com/samsung-man/Ai_Co_Sci_2025.git" target="_blank">View Project on GitHub</a>
-                        </li>
-                        <li class="mb-4">
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <h4 class="mb-1"><strong>2025 Samsung Collegiate Programming Challenge - 3rd place</strong></h4>
-                            <div class="text-muted mb-1">Multimodal QA on photo gallery</div>
-                            <div class="text-muted small mb-2">Team: 각자의 새벽</div>
-                            <a href="https://github.com/samsung-man/SCPC_2025_Code" target="_blank">View Project on GitHub</a>
-                        </li>
-                        <li class="mb-4">
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <h4 class="mb-1"><strong>HAI! Hecto AI Challenge - 21st/748</strong></h4>
-                            <div class="text-muted mb-1">Car model classification</div>
-                            <div class="text-muted small mb-2">Team: 두더띠 (Dudotti)</div>
-                            <a href="https://github.com/DACON-HAI" target="_blank">View Project on GitHub</a>
-                        </li>
-                        <li class="mb-4">
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <h4 class="mb-1"><strong>LG Aimers 5th Class - 43rd/740</strong></h4>
-                            <div class="text-muted mb-1">Product defect determination</div>
-                            <div class="text-muted small mb-2">Team: 각자의 새벽</div>
-                            <a href="https://github.com/LGAimers-junebrothers" target="_blank">View Project on GitHub</a>
-                        </li>
-                        <li class="mb-4">
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <h4 class="mb-1"><strong>토스 NEXT ML CHALLENGE - 64th/2,580</strong></h4>
-                            <div class="text-muted mb-1">CTR (click-through rate) prediction</div>
-                            <div class="text-muted small mb-2">Team: 가용성</div>
-                            <a href="https://github.com/Toss-junebrothers" target="_blank">View Project on GitHub</a>
-                        </li>
-                        <li class="mb-4">
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <h4 class="mb-1"><strong>Capstone Design Project Excellence Award</strong></h4>
-                            <div class="text-muted mb-2">Hankuk University of Foreign Studies, AI Education Institute</div>
-                            <a href="assets/capstone.pdf" target="_blank">View Certificate</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Juneyong Lee CV">
+    <meta name="author" content="Juneyong Lee">
+    <title>Juneyong Lee - CV</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav"><a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="d-block d-lg-none">Juneyong Lee</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile Image"></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Research Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" id="btnPrint" href="#">Print</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+      <!-- About-->
+      <section class="resume-section" id="about">
+        <div class="resume-section-content">
+          <h1 class="mb-0">JUNEYONG <span class="text-primary">LEE</span></h1>
+          <div class="subheading mb-5">Seoul, Republic of Korea · +82 10-5384-7822 · <a href="mailto:diziyong@hufs.ac.kr">diziyong@hufs.ac.kr</a></div>
+          <p class="lead mb-5">I am a Master's student in Computer Science at Hankuk University of Foreign Studies, specializing in <strong>Multimodal Generative AI</strong> and <strong>Autonomous AI Agent</strong> systems. My expertise was demonstrated by securing <strong>3rd place</strong> in both the <strong>2025 Samsung AI Challenge</strong> and the <strong>2025 Samsung Collegiate Programming Challenge</strong>.<br><br>My core research focuses on developing a novel <strong>Multimodal Diffusion Transformer</strong> model that integrates MRI with clinical data to predict Alzheimer's disease progression and generate personalized brain imagery. Beyond this, I have hands-on experience applying AI to solve practical problems in diverse domains, including satellite data restoration and real-time video analysis.<br><br>I am passionate about building and advancing cutting-edge generative models and autonomous systems to tackle complex, real-world challenges.</p>
+          <div class="social-icons"><a class="social-icon" href="https://github.com/yousirong" target="_blank"><i class="fab fa-github"></i></a><a class="social-icon" href="https://scholar.google.com/citations?user=VAbPjjoAAAAJ&amp;hl=ko" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a><a class="social-icon" href="https://www.instagram.com/juneyong_d.v/" target="_blank"><i class="fab fa-instagram"></i></a><a class="social-icon" href="www.linkedin.com/in/juneyong-‍lee-05b09733a" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
         </div>
-        <!-- Print-only CV (A4)-->
-        <div class="print-cv" id="print-cv">
-            <div class="print-layout">
-                <div class="print-sidebar">
-                    <div class="print-photo"><img src="assets/img/profile.jpg" alt="Profile photo" /></div>
-                    <h4>Contact</h4>
-                    <ul class="print-list">
-                        <li>Seoul, Republic of Korea</li>
-                        <li>+82-10-5384-7822</li>
-                        <li>diziyong@hufs.ac.kr</li>
-                        <li>github.com/yousirong</li>
-                        <li>scholar.google.com/citations?user=VAbPjjoAAAAJ</li>
-                    </ul>
-                    <h4>Education</h4>
-                    <ul class="print-list">
-                        <li>
-                            <div class="item-head">
-                                <span class="item-title">Hankuk University of Foreign Studies</span>
-                                <span class="item-year">2024 - Present</span>
-                            </div>
-                            <div class="item-sub">M.S. Computer Science (AI Track) | GPA 4.37/4.5</div>
-                        </li>
-                        <li>
-                            <div class="item-head">
-                                <span class="item-title">Hankuk University of Foreign Studies</span>
-                                <span class="item-year">2017 - 2024</span>
-                            </div>
-                            <div class="item-sub">B.S. Computer and Electronic Systems Engineering | GPA 3.50/4.5</div>
-                        </li>
-                        <li>
-                            <div class="item-head">
-                                <span class="item-title">Seoul High School</span>
-                                <span class="item-year">2014 - 2017</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <h4>Certifications</h4>
-                    <ul class="print-list">
-                        <li>정보처리기사 (Engineer Information Processing)</li>
-                        <li>빅데이터분석기사 (Engineer Big Data Analysis)</li>
-                    </ul>
-                    <h4>Skills</h4>
-                    <ul class="print-list print-skills">
-                        <li>Python</li>
-                        <li>PyTorch</li>
-                        <li>Linux</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>LaTeX</li>
-                        <li>Git</li>
-                        <li>VSCode</li>
-                        <li>AWS</li>
-                        <li>Figma</li>
-                        <li>Notion</li>
-                        <li>Slack</li>
-                    </ul>
-                </div>
-                <div class="print-main">
-                    <div class="print-hero">
-                        <h1>
-                            <span class="first">JUNEYONG</span>
-                            <span class="last">LEE</span>
-                        </h1>
-                        <h2>M.S. Candidate, Computer Science (AI Track)</h2>
-                        <div class="accent"></div>
-                    </div>
-                    <div class="print-section">
-                        <h3>Profile</h3>
-                        <p>Master's student in Computer Science (AI Track) at Hankuk University of Foreign Studies focused on multimodal generative AI and autonomous agents. Ranked 3rd in the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge. Research spans diffusion models for medical imaging, satellite data restoration, and real-time video analysis.</p>
-                    </div>
-                    <div class="print-section">
-                        <h3>Publications</h3>
-                        <ul class="print-list">
-                            <li>
-                                <div class="item-head">
-                                    <span class="item-title">Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling</span>
-                                    <span class="item-year">2025</span>
-                                </div>
-                                <div class="item-sub">IEEE Access (submitted)</div>
-                            </li>
-                            <li>
-                                <div class="item-head">
-                                    <span class="item-title">ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression</span>
-                                    <span class="item-year">2025</span>
-                                </div>
-                                <div class="item-sub">The International Conference on Pattern Recognition (ICPR)</div>
-                            </li>
-                            <li>
-                                <div class="item-head">
-                                    <span class="item-title">Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection</span>
-                                    <span class="item-year">2024</span>
-                                </div>
-                                <div class="item-sub">Korean Institute of Information Scientists and Engineers - Journal of KIISE (JOK)</div>
-                            </li>
-                            <li>
-                                <div class="item-head">
-                                    <span class="item-title">Research on Developing a Responsive Web Interface for Small Businesses Using React</span>
-                                    <span class="item-year">2023</span>
-                                </div>
-                                <div class="item-sub">Collaboration with PeopleCat Co., Ltd.</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="print-section">
-                        <h3>Research Projects</h3>
-                        <ul class="print-list">
-                            <li>
-                                <div class="item-head"><strong>Lightweight DDRM for ultrasound blind zone restoration</strong></div>
-                                <div class="item-sub">Real-time restoration (<15ms) with improved SSIM/PSNR via diffusion optimization for edge deployment.</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>RFR-based restoration of East Asia oceanographic data</strong></div>
-                                <div class="item-sub">Inpainted missing GOCI/UST21 Chlorophyll-a maps at regional scale for environmental monitoring.</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>DiffusionDet for wave overtopping detection</strong></div>
-                                <div class="item-sub">Fine-tuned for breakwater overtopping; more robust than YOLO under resolution/lighting changes.</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>YOLO v9 + ByteTrack for overtopping tracking</strong></div>
-                                <div class="item-sub">Upgraded detector and tracker, improving detection and ID persistence.</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="print-section">
-                        <h3>Awards</h3>
-                        <ul class="print-list">
-                            <li>
-                                <div class="item-head"><strong>2025 Samsung AI Challenge - 3rd place</strong></div>
-                                <div class="item-sub">Multi-AI Agent Collaboration</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>2025 Samsung Collegiate Programming Challenge - 3rd place</strong></div>
-                                <div class="item-sub">Multimodal QA on photo gallery</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>HAI! Hecto AI Challenge - 21st/748</strong></div>
-                                <div class="item-sub">Car model classification</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>LG Aimers 5th Class - 43rd/740</strong></div>
-                                <div class="item-sub">Product defect determination</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>토스 NEXT ML CHALLENGE - 64th/2,580</strong></div>
-                                <div class="item-sub">CTR (click-through rate) prediction</div>
-                            </li>
-                            <li>
-                                <div class="item-head"><strong>Capstone Design Project Excellence Award</strong></div>
-                                <div class="item-sub">HUFS AI Education Institute</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      </section>
+      <hr class="m-0">
+      <!-- Publications-->
+      <section class="resume-section" id="publications">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Publications</h2>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling</h3>
+              <div class="subheading mb-3">IEEE Access Submitted</div>
+              <p>
+                 Ultrasound imaging is inherently limited by speckle noise, which degrades resolution and contrast, thereby reducing diagnostic efficiency. Conventional filtering techniques often lead to over smoothing, while supervised deep learning approaches face the fundamental challenge of lacking high quality ground truth (GT) images in clinical environments.
+                 To overcome these limitations, this study proposes Wavelet-based Null-space Diffusion (WaND), a novel unsupervised learning framework that integrates linear-space adaptation with uncertainty-aware fusion.
+                 Specifically, to address the issue of background noise amplification common in diffusion models operating in the non-linear log-compressed domain, we adopt a new approach that enforces Data Consistency (DC) within the physical linear space.
+                 The proposed WaND framework robustly extracts signal envelopes in the linear domain by combining Speckle Reducing Anisotropic Diffusion (SRAD) filters with the Discrete Wavelet Transform (DWT). Based on this, it calculates adaptive weights representing pixel-wise reliability. This enables Adaptive Range-Null Decomposition, where tissue structures with high signal intensity (Range-Space) are preserved from the observed data, while weak background and noise regions (Null-Space) are precisely reconstructed using the diffusion model’s prior knowledge.
+                 Furthermore, to effectively control the stochastic nature of the diffusion model, we introduce an Uncertainty Aware Fusion strategy based on the pixel-wise variance of generated samples. This strategy suppresses noise by applying the Mean in regions of high uncertainty (speckle) and preserves fine anatomical structures by utilizing the Median in regions where uncertainty is low and tissue textures remain consistent.
+                 Experimental results using the PICMUS (Plane-Wave Imaging Challenge in Medical Ultrasound) benchmark and in-vivo datasets demonstrate that WaND outperforms existing methodologies across key quantitative metrics, including gCNR, SNR, and FWHM. Moreover, it qualitatively proves its efficacy in enhancing anatomical clarity while simultaneously suppressing background noise.
+              </p>
+              <div><a href="https://github.com/yousirong/WaND.git" target="_blank">https://github.com/yousirong/WaND</a></div>
+              <p class="mt-3"><span class="badge text-bg-secondary me-2">Ultrasound Speckle Reduction</span><span class="badge text-bg-secondary me-2">Denoising Diffusion Probabilistic Models</span><span class="badge text-bg-secondary me-2">Range-Null Space Decomposition</span><span class="badge text-bg-secondary me-2">Zero-Shot Image Restoration</span></p>
             </div>
+            <div class="flex-shrink-0"><span class="text-primary">2nd semester 2025</span></div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer’s Disease Progression</h3>
+              <div class="subheading mb-3">The International Conference on Pattern Recognition (ICPR)</div>
+              <p>
+                Alzheimer’s disease (AD) progresses heterogeneously across individuals, motivating subject-specific synthesis of follow-up magnetic resonance imaging (MRI) to support progression assessment. While Diffusion Transformers (DiT), an emerging transformer-based diffusion model, offer a scalable backbone for image synthesis, longitudinal AD MRI generation with clinically interpretable control over follow-up time and participant metadata remains underexplored.
+                We present ADP-DiT, an interval-aware, clinically text-conditioned diffusion transformer for longitudinal AD MRI synthesis. ADP-DiT encodes follow-up interval together with multi-domain demographic, diagnostic (CN/MCI/AD), and neuropsychological information as a natural-language prompt, enabling time-specific control beyond coarse diagnostic stages. To inject this conditioning effectively, we use dual text encoders--OpenCLIP for vision–language alignment and T5 for richer clinical-language understanding. Their embeddings are fused into DiT through cross-attention for fine-grained guidance and adaptive layer normalization for global modulation. We further enhance anatomical fidelity by applying rotary positional embeddings to image tokens and performing diffusion in a pretrained SDXL-VAE latent space to enable efficient high-resolution reconstruction.
+                On 3,321 longitudinal 3T T1-weighted scans from 712 participants (259,038 image slices), ADP-DiT achieves SSIM 0.8739 and PSNR 29.32 dB, improving over a DiT baseline by +0.1087 SSIM and +6.08 dB PSNR while capturing progression-related changes such as ventricular enlargement and shrinking hippocampus. These results suggest that integrating comprehensive, subject-specific clinical conditions with architectures can improve longitudinal AD MRI synthesis.
+              </p>
+              <div><a href="https://github.com/Deep-Generative-Models-research" target="_blank">https://github.com/Deep-Generative-Models-research</a></div>
+              <p class="mt-3"><span class="badge text-bg-secondary me-2">Alzheimer's Disease</span><span class="badge text-bg-secondary me-2">Disease Progression</span><span class="badge text-bg-secondary me-2">Text-Guided Image Generation</span><span class="badge text-bg-secondary me-2">Diffusion Transformer</span></p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">1st semester 2025</span></div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection</h3>
+              <div class="subheading mb-3">Korean Institute of Information Scientists and Engineers - Journal of KIISE(JOK)</div>
+              <p>There has been an increasing number of driver assaults in transportation such as taxis and buses in the past years. It can be especially difficult to respond quickly to assaults on drivers by drunks late at night. To address this issue, our research team proposes a lightweight CNN-based Temporal Segment Network (TSN) model, which can detect driver assaults by passengers in real time. The TSN model efficiently processes videos by sampling a small number of image frames and is divided into two streams for learning: one for spatial information processing and the other for temporal information processing. Convolutional neural networks are employed in each stream. In this research, we apply a lightweight CNN architecture, MobileOne, significantly reducing the model size while demonstrating improved accuracy even with limited computing resources. The model is expected to contribute to a rapid response and prevention of hazardous situations for drivers by being integrated into vehicular driver monitoring systems.</p>
+              <div><a href="https://github.com/HUFSuperman/HUFS_SavingDriver" target="_blank">https://github.com/HUFSuperman/HUFS_SavingDriver</a></div>
+              <p class="mt-3"><span class="badge text-bg-secondary me-2">Temporal Segment Network</span><span class="badge text-bg-secondary me-2">Lightweight CNN Architecture</span><span class="badge text-bg-secondary me-2">Assault Recognition</span><span class="badge text-bg-secondary me-2">Abnormal Behavior</span></p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">1st semester 2024</span></div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Research on Developing a Responsive Web Interface for Small Businesses Using React</h3>
+              <div class="subheading mb-3">Collaboration with PeopleCat Co., Ltd.</div>
+              <p>Although large corporations have established sales databases for efficient sales activities, small-scale entrepreneurs need a system that provides an interface that anyone can easily manage, offering diverse and complex information. This paper proposes the use of React technology, which can also operate on crawling servers that automatically collect store information. Furthermore, it suggests the development of a responsive web user interface that can be conveniently used in both mouse and keyboard-based desktop environments as well as touch-based smartphone environments, utilizing React technology for the effective delivery of various data. The proposed methods anticipate rapid retrieval of large volumes of data due to the adoption of asynchronous function processing in React technology, an improvement over traditional JavaScript methods.</p>
+              <div><a href="https://github.com/yousirong/CAPSTONE_AWS" target="_blank">https://github.com/yousirong/CAPSTONE_AWS</a></div>
+              <p class="mt-3"><span class="badge text-bg-secondary me-2">Responsive Web Interface</span><span class="badge text-bg-secondary me-2">React</span><span class="badge text-bg-secondary me-2">Asynchronous Processing</span><span class="badge text-bg-secondary me-2">Information Architecture Design</span></p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">2nd semester 2023</span></div>
+          </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+      </section>
+      <hr class="m-0">
+      <!-- Education-->
+      <section class="resume-section" id="education">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Education</h2>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Hankuk University of Foreign Studies</h3>
+              <div class="subheading mb-3">Master's course, Computer Science - AI Track</div>
+              <p>GPA: 4.37 / 4.5</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">March 2024 - Present</span></div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Hankuk University of Foreign Studies</h3>
+              <div class="subheading mb-3">Bachelor's degree, Computer and Electronic Systems Engineering</div>
+              <p>GPA: 3.50 / 4.5</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">March 2017 - February 2024</span></div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">SEOUL HIGH SCHOOL</h3>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">March 2014 - February 2017</span></div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0">
+      <!-- Skills-->
+      <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Skills</h2>
+          <div class="subheading mb-3">Programming Languages & Tools</div>
+          <ul class="list-inline dev-icons">
+            <li class="list-inline-item"><a href="https://www.python.org/" title="Python" target="_blank"><img src="https://skillicons.dev/icons?i=py" alt="Python" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://pytorch.org/" title="PyTorch" target="_blank"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://www.linux.org/" title="Linux" target="_blank"><img src="https://skillicons.dev/icons?i=linux" alt="Linux" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://www.docker.com/" title="Docker" target="_blank"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://kubernetes.io/" title="Kubernetes" target="_blank"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://www.latex-project.org/" title="LaTeX" target="_blank"><img src="https://skillicons.dev/icons?i=latex" alt="LaTeX" style="width:60px; height:60px;"></a></li>
+          </ul>
+          <div class="subheading mb-3">Workspace</div>
+          <ul class="list-inline dev-icons">
+            <li class="list-inline-item"><a href="https://git-scm.com/" title="Git" target="_blank"><img src="https://skillicons.dev/icons?i=git" alt="Git" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://code.visualstudio.com/" title="VSCode" target="_blank"><img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://aws.amazon.com/" title="AWS" target="_blank"><img src="https://skillicons.dev/icons?i=aws" alt="AWS" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://www.figma.com/" title="Figma" target="_blank"><img src="https://skillicons.dev/icons?i=figma" alt="Figma" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://www.notion.so/" title="Notion" target="_blank"><img src="https://skillicons.dev/icons?i=notion" alt="Notion" style="width:60px; height:60px;"></a></li>
+            <li class="list-inline-item"><a href="https://discord.com/" title="Discord" target="_blank"><img src="https://skillicons.dev/icons?i=discord" alt="Discord" style="width:60px; height:60px;"></a></li>
+          </ul>
+        </div>
+      </section>
+      <hr class="m-0">
+      <!-- Interests-->
+      <section class="resume-section" id="interests">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Research Projects</h2>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Lightweight Ultrasound Blind Zone Restoration using Denoising Diffusion Restoration Models (DDRM)</h3>
+              <p>Developed a <strong>lightweight Denoising Diffusion Restoration Model (DDRM)</strong> for <strong>real-time restoration</strong> of blind zones in ultrasound images (inference <15ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics by optimizing the diffusion process and model architecture for on-device efficiency.</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Large-Scale Oceanographic Data Restoration for East Asia using Recurrent Feature Reasoning (RFR)</h3>
+              <p>Successfully restored missing data in GOCI and UST21 satellite imagery across the <strong>entire East Asia region</strong>, expanding significantly beyond the initial Saemangeum and Nakdong River areas. Utilized a <strong>Recurrent Feature Reasoning (RFR) model</strong> for high-fidelity inpainting of Chlorophyll-a composite maps, enabling comprehensive environmental monitoring on a large geographical scale.</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Application & Evaluation of DiffusionDet for Wave Overtopping Detection</h3>
+              <p>Applied and fine-tuned the <strong>DiffusionDet</strong> model for real-world <strong>breakwater wave overtopping detection</strong>, demonstrating <strong>superior robustness and accuracy</strong> over the conventional YOLO model, especially under varying resolution and lighting conditions.</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack</h3>
+              <p>Upgraded object detection from YOLO v7 to <strong>YOLO v9</strong> and replaced IOU Tracker with <strong>ByteTrack</strong> for wave overtopping. Demonstrated significant improvements in both detection and <strong>tracking accuracy (ID persistence)</strong> through rigorous quantitative comparison.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0">
+      <!-- Awards-->
+      <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Awards & Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li class="mb-4"><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+              <h4 class="mb-1"><strong>2025 Samsung AI Challenge - 3rd place</strong></h4>
+              <div class="text-muted mb-1">Multi-AI Agent Collaboration (AI Co-Scientist)</div>
+              <div class="text-muted small mb-2">Team: 각자의 새벽</div><a href="https://github.com/samsung-man/Ai_Co_Sci_2025.git" target="_blank">View Project on GitHub</a>
+            </li>
+            <li class="mb-4"><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+              <h4 class="mb-1"><strong>2025 Samsung Collegiate Programming Challenge - 3rd place</strong></h4>
+              <div class="text-muted mb-1">Multimodal QA on photo gallery</div>
+              <div class="text-muted small mb-2">Team: 각자의 새벽</div><a href="https://github.com/samsung-man/SCPC_2025_Code" target="_blank">View Project on GitHub</a>
+            </li>
+            <li class="mb-4"><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+              <h4 class="mb-1"><strong>HAI! Hecto AI Challenge - 21st/748</strong></h4>
+              <div class="text-muted mb-1">Car model classification</div>
+              <div class="text-muted small mb-2">Team: 두더띠 (Dudotti)</div><a href="https://github.com/DACON-HAI" target="_blank">View Project on GitHub</a>
+            </li>
+            <li class="mb-4"><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+              <h4 class="mb-1"><strong>LG Aimers 5th Class - 43rd/740</strong></h4>
+              <div class="text-muted mb-1">Product defect determination</div>
+              <div class="text-muted small mb-2">Team: 각자의 새벽</div><a href="https://github.com/LGAimers-junebrothers" target="_blank">View Project on GitHub</a>
+            </li>
+            <li class="mb-4"><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+              <h4 class="mb-1"><strong>토스 NEXT ML CHALLENGE - 64th/2,580</strong></h4>
+              <div class="text-muted mb-1">CTR (click-through rate) prediction</div>
+              <div class="text-muted small mb-2">Team: 가용성</div><a href="https://github.com/Toss-junebrothers" target="_blank">View Project on GitHub</a>
+            </li>
+            <li class="mb-4"><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+              <h4 class="mb-1"><strong>Capstone Design Project Excellence Award</strong></h4>
+              <div class="text-muted mb-2">Hankuk University of Foreign Studies, AI Education Institute</div><a href="assets/capstone.pdf" target="_blank">View Certificate</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- Print-only CV (A4)-->
+    <div class="print-cv" id="print-cv">
+      <div class="print-layout">
+        <div class="print-sidebar">
+          <div class="print-photo"><img src="assets/img/profile.jpg" alt="Profile photo"></div>
+          <h4>Contact</h4>
+          <ul class="print-list">
+            <li>Seoul, Republic of Korea</li>
+            <li>+82-10-5384-7822</li>
+            <li>diziyong@hufs.ac.kr</li>
+            <li>github.com/yousirong</li>
+            <li>scholar.google.com/citations?user=VAbPjjoAAAAJ</li>
+          </ul>
+          <h4>Education</h4>
+          <ul class="print-list">
+            <li>
+              <div class="item-head"><span class="item-title">Hankuk University of Foreign Studies</span><span class="item-year">2024 - Present</span></div>
+              <div class="item-sub">M.S. Computer Science (AI Track) | GPA 4.37/4.5</div>
+            </li>
+            <li>
+              <div class="item-head"><span class="item-title">Hankuk University of Foreign Studies</span><span class="item-year">2017 - 2024</span></div>
+              <div class="item-sub">B.S. Computer and Electronic Systems Engineering | GPA 3.50/4.5</div>
+            </li>
+            <li>
+              <div class="item-head"><span class="item-title">Seoul High School</span><span class="item-year">2014 - 2017</span></div>
+            </li>
+          </ul>
+          <h4>Certifications</h4>
+          <ul class="print-list">
+            <li>정보처리기사 (Engineer Information Processing)</li>
+            <li>빅데이터분석기사 (Engineer Big Data Analysis)</li>
+          </ul>
+          <h4>Skills</h4>
+          <ul class="print-list print-skills">
+            <li>Python</li>
+            <li>PyTorch</li>
+            <li>Linux</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>LaTeX</li>
+            <li>Git</li>
+            <li>VSCode</li>
+            <li>AWS</li>
+            <li>Figma</li>
+            <li>Notion</li>
+            <li>Slack</li>
+          </ul>
+        </div>
+        <div class="print-main">
+          <div class="print-hero">
+            <h1><span class="first">JUNEYONG</span> <span class="last">LEE</span></h1>
+            <h2>M.S. Candidate, Computer Science (AI Track)</h2>
+            <div class="accent"></div>
+          </div>
+          <div class="print-section">
+            <h3>Profile</h3>
+            <p>Master's student in Computer Science (AI Track) at Hankuk University of Foreign Studies focused on multimodal generative AI and autonomous agents. Ranked 3rd in the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge. Research spans diffusion models for medical imaging, satellite data restoration, and real-time video analysis.</p>
+          </div>
+          <div class="print-section">
+            <h3>Publications</h3>
+            <ul class="print-list">
+              <li>
+                <div class="item-head"><span class="item-title">Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling</span><span class="item-year">2025</span></div>
+                <div class="item-sub">IEEE Access (submitted)</div>
+              </li>
+              <li>
+                <div class="item-head"><span class="item-title">ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression</span><span class="item-year">2025</span></div>
+                <div class="item-sub">The International Conference on Pattern Recognition (ICPR)</div>
+              </li>
+              <li>
+                <div class="item-head"><span class="item-title">Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection</span><span class="item-year">2024</span></div>
+                <div class="item-sub">Korean Institute of Information Scientists and Engineers - Journal of KIISE (JOK)</div>
+              </li>
+              <li>
+                <div class="item-head"><span class="item-title">Research on Developing a Responsive Web Interface for Small Businesses Using React</span><span class="item-year">2023</span></div>
+                <div class="item-sub">Collaboration with PeopleCat Co., Ltd.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="print-section">
+            <h3>Research Projects</h3>
+            <ul class="print-list">
+              <li>
+                <div class="item-head"><strong>Lightweight DDRM for ultrasound blind zone restoration</strong></div>
+                <div class="item-sub">Real-time restoration (<15ms) with improved SSIM/PSNR via diffusion optimization for edge deployment.</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>RFR-based restoration of East Asia oceanographic data</strong></div>
+                <div class="item-sub">Inpainted missing GOCI/UST21 Chlorophyll-a maps at regional scale for environmental monitoring.</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>DiffusionDet for wave overtopping detection</strong></div>
+                <div class="item-sub">Fine-tuned for breakwater overtopping; more robust than YOLO under resolution/lighting changes.</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>YOLO v9 + ByteTrack for overtopping tracking</strong></div>
+                <div class="item-sub">Upgraded detector and tracker, improving detection and ID persistence.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="print-section">
+            <h3>Awards </h3>
+            <ul class="print-list">
+              <li>
+                <div class="item-head"><strong>2025 Samsung AI Challenge - 3rd place</strong></div>
+                <div class="item-sub">Multi-AI Agent Collaboration</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>2025 Samsung Collegiate Programming Challenge - 3rd place</strong></div>
+                <div class="item-sub">Multimodal QA on photo gallery</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>HAI! Hecto AI Challenge - 21st/748</strong></div>
+                <div class="item-sub">Car model classification</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>LG Aimers 5th Class - 43rd/740</strong></div>
+                <div class="item-sub">Product defect determination</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>토스 NEXT ML CHALLENGE - 64th/2,580</strong></div>
+                <div class="item-sub">CTR (click-through rate) prediction</div>
+              </li>
+              <li>
+                <div class="item-head"><strong>Capstone Design Project Excellence Award</strong></div>
+                <div class="item-sub">HUFS AI Education Institute</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
