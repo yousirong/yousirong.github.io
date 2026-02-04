@@ -10971,6 +10971,13 @@ section.resume-section .resume-section-content {
   }
 }
 
+/* Hide BrowserSync notification on print only */
+@media print {
+  #__bs_notify__ {
+    display: none !important;
+  }
+}
+
 /* Print CV (A4) - two column layout with sidebar */
 #print-cv {
   display: none;

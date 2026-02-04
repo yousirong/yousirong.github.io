@@ -11146,3 +11146,8 @@ section.resume-section .resume-section-content {
     margin-top: 0.5mm;
   }
 }
+@media print {
+  #__bs_notify__ {
+    display: none !important;
+  }
+}

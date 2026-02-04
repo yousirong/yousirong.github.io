@@ -20,3 +20,10 @@
 
 // Print
 @import "./print.scss";
+
+// Hide BrowserSync notification on print only
+@media print {
+  #__bs_notify__ {
+    display: none !important;
+  }
+}
