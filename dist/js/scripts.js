@@ -1,6 +1,6 @@
 /*!
 * Start Bootstrap - yousirong_CV v7.0.6 (https://yousirong.github.io/)
-* Copyright 2013-2025 Start Bootstrap
+* Copyright 2013-2026 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
 //
@@ -29,6 +29,12 @@ window.addEventListener('DOMContentLoaded', event => {
                 navbarToggler.click();
             }
         });
+    });
+
+    const btnPrint = document.body.querySelector('#btnPrint');
+    btnPrint.addEventListener('click', event => {
+        event.preventDefault();
+        window.print();
     });
 
 });

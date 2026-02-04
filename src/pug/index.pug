@@ -38,6 +38,8 @@ html(lang='en')
             a.nav-link.js-scroll-trigger(href='#interests') Research Projects
           li.nav-item
             a.nav-link.js-scroll-trigger(href='#awards') Awards
+          li.nav-item
+            a#btnPrint.nav-link(href='#') Print
 
     // Page Content
     .container-fluid.p-0
@@ -77,16 +79,39 @@ html(lang='en')
           h2.mb-5 Publications
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
             .flex-grow-1
-              h3.mb-0 ADPDiT: A Multimodal Diffusion Transformer for Predicting Alzheimer's Disease Progression and Generating Brain Image
-              .subheading.mb-3 Journal undecided
+              h3.mb-0 Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling
+              .subheading.mb-3 IEEE Access Submitted
               p
-                | ADPDiT (Alzheimer's Disease Progression Diffusion Transformer) is a novel multimodal framework that integrates brain MRI data with structured clinical metadata to predict Alzheimer's disease (AD) progression and generate personalized, progression-conditioned brain images. AI-based AD diagnosis using MRI requires longitudinal imaging data capturing disease state transitions over time. However, clinical practice faces significant challenges: patients may skip scheduled MRI appointments, and many datasets predominantly contain images from single disease states rather than progressive sequences. To address these limitations, ADPDiT employs predictive generation capabilities that can synthesize missing temporal MRI data, potentially enhancing existing AD prediction systems by providing continuous disease progression visualization. The model addresses the limitations of conventional single-modality diagnostic approaches by employing a diffusion transformer architecture with specialized cross-attention modules that effectively fuse patient-specific neuroimaging features with comprehensive clinical data. The core architecture features ADPDiTBlocks with self-attention, cross-attention, and feed-forward networks, utilizing Flash Attention optimization and Query-Key normalization for enhanced computational efficiency. The model incorporates 2D Rotary Position Encoding (RoPE) for spatial-aware image token processing and attention pooling mechanisms to integrate multi-scale clinical information. The framework operates on 256×256 resolution brain MRI slices, which are processed into patch embeddings within a VAE-based latent space. Training data comprises 619 unique patients from the Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset, with 226,434 brain MRI slices distributed as: 341 mild cognitive impairment (MCI) patients, 141 AD patients, and 137 cognitively normal (CN) individuals. Clinical metadata includes comprehensive neuropsychological assessments (CDRSB, ADAS11, ADAS13, MMSE, RAVLT, MOCA, FAQ) embedded through learned representations and integrated via attention pooling, making it a comprehensive tool for AD research and precision medicine applications in neurodegenerative disease management.
+                |  Ultrasound imaging is inherently limited by speckle noise, which degrades resolution and contrast, thereby reducing diagnostic efficiency. Conventional filtering techniques often lead to over smoothing, while supervised deep learning approaches face the fundamental challenge of lacking high quality ground truth (GT) images in clinical environments.
+                |  To overcome these limitations, this study proposes Wavelet-based Null-space Diffusion (WaND), a novel unsupervised learning framework that integrates linear-space adaptation with uncertainty-aware fusion.
+                |  Specifically, to address the issue of background noise amplification common in diffusion models operating in the non-linear log-compressed domain, we adopt a new approach that enforces Data Consistency (DC) within the physical linear space.
+                |  The proposed WaND framework robustly extracts signal envelopes in the linear domain by combining Speckle Reducing Anisotropic Diffusion (SRAD) filters with the Discrete Wavelet Transform (DWT). Based on this, it calculates adaptive weights representing pixel-wise reliability. This enables Adaptive Range-Null Decomposition, where tissue structures with high signal intensity (Range-Space) are preserved from the observed data, while weak background and noise regions (Null-Space) are precisely reconstructed using the diffusion model’s prior knowledge.
+                |  Furthermore, to effectively control the stochastic nature of the diffusion model, we introduce an Uncertainty Aware Fusion strategy based on the pixel-wise variance of generated samples. This strategy suppresses noise by applying the Mean in regions of high uncertainty (speckle) and preserves fine anatomical structures by utilizing the Median in regions where uncertainty is low and tissue textures remain consistent.
+                |  Experimental results using the PICMUS (Plane-Wave Imaging Challenge in Medical Ultrasound) benchmark and in-vivo datasets demonstrate that WaND outperforms existing methodologies across key quantitative metrics, including gCNR, SNR, and FWHM. Moreover, it qualitatively proves its efficacy in enhancing anatomical clarity while simultaneously suppressing background noise.
+              div
+                a(href='https://github.com/yousirong/WaND.git', target='_blank') https://github.com/yousirong/WaND
+              p.mt-3
+                span.badge.text-bg-secondary.me-2 Ultrasound Speckle Reduction
+                span.badge.text-bg-secondary.me-2 Denoising Diffusion Probabilistic Models
+                span.badge.text-bg-secondary.me-2 Range-Null Space Decomposition
+                span.badge.text-bg-secondary.me-2 Zero-Shot Image Restoration
+            .flex-shrink-0
+              span.text-primary 2nd semester 2025
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+            .flex-grow-1
+              h3.mb-0 ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer’s Disease Progression
+              .subheading.mb-3 The International Conference on Pattern Recognition (ICPR)
+              p
+                | Alzheimer’s disease (AD) progresses heterogeneously across individuals, motivating subject-specific synthesis of follow-up magnetic resonance imaging (MRI) to support progression assessment. While Diffusion Transformers (DiT), an emerging transformer-based diffusion model, offer a scalable backbone for image synthesis, longitudinal AD MRI generation with clinically interpretable control over follow-up time and participant metadata remains underexplored.
+                | We present ADP-DiT, an interval-aware, clinically text-conditioned diffusion transformer for longitudinal AD MRI synthesis. ADP-DiT encodes follow-up interval together with multi-domain demographic, diagnostic (CN/MCI/AD), and neuropsychological information as a natural-language prompt, enabling time-specific control beyond coarse diagnostic stages. To inject this conditioning effectively, we use dual text encoders--OpenCLIP for vision–language alignment and T5 for richer clinical-language understanding. Their embeddings are fused into DiT through cross-attention for fine-grained guidance and adaptive layer normalization for global modulation. We further enhance anatomical fidelity by applying rotary positional embeddings to image tokens and performing diffusion in a pretrained SDXL-VAE latent space to enable efficient high-resolution reconstruction.
+                | On 3,321 longitudinal 3T T1-weighted scans from 712 participants (259,038 image slices), ADP-DiT achieves SSIM 0.8739 and PSNR 29.32 dB, improving over a DiT baseline by +0.1087 SSIM and +6.08 dB PSNR while capturing progression-related changes such as ventricular enlargement and shrinking hippocampus. These results suggest that integrating comprehensive, subject-specific clinical conditions with architectures can improve longitudinal AD MRI synthesis.
               div
                 a(href='https://github.com/Deep-Generative-Models-research', target='_blank') https://github.com/Deep-Generative-Models-research
               p.mt-3
-                span.badge.text-bg-secondary.me-2 Alzheimer’s Disease (AD)
+                span.badge.text-bg-secondary.me-2 Alzheimer's Disease
+                span.badge.text-bg-secondary.me-2 Disease Progression
                 span.badge.text-bg-secondary.me-2 Text-Guided Image Generation
-                span.badge.text-bg-secondary.me-2 Brain MRI Generation
+                span.badge.text-bg-secondary.me-2 Diffusion Transformer
             .flex-shrink-0
               span.text-primary 1st semester 2025
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
@@ -139,19 +164,12 @@ html(lang='en')
               .subheading.mb-3 Bachelor's degree, Computer and Electronic Systems Engineering
               p GPA: 3.50 / 4.5
             .flex-shrink-0
-              span.text-primary March 2021 - February 2024
+              span.text-primary March 2017 - February 2024
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
             .flex-grow-1
-              h3.mb-0 Hankuk University of Foreign Studies
-              .subheading.mb-3 Bachelor's course (Change of Major) - Computer Science
+              h3.mb-0 SEOUL HIGH SCHOOL
             .flex-shrink-0
-              span.text-primary March 2018 - February 2019
-          .d-flex.flex-column.flex-md-row.justify-content-between
-            .flex-grow-1
-              h3.mb-0 Hankuk University of Foreign Studies
-              .subheading.mb-3 Bachelor's course (Admission) - Statistics and Data Science
-            .flex-shrink-0
-              span.text-primary March 2017 - February 2018
+              span.text-primary March 2014 - February 2017
 
       hr.m-0
 
@@ -242,52 +260,179 @@ html(lang='en')
             li.mb-4
               span.fa-li
                 i.fas.fa-trophy.text-warning
-              h4.mb-1 AI Co-Scientist : 2025 Samsung AI Challenge
-              .subheading.mb-2 Team: 각자의 새벽 
-              p.mb-2
-                | #[strong Secured 3rd place] in a challenge requiring the design and implementation of a #[strong Multi-AI Agent Collaboration] system capable of #[strong autonomously] handling the entire model development lifecycle (code generation, tuning, etc.) with minimal human intervention.
+              h4.mb-1
+                strong 2025 Samsung AI Challenge - 3rd place
+              .text-muted.mb-1 Multi-AI Agent Collaboration (AI Co-Scientist)
+              .text-muted.small.mb-2 Team: 각자의 새벽
               a(href='https://github.com/samsung-man/Ai_Co_Sci_2025.git', target='_blank') View Project on GitHub
             li.mb-4
               span.fa-li
                 i.fas.fa-trophy.text-warning
-              h4.mb-1 2025 Samsung Collegiate Programming Challenge
-              .subheading.mb-2 Team: 각자의 새벽 
-              p.mb-2
-                | #[strong Achieved 3rd place out of 242 teams] by successfully developing a #[strong multimodal AI model] designed to answer multiple-choice questions based on analyzing a user's daily smartphone photo gallery.
+              h4.mb-1
+                strong 2025 Samsung Collegiate Programming Challenge - 3rd place
+              .text-muted.mb-1 Multimodal QA on photo gallery
+              .text-muted.small.mb-2 Team: 각자의 새벽
               a(href='https://github.com/samsung-man/SCPC_2025_Code', target='_blank') View Project on GitHub
             li.mb-4
               span.fa-li
                 i.fas.fa-trophy.text-warning
-              h4.mb-1 HAI! - Hecto AI Challenge
-              .subheading.mb-2 Team: 두더띠 (Dudotti)
-              p.mb-2
-                | #[strong Ranked 21st out of 748 teams] in a competition to develop an AI model for #[strong classifying car models] based on real used car images.
+              h4.mb-1
+                strong HAI! Hecto AI Challenge - 21st/748
+              .text-muted.mb-1 Car model classification
+              .text-muted.small.mb-2 Team: 두더띠 (Dudotti)
               a(href='https://github.com/DACON-HAI', target='_blank') View Project on GitHub
             li.mb-4
               span.fa-li
                 i.fas.fa-trophy.text-warning
-              h4.mb-1 LG Aimers 5th Class
-              .subheading.mb-2 Team: 각자의 새벽 
-              p.mb-2
-                | #[strong Ranked 43rd out of 740 teams] in the #[strong product defect determination] project.
+              h4.mb-1
+                strong LG Aimers 5th Class - 43rd/740
+              .text-muted.mb-1 Product defect determination
+              .text-muted.small.mb-2 Team: 각자의 새벽
               a(href='https://github.com/LGAimers-junebrothers', target='_blank') View Project on GitHub
             li.mb-4
               span.fa-li
                 i.fas.fa-trophy.text-warning
-              h4.mb-1 토스 NEXT ML CHALLENGE : 광고 클릭 예측(CTR) 모델 개발
-              .subheading.mb-2 Team: 가용성 
-              p.mb-2
-              | #[strong Ranked 64th out of 2,580 teams] in the competition on #[strong rapidly and accurately predicting user click-through probability].
-              br
+              h4.mb-1
+                strong 토스 NEXT ML CHALLENGE - 64th/2,580
+              .text-muted.mb-1 CTR (click-through rate) prediction
+              .text-muted.small.mb-2 Team: 가용성
               a(href='https://github.com/Toss-junebrothers', target='_blank') View Project on GitHub
             li.mb-4
               span.fa-li
                 i.fas.fa-trophy.text-warning
-              h4.mb-1 Capstone Design Project Excellence Award
-              .subheading.mb-2 Hankuk University of Foreign Studies, AI Education Institute
-              p.mb-2
-                | #[strong Awarded the Excellence Award] for outstanding performance in the Capstone Design Project.
+              h4.mb-1
+                strong Capstone Design Project Excellence Award
+              .text-muted.mb-2 Hankuk University of Foreign Studies, AI Education Institute
               a(href="assets/capstone.pdf", target="_blank") View Certificate
+
+    // Print-only CV (A4)
+    #print-cv.print-cv
+      .print-layout
+        .print-sidebar
+          .print-photo
+            img(src='assets/img/profile.jpg', alt='Profile photo')
+          h4 Contact
+          ul.print-list
+            li Seoul, Republic of Korea
+            li +82-10-5384-7822
+            li diziyong@hufs.ac.kr
+            li github.com/yousirong
+            li scholar.google.com/citations?user=VAbPjjoAAAAJ
+          h4 Education
+          ul.print-list
+            li
+              .item-head
+                span.item-title Hankuk University of Foreign Studies
+                span.item-year 2024 - Present
+              .item-sub M.S. Computer Science (AI Track) | GPA 4.37/4.5
+            li
+              .item-head
+                span.item-title Hankuk University of Foreign Studies
+                span.item-year 2017 - 2024
+              .item-sub B.S. Computer and Electronic Systems Engineering | GPA 3.50/4.5
+            li
+              .item-head
+                span.item-title Seoul High School
+                span.item-year 2014 - 2017
+          h4 Certifications
+          ul.print-list
+            li 정보처리기사 (Engineer Information Processing)
+            li 빅데이터분석기사 (Engineer Big Data Analysis)
+          h4 Skills
+          ul.print-list.print-skills
+            li Python
+            li PyTorch
+            li Linux
+            li Docker
+            li Kubernetes
+            li LaTeX
+            li Git
+            li VSCode
+            li AWS
+            li Figma
+            li Notion
+            li Slack
+        .print-main
+          .print-hero
+            h1
+              span.first JUNEYONG
+              | 
+              span.last LEE
+            h2 M.S. Candidate, Computer Science (AI Track)
+            .accent
+          .print-section
+            h3 Profile
+            p
+              | Master's student in Computer Science (AI Track) at Hankuk University of Foreign Studies focused on multimodal generative AI and autonomous agents. Ranked 3rd in the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge. Research spans diffusion models for medical imaging, satellite data restoration, and real-time video analysis.
+          .print-section
+            h3 Publications
+            ul.print-list
+              li
+                .item-head
+                  span.item-title Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling
+                  span.item-year 2025
+                .item-sub IEEE Access (submitted)
+              li
+                .item-head
+                  span.item-title ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression
+                  span.item-year 2025
+                .item-sub The International Conference on Pattern Recognition (ICPR)
+              li
+                .item-head
+                  span.item-title Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection
+                  span.item-year 2024
+                .item-sub Korean Institute of Information Scientists and Engineers - Journal of KIISE (JOK)
+              li
+                .item-head
+                  span.item-title Research on Developing a Responsive Web Interface for Small Businesses Using React
+                  span.item-year 2023
+                .item-sub Collaboration with PeopleCat Co., Ltd.
+          .print-section
+            h3 Research Projects
+            ul.print-list
+              li
+                .item-head
+                  strong Lightweight DDRM for ultrasound blind zone restoration
+                .item-sub Real-time restoration (<15ms) with improved SSIM/PSNR via diffusion optimization for edge deployment.
+              li
+                .item-head
+                  strong RFR-based restoration of East Asia oceanographic data
+                .item-sub Inpainted missing GOCI/UST21 Chlorophyll-a maps at regional scale for environmental monitoring.
+              li
+                .item-head
+                  strong DiffusionDet for wave overtopping detection
+                .item-sub Fine-tuned for breakwater overtopping; more robust than YOLO under resolution/lighting changes.
+              li
+                .item-head
+                  strong YOLO v9 + ByteTrack for overtopping tracking
+                .item-sub Upgraded detector and tracker, improving detection and ID persistence.
+          .print-section
+            h3 Awards 
+            ul.print-list
+              li
+                .item-head
+                  strong 2025 Samsung AI Challenge - 3rd place
+                .item-sub Multi-AI Agent Collaboration
+              li
+                .item-head
+                  strong 2025 Samsung Collegiate Programming Challenge - 3rd place
+                .item-sub Multimodal QA on photo gallery
+              li
+                .item-head
+                  strong HAI! Hecto AI Challenge - 21st/748
+                .item-sub Car model classification
+              li
+                .item-head
+                  strong LG Aimers 5th Class - 43rd/740
+                .item-sub Product defect determination
+              li
+                .item-head
+                  strong 토스 NEXT ML CHALLENGE - 64th/2,580
+                .item-sub CTR (click-through rate) prediction
+              li
+                .item-head
+                  strong Capstone Design Project Excellence Award
+                .item-sub HUFS AI Education Institute
 
 
     // Bootstrap core JS

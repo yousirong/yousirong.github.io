@@ -1,0 +1,182 @@
+// Print CV (A4) - two column layout with sidebar
+#print-cv {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    color: #111;
+  }
+
+  body {
+    font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-size: 9.4pt;
+    line-height: 1.22;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #sideNav,
+  .navbar,
+  .container-fluid,
+  section.resume-section,
+  hr.m-0 {
+    display: none !important;
+  }
+
+  #print-cv {
+    display: block !important;
+  }
+
+  .print-cv {
+    height: 297mm;
+    width: 210mm;
+    overflow: hidden;
+  }
+
+  .print-cv .print-layout {
+    display: grid;
+    grid-template-columns: 62mm 1fr;
+    min-height: 100%;
+  }
+
+  .print-cv .print-sidebar {
+    background: #173a52;
+    color: #fff;
+    padding: 8mm 6.5mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-cv .print-photo {
+    text-align: center;
+    margin-bottom: 6mm;
+  }
+
+  .print-cv .print-photo img {
+    width: 38mm;
+    height: 48mm;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.2mm solid #fff;
+  }
+
+  .print-cv .print-sidebar h4 {
+    font-size: 9.4pt;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 4.5mm 0 1.6mm;
+    padding-bottom: 1.4mm;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .print-cv .print-sidebar .print-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3.2mm 0;
+    font-size: 8.8pt;
+  }
+
+  .print-cv .print-sidebar .print-list li {
+    margin-bottom: 2mm;
+  }
+
+  .print-cv .print-sidebar .print-skills {
+    columns: 2;
+    column-gap: 6mm;
+  }
+
+  .print-cv .print-sidebar .item-year,
+  .print-cv .print-sidebar .item-sub {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .print-cv .print-main {
+    padding: 8mm 9mm;
+  }
+
+  .print-cv .print-hero h1 {
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+      "Liberation Sans", sans-serif;
+    font-size: 27pt;
+    letter-spacing: 1pt;
+    margin: 0;
+  }
+
+  .print-cv .print-hero h1 .last {
+    color: #173a52;
+  }
+
+  .print-cv .print-hero h2 {
+    font-size: 11.5pt;
+    margin: 0.8mm 0 3.5mm;
+    letter-spacing: 0.7pt;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .print-cv .print-hero .accent {
+    width: 14mm;
+    height: 1.1mm;
+    background: #173a52;
+    margin-bottom: 5mm;
+  }
+
+  .print-cv .print-section h3 {
+    font-size: 10.7pt;
+    letter-spacing: 1.4pt;
+    text-transform: uppercase;
+    margin: 4.5mm 0 1.8mm;
+    padding-bottom: 1.2mm;
+    border-bottom: 1px solid #d0d4d8;
+    color: #173a52;
+  }
+
+  .print-cv .print-section p {
+    margin: 0 0 2.6mm 0;
+  }
+
+  .print-cv .print-main .print-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.6mm 0;
+  }
+
+  .print-cv .print-main .print-list li {
+    margin-bottom: 2.2mm;
+  }
+
+  .print-cv .item-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 4mm;
+  }
+
+  .print-cv .item-title {
+    font-weight: 700;
+  }
+
+  .print-cv .item-year {
+    white-space: nowrap;
+    color: #666;
+    font-size: 8.7pt;
+  }
+
+  .print-cv .item-sub {
+    color: #555;
+    font-size: 8.8pt;
+    margin-top: 0.5mm;
+  }
+}

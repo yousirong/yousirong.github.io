@@ -38,3 +38,10 @@ p.lead {
     font-weight: 500;
     font-size: 1.5rem;
 }
+
+@media print {
+    body {
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
