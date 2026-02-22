@@ -49,15 +49,13 @@
           <h2 class="mb-5">Publications</h2>
           <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
-              <h3 class="mb-0">Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling</h3>
+              <h3 class="mb-0">Uncertainty-Guided Null-Space Diffusion for Physically-Consistent Ultrasound Speckle Reduction</h3>
               <div class="subheading mb-3">IEEE Access Submitted</div>
               <p>
-                 Ultrasound imaging is inherently limited by speckle noise, which degrades resolution and contrast, thereby reducing diagnostic efficiency. Conventional filtering techniques often lead to over smoothing, while supervised deep learning approaches face the fundamental challenge of lacking high quality ground truth (GT) images in clinical environments.
-                 To overcome these limitations, this study proposes Wavelet-based Null-space Diffusion (WaND), a novel unsupervised learning framework that integrates linear-space adaptation with uncertainty-aware fusion.
-                 Specifically, to address the issue of background noise amplification common in diffusion models operating in the non-linear log-compressed domain, we adopt a new approach that enforces Data Consistency (DC) within the physical linear space.
-                 The proposed WaND framework robustly extracts signal envelopes in the linear domain by combining Speckle Reducing Anisotropic Diffusion (SRAD) filters with the Discrete Wavelet Transform (DWT). Based on this, it calculates adaptive weights representing pixel-wise reliability. This enables Adaptive Range-Null Decomposition, where tissue structures with high signal intensity (Range-Space) are preserved from the observed data, while weak background and noise regions (Null-Space) are precisely reconstructed using the diffusion model’s prior knowledge.
-                 Furthermore, to effectively control the stochastic nature of the diffusion model, we introduce an Uncertainty Aware Fusion strategy based on the pixel-wise variance of generated samples. This strategy suppresses noise by applying the Mean in regions of high uncertainty (speckle) and preserves fine anatomical structures by utilizing the Median in regions where uncertainty is low and tissue textures remain consistent.
-                 Experimental results using the PICMUS (Plane-Wave Imaging Challenge in Medical Ultrasound) benchmark and in-vivo datasets demonstrate that WaND outperforms existing methodologies across key quantitative metrics, including gCNR, SNR, and FWHM. Moreover, it qualitatively proves its efficacy in enhancing anatomical clarity while simultaneously suppressing background noise.
+                 Ultrasound brightness-mode (B-mode) imaging is inherently affected by speckle, which degrades contrast and obscures fine structures. Supervised despeckling methods are limited by the 'Ground Truth Paradox,' and recent diffusion-based approaches often enforce data consistency in the nonlinear log-compressed domain, where log compression amplifies low-intensity background noise and breaks the physical additivity of the signal.
+                 We propose UDUS (Uncertainty-Guided Diffusion for Ultrasound Speckle Reduction), a zero-shot framework that performs consistency corrections in the physical linear domain. UDUS extracts a physically consistent structural prior by combining Speckle Reducing Anisotropic Diffusion (SRAD) with a Discrete Wavelet Transform (DWT) low-pass operator, yielding a robust envelope that preserves anatomy during null-space diffusion.
+                 Building on this prior, Adaptive Range-Null Reconstruction uses an intensity-adaptive mask to preserve tissue regions via range-space projection while suppressing background speckle using the diffusion prior. Finally, Uncertainty-Guided Optimal Fusion reduces sampling variability by selecting and blending an optimal representative sample with the ensemble mean based on pixel-wise uncertainty.
+                 Experiments on the Plane-wave Imaging Challenge in Medical UltraSound (PICMUS) benchmark and in vivo datasets show that UDUS consistently improves the generalized contrast-to-noise ratio (gCNR) while maintaining competitive signal-to-noise ratio (SNR) and resolution compared with delay-and-sum (DAS) beamforming and recent diffusion-based baselines. With a single plane-wave (PW) acquisition (PW1), UDUS achieves reconstruction quality comparable to heavily compounded DAS using 75 plane waves (PW75) on the evaluated benchmarks.
               </p>
               <div><a href="https://github.com/yousirong/WaND.git" target="_blank">https://github.com/yousirong/WaND</a></div>
               <p class="mt-3"><span class="badge text-bg-secondary me-2">Ultrasound Speckle Reduction</span><span class="badge text-bg-secondary me-2">Denoising Diffusion Probabilistic Models</span><span class="badge text-bg-secondary me-2">Range-Null Space Decomposition</span><span class="badge text-bg-secondary me-2">Zero-Shot Image Restoration</span></p>
@@ -286,7 +284,7 @@
             <h3>Publications</h3>
             <ul class="print-list">
               <li>
-                <div class="item-head"><span class="item-title">Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling</span><span class="item-year">2026</span></div>
+                <div class="item-head"><span class="item-title">Uncertainty-Guided Null-Space Diffusion for Physically-Consistent Ultrasound Speckle Reduction</span><span class="item-year">2026</span></div>
                 <div class="item-sub">IEEE Access (submitted)</div>
               </li>
               <li>
