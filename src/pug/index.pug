@@ -79,15 +79,13 @@ html(lang='en')
           h2.mb-5 Publications
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
             .flex-grow-1
-              h3.mb-0 Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling
+              h3.mb-0 Uncertainty-Guided Null-Space Diffusion for Physically-Consistent Ultrasound Speckle Reduction
               .subheading.mb-3 IEEE Access Submitted
               p
-                |  Ultrasound imaging is inherently limited by speckle noise, which degrades resolution and contrast, thereby reducing diagnostic efficiency. Conventional filtering techniques often lead to over smoothing, while supervised deep learning approaches face the fundamental challenge of lacking high quality ground truth (GT) images in clinical environments.
-                |  To overcome these limitations, this study proposes Wavelet-based Null-space Diffusion (WaND), a novel unsupervised learning framework that integrates linear-space adaptation with uncertainty-aware fusion.
-                |  Specifically, to address the issue of background noise amplification common in diffusion models operating in the non-linear log-compressed domain, we adopt a new approach that enforces Data Consistency (DC) within the physical linear space.
-                |  The proposed WaND framework robustly extracts signal envelopes in the linear domain by combining Speckle Reducing Anisotropic Diffusion (SRAD) filters with the Discrete Wavelet Transform (DWT). Based on this, it calculates adaptive weights representing pixel-wise reliability. This enables Adaptive Range-Null Decomposition, where tissue structures with high signal intensity (Range-Space) are preserved from the observed data, while weak background and noise regions (Null-Space) are precisely reconstructed using the diffusion model’s prior knowledge.
-                |  Furthermore, to effectively control the stochastic nature of the diffusion model, we introduce an Uncertainty Aware Fusion strategy based on the pixel-wise variance of generated samples. This strategy suppresses noise by applying the Mean in regions of high uncertainty (speckle) and preserves fine anatomical structures by utilizing the Median in regions where uncertainty is low and tissue textures remain consistent.
-                |  Experimental results using the PICMUS (Plane-Wave Imaging Challenge in Medical Ultrasound) benchmark and in-vivo datasets demonstrate that WaND outperforms existing methodologies across key quantitative metrics, including gCNR, SNR, and FWHM. Moreover, it qualitatively proves its efficacy in enhancing anatomical clarity while simultaneously suppressing background noise.
+                |  Ultrasound brightness-mode (B-mode) imaging is inherently affected by speckle, which degrades contrast and obscures fine structures. Supervised despeckling methods are limited by the 'Ground Truth Paradox,' and recent diffusion-based approaches often enforce data consistency in the nonlinear log-compressed domain, where log compression amplifies low-intensity background noise and breaks the physical additivity of the signal.
+                |  We propose UDUS (Uncertainty-Guided Diffusion for Ultrasound Speckle Reduction), a zero-shot framework that performs consistency corrections in the physical linear domain. UDUS extracts a physically consistent structural prior by combining Speckle Reducing Anisotropic Diffusion (SRAD) with a Discrete Wavelet Transform (DWT) low-pass operator, yielding a robust envelope that preserves anatomy during null-space diffusion.
+                |  Building on this prior, Adaptive Range-Null Reconstruction uses an intensity-adaptive mask to preserve tissue regions via range-space projection while suppressing background speckle using the diffusion prior. Finally, Uncertainty-Guided Optimal Fusion reduces sampling variability by selecting and blending an optimal representative sample with the ensemble mean based on pixel-wise uncertainty.
+                |  Experiments on the Plane-wave Imaging Challenge in Medical UltraSound (PICMUS) benchmark and in vivo datasets show that UDUS consistently improves the generalized contrast-to-noise ratio (gCNR) while maintaining competitive signal-to-noise ratio (SNR) and resolution compared with delay-and-sum (DAS) beamforming and recent diffusion-based baselines. With a single plane-wave (PW) acquisition (PW1), UDUS achieves reconstruction quality comparable to heavily compounded DAS using 75 plane waves (PW75) on the evaluated benchmarks.
               div
                 a(href='https://github.com/yousirong/WaND.git', target='_blank') https://github.com/yousirong/WaND
               p.mt-3
@@ -369,24 +367,34 @@ html(lang='en')
             ul.print-list
               li
                 .item-head
-                  span.item-title Wavelet-based Null-space Diffusion with Linear-Space Adaptation for Ultrasound Despeckling
-                  span.item-year 2025
+                  span.item-title Uncertainty-Guided Null-Space Diffusion for Physically-Consistent Ultrasound Speckle Reduction
+                  span.item-year 2026
                 .item-sub IEEE Access (submitted)
               li
                 .item-head
                   span.item-title ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression
                   span.item-year 2025
-                .item-sub The International Conference on Pattern Recognition (ICPR)
+                .item-sub The International Conference on Pattern Recognition (ICPR) - revision
               li
                 .item-head
                   span.item-title Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection
                   span.item-year 2024
                 .item-sub Korean Institute of Information Scientists and Engineers - Journal of KIISE (JOK)
+          .print-section
+            h3 Awards
+            ul.print-list
               li
                 .item-head
-                  span.item-title Research on Developing a Responsive Web Interface for Small Businesses Using React
-                  span.item-year 2023
-                .item-sub Collaboration with PeopleCat Co., Ltd.
+                  strong 2025 Samsung AI Challenge - 3rd place
+                .item-sub Multi-AI Agent Collaboration
+              li
+                .item-head
+                  strong 2025 Samsung Collegiate Programming Challenge - 3rd place
+                .item-sub Multimodal QA on photo gallery
+              li
+                .item-head
+                  strong Capstone Design Project Excellence Award
+                .item-sub HUFS AI Education Institute
           .print-section
             h3 Research Projects
             ul.print-list
@@ -407,16 +415,8 @@ html(lang='en')
                   strong YOLO v9 + ByteTrack for overtopping tracking
                 .item-sub Upgraded detector and tracker, improving detection and ID persistence.
           .print-section
-            h3 Awards 
+            h3 Activities
             ul.print-list
-              li
-                .item-head
-                  strong 2025 Samsung AI Challenge - 3rd place
-                .item-sub Multi-AI Agent Collaboration
-              li
-                .item-head
-                  strong 2025 Samsung Collegiate Programming Challenge - 3rd place
-                .item-sub Multimodal QA on photo gallery
               li
                 .item-head
                   strong HAI! Hecto AI Challenge - 21st/748
@@ -431,10 +431,8 @@ html(lang='en')
                 .item-sub CTR (click-through rate) prediction
               li
                 .item-head
-                  strong Capstone Design Project Excellence Award
-                .item-sub HUFS AI Education Institute
-
-
+                  strong Responsive Web Interface for Small Businesses Using React
+                .item-sub Collaboration with PeopleCat Co., Ltd. (2023)
     // Bootstrap core JS
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
     // Core theme JS
