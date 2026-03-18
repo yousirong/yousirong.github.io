@@ -71,6 +71,11 @@ html(lang='en')
             a.social-icon(href='www.linkedin.com/in/juneyong-‍lee-05b09733a', target='_blank')
               i.fab.fa-linkedin-in
 
+          .mt-4.d-print-none
+            a.btn.btn-primary.btn-lg(href='https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf', target='_blank', rel='noopener noreferrer')
+              i.fa-solid.fa-arrow-up-right-from-square.me-2
+              | View Portfolio
+
       hr.m-0
 
       // Publications
@@ -79,20 +84,19 @@ html(lang='en')
           h2.mb-5 Publications
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
             .flex-grow-1
-              h3.mb-0 Uncertainty-Guided Null-Space Diffusion for Physically-Consistent Ultrasound Speckle Reduction
+              h3.mb-0 Zero-Shot Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction
               .subheading.mb-3 IEEE Access Submitted
               p
-                |  Ultrasound brightness-mode (B-mode) imaging is inherently affected by speckle, which degrades contrast and obscures fine structures. Supervised despeckling methods are limited by the 'Ground Truth Paradox,' and recent diffusion-based approaches often enforce data consistency in the nonlinear log-compressed domain, where log compression amplifies low-intensity background noise and breaks the physical additivity of the signal.
-                |  We propose UDUS (Uncertainty-Guided Diffusion for Ultrasound Speckle Reduction), a zero-shot framework that performs consistency corrections in the physical linear domain. UDUS extracts a physically consistent structural prior by combining Speckle Reducing Anisotropic Diffusion (SRAD) with a Discrete Wavelet Transform (DWT) low-pass operator, yielding a robust envelope that preserves anatomy during null-space diffusion.
-                |  Building on this prior, Adaptive Range-Null Reconstruction uses an intensity-adaptive mask to preserve tissue regions via range-space projection while suppressing background speckle using the diffusion prior. Finally, Uncertainty-Guided Optimal Fusion reduces sampling variability by selecting and blending an optimal representative sample with the ensemble mean based on pixel-wise uncertainty.
-                |  Experiments on the Plane-wave Imaging Challenge in Medical UltraSound (PICMUS) benchmark and in vivo datasets show that UDUS consistently improves the generalized contrast-to-noise ratio (gCNR) while maintaining competitive signal-to-noise ratio (SNR) and resolution compared with delay-and-sum (DAS) beamforming and recent diffusion-based baselines. With a single plane-wave (PW) acquisition (PW1), UDUS achieves reconstruction quality comparable to heavily compounded DAS using 75 plane waves (PW75) on the evaluated benchmarks.
+                |  Ultrasound B-mode imaging commonly suffers from speckle noise and artifacts, requiring a delicate balance between contrast, resolution, and preservation of anatomical structures. Although recently developed despeckling methods have achieved some progress, supervised learning approaches remain fundamentally limited by the ground truth paradox, which arises from the absence of noise-free, ground truth reference images in in vivo scenarios. Existing unsupervised diffusion-based methods typically enforce data consistency in the nonlinear log-compressed domain, which violates the physical additivity of acoustic signals and can disproportionately amplify background artifacts. To overcome these limitations, we propose
+                |  an uncertainty-guided null-space diffusion solution (UGNS), a novel zero-shot framework that rigorously enforces consistency corrections in the physical linear domain. The proposed UGNS introduces several technical novelties: (a) extraction of a physically consistent structural prior through a dedicated structural prior to produce a robust signal envelope that preserves anatomical structure, (b) development of an adaptive range-null reconstruction mechanism that uses an adaptive weight mask to preserve tissue regions via range-space projection, and (c) introduction of uncertainty-guided fusion in an adaptive way to mitigate
+                |  sampling variability. Extensive and comparative experiments were conducted using the PICMUS benchmark and in vivo datasets. The results demonstrate that our UGNS achieves better generalized contrast-to-noise ratios than other state-of-the-art methods. In addition, our UGNS effectively suppresses speckle noise while preserving fine spatial resolution.
               div
-                a(href='https://github.com/yousirong/WaND.git', target='_blank') https://github.com/yousirong/WaND
+                a(href='https://github.com/yousirong/UGNS.git', target='_blank') https://github.com/yousirong/UGNS
               p.mt-3
                 span.badge.text-bg-secondary.me-2 Ultrasound Speckle Reduction
-                span.badge.text-bg-secondary.me-2 Denoising Diffusion Probabilistic Models
-                span.badge.text-bg-secondary.me-2 Range-Null Space Decomposition
-                span.badge.text-bg-secondary.me-2 Zero-Shot Image Restoration
+                span.badge.text-bg-secondary.me-2 Uncertainty-Guided Null-Space Diffusion
+                span.badge.text-bg-secondary.me-2 Adaptive Range-null-Space Reconstruction
+                span.badge.text-bg-secondary.me-2 Zero-Shot Diffusion Restoration
             .flex-shrink-0
               span.text-primary 2nd semester 2025
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
@@ -210,7 +214,7 @@ html(lang='en')
               a(href='https://www.figma.com/', title='Figma', target='_blank')
                 img(src='https://skillicons.dev/icons?i=figma', alt='Figma', style='width:60px; height:60px;')
             li.list-inline-item
-              a(href='https://www.notion.so/', title='Notion', target='_blank')
+              a(href='https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf', title='Portfolio on Notion', target='_blank', rel='noopener noreferrer')
                 img(src='https://skillicons.dev/icons?i=notion', alt='Notion', style='width:60px; height:60px;')
             li.list-inline-item
               a(href='https://discord.com/', title='Discord', target='_blank')
@@ -367,7 +371,7 @@ html(lang='en')
             ul.print-list
               li
                 .item-head
-                  span.item-title Uncertainty-Guided Null-Space Diffusion for Physically-Consistent Ultrasound Speckle Reduction
+                  span.item-title Zero-Shot Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction
                   span.item-year 2026
                 .item-sub IEEE Access (submitted)
               li
