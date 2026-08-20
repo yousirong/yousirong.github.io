@@ -11006,7 +11006,7 @@ section.resume-section .resume-section-content {
   body {
     font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
     font-size: 9.4pt;
-    line-height: 1.22;
+    line-height: 1.14;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -11038,39 +11038,39 @@ section.resume-section .resume-section-content {
   .print-cv .print-sidebar {
     background: #173a52;
     color: #fff;
-    padding: 8mm 6.5mm;
+    padding: 6mm 5.5mm;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
   .print-cv .print-photo {
     text-align: center;
-    margin-bottom: 6mm;
+    margin-bottom: 4mm;
   }
   .print-cv .print-photo img {
-    width: 38mm;
-    height: 48mm;
+    width: 34mm;
+    height: 42mm;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 50%;
-    border: 2.2mm solid #fff;
+    border: 2mm solid #fff;
   }
   .print-cv .print-sidebar h4, .print-cv .print-sidebar .h4 {
     font-size: 9.4pt;
     letter-spacing: 1.8px;
     text-transform: uppercase;
     color: #fff;
-    margin: 4.5mm 0 1.6mm;
-    padding-bottom: 1.4mm;
+    margin: 3mm 0 1mm;
+    padding-bottom: 1mm;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
   .print-cv .print-sidebar .print-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 3.2mm 0;
+    margin: 0 0 2mm 0;
     font-size: 8.8pt;
   }
   .print-cv .print-sidebar .print-list li {
-    margin-bottom: 2mm;
+    margin-bottom: 1.4mm;
   }
   .print-cv .print-sidebar .print-skills {
     -moz-columns: 2;
@@ -11083,7 +11083,7 @@ section.resume-section .resume-section-content {
     color: rgba(255, 255, 255, 0.8);
   }
   .print-cv .print-main {
-    padding: 8mm 9mm;
+    padding: 6mm 8mm;
   }
   .print-cv .print-hero h1, .print-cv .print-hero .h1 {
     font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
@@ -11096,7 +11096,7 @@ section.resume-section .resume-section-content {
   }
   .print-cv .print-hero h2, .print-cv .print-hero .h2 {
     font-size: 11.5pt;
-    margin: 0.8mm 0 3.5mm;
+    margin: 0.5mm 0 2mm;
     letter-spacing: 0.7pt;
     text-transform: uppercase;
     color: #555;
@@ -11105,27 +11105,27 @@ section.resume-section .resume-section-content {
     width: 14mm;
     height: 1.1mm;
     background: #173a52;
-    margin-bottom: 5mm;
+    margin-bottom: 3mm;
   }
   .print-cv .print-section h3, .print-cv .print-section .h3 {
     font-size: 10.7pt;
     letter-spacing: 1.4pt;
     text-transform: uppercase;
-    margin: 4.5mm 0 1.8mm;
-    padding-bottom: 1.2mm;
+    margin: 3mm 0 1.2mm;
+    padding-bottom: 0.8mm;
     border-bottom: 1px solid #d0d4d8;
     color: #173a52;
   }
   .print-cv .print-section p {
-    margin: 0 0 2.6mm 0;
+    margin: 0 0 1.6mm 0;
   }
   .print-cv .print-main .print-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 2.6mm 0;
+    margin: 0 0 1.6mm 0;
   }
   .print-cv .print-main .print-list li {
-    margin-bottom: 2.2mm;
+    margin-bottom: 1.6mm;
   }
   .print-cv .item-head {
     display: flex;
