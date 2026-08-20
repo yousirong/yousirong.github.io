@@ -1,4 +1,4 @@
-doctype html
+﻿doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -84,27 +84,53 @@ html(lang='en')
           h2.mb-5 Publications
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
             .flex-grow-1
-              h3.mb-0 Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction
-              .subheading.mb-3 IEEE Access revision
+              h3.mb-0 Multimodal Diffusion Transformer for 3D Brain Image Generation and Diagnostic Support in Alzheimer's Disease Progression
+              .subheading.mb-3 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV, submitted)
               p
-                |  Ultrasound B-mode imaging commonly suffers from speckle noise and artifacts, requiring a delicate balance between contrast, resolution, and preservation of anatomical structures. Although recently developed despeckling methods have achieved some progress, supervised learning approaches remain fundamentally limited by the ground truth paradox, which arises from the absence of noise-free, ground truth reference images in in vivo scenarios. Existing unsupervised diffusion-based methods typically enforce data consistency in the nonlinear log-compressed domain, which violates the physical additivity of acoustic signals and can disproportionately amplify background artifacts. To overcome these limitations, we propose
-                |  an uncertainty-guided null-space diffusion solution (UGNS), a novel zero-shot framework that rigorously enforces consistency corrections in the physical linear domain. The proposed UGNS introduces several technical novelties: (a) extraction of a physically consistent structural prior through a dedicated structural prior to produce a robust signal envelope that preserves anatomical structure, (b) development of an adaptive range-null reconstruction mechanism that uses an adaptive weight mask to preserve tissue regions via range-space projection, and (c) introduction of uncertainty-guided fusion in an adaptive way to mitigate
-                |  sampling variability. Extensive and comparative experiments were conducted using the PICMUS benchmark and in vivo datasets. The results demonstrate that our UGNS achieves better generalized contrast-to-noise ratios than other state-of-the-art methods. In addition, our UGNS effectively suppresses speckle noise while preserving fine spatial resolution.
+                | Alzheimer's disease (AD) progression trajectories vary significantly depending on the timing of treatment, making the prediction of future anatomical changes crucial. However, due to the subtle, localized, and heterogeneous nature of AD-related neurodegeneration, this remains a uniquely challenging task. While previous studies have improved predictive generation performance by integrating patient information, they primarily focus on generation, rely on 2D models, have limited support for fused patient data, or lack robust interval-aware capabilities. To address these limitations, we propose ADP-DiT 3D, a multimodal framework that performs progression generation and diagnostic classification simultaneously. We propose contribution-matched activation for balanced joint optimization of generation and classification, initializing the newly activated classification-loss weight from the current mean weighted contribution of the generative objectives within an uncertainty-weighted joint objective. We further incorporate 3D rotary positional embeddings and interval-time embeddings to model volumetric spatial relationships and temporal progression, respectively. Furthermore, we compress the CLIP text encoder to alleviate computational complexity. In progression generation on multi-cohort data, ADP-DiT 3D achieved an SSIM of 0.885 and a PSNR of 24.7, corresponding to 3.9% higher SSIM and 7.1% higher PSNR than the state-of-the-art model.
+              p.mt-3
+                span.badge.text-bg-secondary.me-2 3D Brain Image Generation
+                span.badge.text-bg-secondary.me-2 Alzheimer's Disease Progression
+                span.badge.text-bg-secondary.me-2 Multimodal Diffusion Transformer
+                span.badge.text-bg-secondary.me-2 Diagnostic Classification
+            .flex-shrink-0
+              span.text-primary 2026
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+            .flex-grow-1
+              h3.mb-0 Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction
+              .subheading.mb-3 IEEE Access (accepted)
+              p
+                | Ultrasound B-mode imaging commonly suffers from speckle noise and artifacts, requiring a delicate balance between contrast, resolution, and preservation of anatomical structures. Although recently developed despeckling methods have achieved some progress, supervised learning approaches remain fundamentally limited by the ground truth paradox, which arises from the absence of noise-free, ground truth reference images in in vivo scenarios. Existing unsupervised diffusion-based methods typically enforce data consistency directly in the nonlinear log-compressed domain, which can disproportionately amplify background artifacts when mapped back to the envelope domain. To overcome these limitations, we propose an uncertainty-guided null-space diffusion (UGNS) framework, a novel label-free solution that enforces consistency correction on a stabilized positive-envelope proxy obtained via inverse log compression. The proposed UGNS introduces several technical novelties: (a) extraction of a structural prior in the stabilized envelope domain to produce a robust signal envelope that preserves anatomical structure, (b) development of an adaptive range-null reconstruction mechanism that uses an adaptive weight mask to preserve tissue regions via range-space projection, and (c) introduction of uncertainty-guided fusion in an adaptive way to mitigate sampling variability. Extensive and comparative experiments were conducted using the PICMUS benchmark and in vivo datasets. The results demonstrate that UGNS achieves competitive generalized contrast-to-noise ratio (gCNR) values across diverse datasets. In addition, UGNS effectively suppresses speckle noise while preserving fine spatial resolution.
               div
                 a(href='https://github.com/yousirong/UGNS.git', target='_blank') https://github.com/yousirong/UGNS
               p.mt-3
                 span.badge.text-bg-secondary.me-2 Ultrasound Speckle Reduction
                 span.badge.text-bg-secondary.me-2 Uncertainty-Guided Null-Space Diffusion
-                span.badge.text-bg-secondary.me-2 Adaptive Range-null-Space Reconstruction
-                span.badge.text-bg-secondary.me-2 Zero-Shot Diffusion Restoration
+                span.badge.text-bg-secondary.me-2 Adaptive Range-Null Reconstruction
+                span.badge.text-bg-secondary.me-2 Label-Free Diffusion Restoration
             .flex-shrink-0
-              span.text-primary 2nd semester 2025
+              span.text-primary 2026
           .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
             .flex-grow-1
-              h3.mb-0 ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer’s Disease Progression
+              h3.mb-0 Transmit-Conditioned Single-Pass Null-Space Diffusion for High-Quality Restoration of Low-Quality Ultrasound Images
+              .subheading.mb-3 Journal of Korea Multimedia Society (accepted)
+              p
+                | Ultrasound B-mode imaging using sparse-transmit delay-and-sum (DAS) beamforming can improve acquisition efficiency, but suffers from reduced contrast, unstable speckle statistics, and loss of anatomical detail with fewer transmit events. In this paper, we propose a transmit-conditioned single-pass null-space diffusion model for restoring sparse-transmit ultrasound images toward a 75Tx DAS reference. The proposed model learns a paired conditional restoration distribution from 1Tx/11Tx DAS inputs and a transmit-level condition map to a 75Tx DAS target. The inference stage is designed so that the low-frequency structural component of the current clean estimate is accumulated as an exponential moving average prior in the wavelet range space, while the high-frequency speckle component is regenerated by the diffusion prior within the same DDIM trajectory. The proposed model preserves anatomical structure without relying on ensemble sampling or a separate prior trajectory, significantly reducing computational cost. Extensive experiments on both phantom and preclinical murine FSA datasets show that the proposed method considerably improves perceptual fidelity and speckle-level matching to the 75Tx reference while reducing over-smoothing, compared with recently developed denoising methods.
+              div
+                a(href='https://github.com/yousirong/TCNS', target='_blank') https://github.com/yousirong/TCNS
+              p.mt-3
+                span.badge.text-bg-secondary.me-2 Sparse-Transmit Ultrasound Restoration
+                span.badge.text-bg-secondary.me-2 Null-Space Diffusion
+                span.badge.text-bg-secondary.me-2 Single-Pass Inference
+                span.badge.text-bg-secondary.me-2 Transmit-Conditioned Diffusion
+            .flex-shrink-0
+              span.text-primary 2026
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+            .flex-grow-1
+              h3.mb-0 ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression
               .subheading.mb-3 The International Conference on Pattern Recognition (ICPR)
               p
-                | Alzheimer’s disease (AD) progresses heterogeneously across individuals, motivating subject-specific synthesis of follow-up magnetic resonance imaging (MRI) to support progression assessment. While Diffusion Transformers (DiT), an emerging transformer-based diffusion model, offer a scalable backbone for image synthesis, longitudinal AD MRI generation with clinically interpretable control over follow-up time and participant metadata remains underexplored.
+                | Alzheimer's disease (AD) progresses heterogeneously across individuals, motivating subject-specific synthesis of follow-up magnetic resonance imaging (MRI) to support progression assessment. While Diffusion Transformers (DiT), an emerging transformer-based diffusion model, offer a scalable backbone for image synthesis, longitudinal AD MRI generation with clinically interpretable control over follow-up time and participant metadata remains underexplored.
                 | We present ADP-DiT, an interval-aware, clinically text-conditioned diffusion transformer for longitudinal AD MRI synthesis. ADP-DiT encodes follow-up interval together with multi-domain demographic, diagnostic (CN/MCI/AD), and neuropsychological information as a natural-language prompt, enabling time-specific control beyond coarse diagnostic stages. To inject this conditioning effectively, we use dual text encoders--OpenCLIP for vision–language alignment and T5 for richer clinical-language understanding. Their embeddings are fused into DiT through cross-attention for fine-grained guidance and adaptive layer normalization for global modulation. We further enhance anatomical fidelity by applying rotary positional embeddings to image tokens and performing diffusion in a pretrained SDXL-VAE latent space to enable efficient high-resolution reconstruction.
                 | On 3,321 longitudinal 3T T1-weighted scans from 712 participants (259,038 image slices), ADP-DiT achieves SSIM 0.8739 and PSNR 29.32 dB, improving over a DiT baseline by +0.1087 SSIM and +6.08 dB PSNR while capturing progression-related changes such as ventricular enlargement and shrinking hippocampus. These results suggest that integrating comprehensive, subject-specific clinical conditions with architectures can improve longitudinal AD MRI synthesis.
               div
@@ -362,9 +388,19 @@ html(lang='en')
             ul.print-list
               li
                 .item-head
+                  span.item-title Multimodal Diffusion Transformer for 3D Brain Image Generation and Diagnostic Support in Alzheimer's Disease Progression
+                  span.item-year 2026
+                .item-sub WACV (submitted)
+              li
+                .item-head
                   span.item-title Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction
                   span.item-year 2026
-                .item-sub IEEE Access (revision)
+                .item-sub IEEE Access (accepted)
+              li
+                .item-head
+                  span.item-title Transmit-Conditioned Single-Pass Null-Space Diffusion for High-Quality Restoration of Low-Quality Ultrasound Images
+                  span.item-year 2026
+                .item-sub Journal of Korea Multimedia Society (accepted)
               li
                 .item-head
                   span.item-title ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression
