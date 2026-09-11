@@ -1,0 +1,126 @@
+//
+// Timeline
+//
+// Date column on the left, details on the right. Shared by Education and
+// Awards so the two sections read alike.
+//
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1.5rem;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $muted;
+    padding-top: 0.15rem;
+    white-space: nowrap;
+}
+
+.timeline-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $gray-800;
+    margin: 0;
+}
+
+.timeline-rank {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: $primary;
+    background-color: rgba($primary, 0.08);
+    border-radius: 999px;
+    vertical-align: middle;
+}
+
+.timeline-sub {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    color: $gray-700;
+}
+
+.timeline-meta {
+    margin: 0.2rem 0 0;
+    font-size: 0.82rem;
+    color: $muted;
+}
+
+.timeline-body .pub-links {
+    margin-top: 0.55rem;
+}
+
+//
+// Research projects
+//
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.project-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $gray-800;
+    margin: 0 0 0.4rem;
+}
+
+.project-body {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: $gray-700;
+}
+
+//
+// Contact
+//
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-line {
+    margin: 0 0 0.5rem;
+    font-size: 0.92rem;
+}
+
+.contact-label {
+    display: inline-block;
+    width: 5.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $muted;
+}
+
+@include media-breakpoint-down(md) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+}
+
+@media print {
+    .timeline,
+    .project-list,
+    .contact-grid {
+        display: none !important;
+    }
+}

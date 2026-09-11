@@ -1,0 +1,181 @@
+//
+// Publications
+//
+// Compact entries: title, authors, venue, topic tags and badge links. The
+// abstract is collapsed by default so the whole list stays scannable.
+//
+
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pub-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.pub-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $gray-800;
+    margin: 0;
+}
+
+.pub-period {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    color: $muted;
+    white-space: nowrap;
+}
+
+.pub-authors {
+    margin: 0.4rem 0 0;
+    font-size: 0.88rem;
+    color: $gray-700;
+
+    .author-me {
+        color: $ink;
+    }
+}
+
+.pub-note {
+    margin: 0.2rem 0 0;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: $muted;
+}
+
+.pub-venue {
+    margin: 0.3rem 0 0;
+    font-size: 0.85rem;
+    color: $muted;
+
+    // Separators are drawn rather than typed, so an absent detail leaves no
+    // dangling punctuation.
+    > span + span::before {
+        content: "·";
+        margin: 0 0.45rem;
+        color: $rule;
+    }
+}
+
+.pub-venue-name {
+    font-style: italic;
+}
+
+.pub-status {
+    font-weight: 600;
+
+    &.is-published {
+        color: $ink-soft;
+    }
+
+    &.is-submitted {
+        color: #a0682a;
+    }
+}
+
+.pub-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0;
+    margin: 0.65rem 0 0;
+
+    li {
+        font-size: 0.73rem;
+        color: $muted;
+        background-color: $surface;
+        border: 1px solid $rule;
+        border-radius: 999px;
+        padding: 0.15rem 0.6rem;
+    }
+}
+
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.badge-link {
+    display: inline-block;
+    padding: 0.22rem 0.7rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: inherit;
+    line-height: 1.5;
+    color: $ink;
+    background-color: #fff;
+    border: 1px solid $rule;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+        background-color: $surface;
+        border-color: darken($rule, 8%);
+        color: $ink;
+        text-decoration: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid rgba($primary, 0.4);
+        outline-offset: 1px;
+    }
+}
+
+// The toggle flips its label between states via CSS so no extra script runs.
+.badge-toggle {
+    &::after {
+        content: " +";
+        color: $muted;
+    }
+
+    &[aria-expanded="true"] {
+        background-color: $surface;
+
+        &::after {
+            content: " −";
+        }
+    }
+}
+
+.pub-abstract {
+    margin-top: 0.8rem;
+    padding: 0.9rem 1.1rem;
+    background-color: $surface;
+    border-left: 2px solid $primary;
+    border-radius: 0 0.3rem 0.3rem 0;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: $gray-700;
+
+    p {
+        margin: 0;
+    }
+
+    p + p {
+        margin-top: 0.8rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .pub-head {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+@media print {
+    .pub-list {
+        display: none !important;
+    }
+}

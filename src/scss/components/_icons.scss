@@ -1,0 +1,55 @@
+//
+// Icons
+//
+
+// Rounded social media links, sized down to sit alongside the contact details
+// rather than dominate the section.
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: $surface;
+        border: 1px solid $rule;
+        color: $ink;
+        border-radius: 100%;
+        font-size: 1rem;
+        transition: background-color 0.15s ease, color 0.15s ease;
+
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+// Skill icon rows
+.dev-icons {
+    margin: 0;
+
+    .list-inline-item {
+        margin-right: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    img {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
+@media print {
+    .social-icons,
+    .dev-icons {
+        display: none !important;
+    }
+}

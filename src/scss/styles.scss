@@ -1,0 +1,29 @@
+//
+// Styles
+//
+
+// Import variables
+@import "./variables.scss";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap.scss";
+
+// Global CSS
+@import "./global.scss";
+
+// Components
+@import "./components/topnav.scss";
+@import "./components/hero.scss";
+@import "./components/publication.scss";
+@import "./components/timeline.scss";
+@import "./components/icons.scss";
+
+// Print
+@import "./print.scss";
+
+// Hide BrowserSync notification on print only
+@media print {
+  #__bs_notify__ {
+    display: none !important;
+  }
+}

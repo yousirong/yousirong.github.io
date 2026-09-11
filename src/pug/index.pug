@@ -1,0 +1,217 @@
+include ./_data.pug
+include ./_mixins.pug
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='Juneyong Lee - M.S. student in Computer Science and Engineering. Generative AI, Multimodal Learning, Efficient AI.')
+    meta(name='author', content='Juneyong Lee')
+    title Juneyong Lee
+    link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
+    // Font Awesome icons (free version)
+    script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
+    // Google fonts
+    link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,600,800,800i', rel='stylesheet', type='text/css')
+    // Core theme CSS (includes Bootstrap)
+    link(href='css/styles.css', rel='stylesheet')
+
+  body#page-top
+
+    // Top navigation
+    nav#topNav.navbar.navbar-expand-lg.fixed-top
+      .container
+        a.navbar-brand(href='#page-top')
+          = profile.first + ' '
+          span.accent= profile.last
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ms-auto
+            each item in navItems
+              li.nav-item
+                a.nav-link(href='#' + item.id)= item.label
+            li.nav-item
+              a#btnPrint.nav-link.nav-print(href='#') Print
+
+    main
+
+      // Hero
+      header#home.hero
+        .container
+          .hero-grid
+            .hero-photo
+              img(src=profile.photo, alt='Juneyong Lee profile photo')
+            .hero-intro
+              h1.hero-name
+                = profile.first + ' '
+                span.accent= profile.last
+              p.hero-role= profile.role
+              p.hero-affil= profile.affiliation
+              p.hero-tagline= profile.tagline
+              .hero-actions
+                a.btn-cta.is-primary(href='#publications') View Publications
+                a.btn-cta(href='mailto:' + profile.email) Email
+                a.btn-cta(href=profile.github, target='_blank', rel='noopener noreferrer') GitHub
+                a.btn-cta(href=profile.scholar, target='_blank', rel='noopener noreferrer') Scholar
+                a.btn-cta(href=profile.portfolio, target='_blank', rel='noopener noreferrer') Portfolio
+          .hero-stats
+            each s in stats
+              .stat
+                .stat-value= s.value
+                .stat-label= s.label
+
+      // About
+      section#about.section
+        .container
+          h2.section-title About
+          .about-body
+            each para in about
+              p!= para
+
+      // Publications
+      section#publications.section
+        .container
+          h2.section-title Publications
+          .pub-list
+            each pub, idx in publications
+              +pubWeb(pub, idx)
+
+      // Education
+      section#education.section
+        .container
+          h2.section-title Education
+          .timeline
+            each item in education
+              +eduWeb(item)
+          h3.subsection-title Certifications
+          ul.plain-list
+            each cert in certifications
+              li= cert
+
+      // Awards
+      section#awards.section
+        .container
+          h2.section-title Awards
+          .timeline
+            each item in awards
+              +awardWeb(item)
+
+      // Research projects
+      section#projects.section
+        .container
+          h2.section-title Research Projects
+          .project-list
+            each item in projects
+              +projectWeb(item)
+
+      // Skills
+      section#skills.section
+        .container
+          h2.section-title Skills
+          each group in skillGroups
+            h3.subsection-title= group.group
+            ul.list-inline.dev-icons
+              each item in group.items
+                li.list-inline-item
+                  a(href=item.url, title=item.name, target='_blank', rel='noopener noreferrer')
+                    img(src='https://skillicons.dev/icons?i=' + item.icon, alt=item.name, width='60', height='60')
+
+      // Contact
+      section#contact.section
+        .container
+          h2.section-title Contact
+          .contact-grid
+            .contact-details
+              p.contact-line
+                span.contact-label Email
+                a(href='mailto:' + profile.email)= profile.email
+              p.contact-line
+                span.contact-label Phone
+                span= profile.phone
+              p.contact-line
+                span.contact-label Location
+                span= profile.location
+            .social-icons
+              a.social-icon(href=profile.github, target='_blank', rel='noopener noreferrer', aria-label='GitHub')
+                i.fab.fa-github
+              a.social-icon(href=profile.scholar, target='_blank', rel='noopener noreferrer', aria-label='Google Scholar')
+                i.fa-solid.fa-graduation-cap
+              a.social-icon(href=profile.linkedin, target='_blank', rel='noopener noreferrer', aria-label='LinkedIn')
+                i.fab.fa-linkedin-in
+              a.social-icon(href=profile.instagram, target='_blank', rel='noopener noreferrer', aria-label='Instagram')
+                i.fab.fa-instagram
+
+      footer.site-footer
+        .container
+          p= me + '  ·  ' + profile.affiliation
+
+    // Print-only CV (A4)
+    #print-cv.print-cv
+      .print-layout
+        .print-sidebar
+          .print-photo
+            img(src=profile.photo, alt='Profile photo')
+          h4 Contact
+          ul.print-list
+            li= profile.location
+            li= profile.phone
+            li= profile.email
+            li github.com/yousirong
+            li scholar.google.com/citations?user=MkSbD78AAAAJ
+          h4 Education
+          ul.print-list
+            each item in education
+              +eduPrint(item)
+          h4 Certifications
+          ul.print-list
+            each cert in certifications
+              li= cert
+          h4 Skills
+          ul.print-list.print-skills
+            each skill in printSkills
+              li= skill
+        .print-main
+          .print-hero
+            h1
+              span.first= profile.first
+              = ' '
+              span.last= profile.last
+            h2= profile.role
+            .accent
+          .print-section
+            h3 Profile
+            p= printProfile
+          .print-section
+            h3 Publications
+            ul.print-list
+              each pub in publications
+                if pub.printGroup !== 'activities'
+                  +pubPrint(pub)
+          .print-section
+            h3 Awards
+            ul.print-list
+              each item in awards
+                if item.featured
+                  +awardPrint(item)
+          .print-section
+            h3 Research Projects
+            ul.print-list
+              each item in projects
+                +projectPrint(item)
+          .print-section
+            h3 Activities
+            ul.print-list
+              each item in awards
+                if !item.featured
+                  +awardPrint(item)
+              each pub in publications
+                if pub.printGroup === 'activities'
+                  +pubPrint(pub)
+
+    // Bootstrap core JS
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+    // Core theme JS
+    script(src='js/scripts.js')

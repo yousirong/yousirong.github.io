@@ -1,0 +1,111 @@
+//
+// Global
+//
+
+body {
+    padding-top: $navbar-base-height;
+    color: $gray-700;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: none;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    line-height: 1.05;
+}
+
+a {
+    color: $ink-soft;
+    text-decoration: none;
+
+    &:hover {
+        color: $ink;
+        text-decoration: underline;
+    }
+}
+
+p.lead {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.subheading {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $muted;
+}
+
+// Shared accent used by the nav brand and the hero name.
+.accent {
+    color: $primary;
+}
+
+// Section shell. Sections flow at their natural height rather than filling the
+// viewport, and carry a scroll-margin so a followed anchor is not hidden behind
+// the fixed bar.
+.section {
+    padding: 3.5rem 0;
+    scroll-margin-top: $navbar-base-height;
+    border-top: 1px solid $rule;
+
+    .container {
+        max-width: $content-max-width;
+    }
+}
+
+.section-title {
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $primary;
+    margin-bottom: 2rem;
+}
+
+.subsection-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: $gray-800;
+    margin: 2rem 0 0.9rem;
+}
+
+.plain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: $gray-700;
+
+    li + li {
+        margin-top: 0.35rem;
+    }
+}
+
+.site-footer {
+    padding: 2rem 0 2.5rem;
+    border-top: 1px solid $rule;
+    color: $muted;
+    font-size: 0.85rem;
+
+    .container {
+        max-width: $content-max-width;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+@media print {
+    body {
+        padding-top: 0;
+    }
+}

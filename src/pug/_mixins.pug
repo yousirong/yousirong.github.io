@@ -1,0 +1,120 @@
+//- ---------------------------------------------------------------------------
+//- Render mixins. Each content type has a web variant and a print variant so
+//- that both layouts read from the same arrays in _data.pug.
+//- ---------------------------------------------------------------------------
+
+//- Author list with the site owner's name in bold. The HTML is assembled in
+//- JavaScript rather than with an each-loop so that --pretty does not insert
+//- stray whitespace before each comma.
+mixin authorLine(authors)
+  if authors && authors.length
+    -
+      var escape = function (s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      }
+      var authorHtml = authors.map(function (name) {
+        var safe = escape(name)
+        return name === me ? '<strong class="author-me">' + safe + '</strong>' : safe
+      }).join(', ')
+    p.pub-authors!= authorHtml
+
+//- A single publication on the web page. `idx` gives the abstract a unique id.
+mixin pubWeb(pub, idx)
+  article.pub
+    .pub-head
+      h3.pub-title= pub.title
+      if pub.period
+        span.pub-period= pub.period
+    +authorLine(pub.authors)
+    if pub.note
+      p.pub-note= pub.note
+    p.pub-venue
+      span.pub-venue-name= pub.venue
+      if pub.detail
+        span.pub-detail= pub.detail
+      if pub.status === 'submitted'
+        span.pub-status.is-submitted Under review
+      else
+        span.pub-status.is-published Published
+    if pub.tags && pub.tags.length
+      ul.pub-tags
+        each tag in pub.tags
+          li= tag
+    .pub-links
+      each link in pub.links
+        a.badge-link(href=link.url, target='_blank', rel='noopener noreferrer')= link.label
+      if pub.abstract && pub.abstract.length
+        button.badge-link.badge-toggle(type='button', data-bs-toggle='collapse', data-bs-target='#abstract-' + idx, aria-expanded='false', aria-controls='abstract-' + idx)
+          | Abstract
+    if pub.abstract && pub.abstract.length
+      .collapse.pub-abstract(id='abstract-' + idx)
+        each para in pub.abstract
+          p= para
+
+//- A single publication inside the A4 print CV. The sub-line is assembled in
+//- JavaScript so that --pretty cannot insert a space before the separator.
+mixin pubPrint(pub)
+  -
+    var pubParts = [pub.short]
+    if (pub.detail && pub.detail !== pub.short) pubParts.push(pub.detail)
+    var pubSub = pubParts.join(', ')
+    if (pub.status === 'submitted') pubSub += ' (submitted)'
+  li
+    .item-head
+      span.item-title= pub.title
+      span.item-year= pub.printYear
+    .item-sub= pubSub
+
+//- Education entry: date column on the left, details on the right.
+mixin eduWeb(item)
+  .timeline-item
+    .timeline-date= item.period
+    .timeline-body
+      h3.timeline-title= item.school
+      .timeline-sub= item.degree
+      if item.gpa
+        p.timeline-meta= item.gpa
+
+mixin eduPrint(item)
+  - var eduSub = item.gpa ? item.degree + ' | ' + item.gpa : item.degree
+  li
+    .item-head
+      span.item-title= item.school
+      span.item-year= item.printYear
+    .item-sub= eduSub
+
+//- Award entry.
+mixin awardWeb(item)
+  .timeline-item
+    .timeline-date= item.date
+    .timeline-body
+      h3.timeline-title
+        = item.title
+        if item.rank
+          span.timeline-rank= item.rank
+      .timeline-sub= item.org
+      if item.team
+        p.timeline-meta= item.team
+      if item.url
+        .pub-links
+          a.badge-link(href=item.url, target='_blank', rel='noopener noreferrer')= item.urlLabel
+
+mixin awardPrint(item)
+  - var awardHead = item.rank ? item.title + ' - ' + item.rank : item.title
+  li
+    .item-head
+      strong= awardHead
+    .item-sub= item.org
+
+//- Research project entry. `body` holds inline <strong> markup, so it is
+//- written unescaped.
+mixin projectWeb(item)
+  article.project
+    h3.project-title= item.title
+    p.project-body!= item.body
+
+mixin projectPrint(item)
+  li
+    .item-head
+      strong= item.title
+    .item-sub= item.printBody

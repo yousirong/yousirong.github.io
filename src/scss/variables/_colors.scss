@@ -1,0 +1,23 @@
+//
+// Colors
+//
+
+// Pre-state grayscale colors used in other variables
+
+$gray-800: #343a40;
+
+// Site theme. The navy is shared by the screen layout and the A4 print CV so
+// that the two stay in step; print.scss reads $ink rather than repeating a hex.
+
+$ink: #173a52;
+$ink-soft: #2d5a78;
+
+// Override Bootstrap default state colors
+
+$primary: $ink;
+
+// Neutrals used across the custom components
+
+$rule: #e2e6ea;
+$muted: #6b7480;
+$surface: #f6f7f9;

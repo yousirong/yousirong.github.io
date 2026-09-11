@@ -1,0 +1,323 @@
+//- ---------------------------------------------------------------------------
+//- Site content. Everything the page shows is defined here once and rendered
+//- by both the web layout and the A4 print CV. Edit content here, not in
+//- index.pug.
+//-
+//- IMPORTANT: use straight quotes only ('). A curly quote (U+2019) breaks the
+//- Pug lexer. Escape apostrophes inside single-quoted strings as \'.
+//- ---------------------------------------------------------------------------
+-
+  var profile = {
+    first: 'JUNEYONG',
+    last: 'LEE',
+    role: 'M.S. Student, Computer Science and Engineering',
+    affiliation: 'Hankuk University of Foreign Studies',
+    tagline: 'Generative AI  ·  Multimodal Learning  ·  Efficient AI',
+    location: 'Seoul, Republic of Korea',
+    phone: '+82 10-5384-7822',
+    email: 'diziyong1523@gmail.com',
+    photo: 'assets/img/profile.jpg',
+    github: 'https://github.com/yousirong',
+    scholar: 'https://scholar.google.com/citations?user=MkSbD78AAAAJ&hl=ko',
+    linkedin: 'https://www.linkedin.com/in/juneyong-lee-05b09733a',
+    instagram: 'https://www.instagram.com/juneyong_d.v/',
+    portfolio: 'https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf'
+  }
+
+-
+  var about = [
+    'I am a Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies. My research focuses on <strong>Generative AI</strong>, <strong>Multimodal Learning</strong>, and <strong>Efficient AI</strong>, with particular interests in diffusion models, vision-language modeling, and efficient model design.',
+    'My research explores <strong>Diffusion Transformers</strong> and multimodal generative models, including text-conditioned image generation, image restoration, and model efficiency. I have published first-author work at <strong>ICPR</strong> and <strong>IEEE Access</strong>, and my recent work investigates 3D multimodal generation with efficient vision-language encoders.',
+    'Beyond academic research, I am interested in translating AI research into practical systems. I placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets. My goal is to develop efficient and deployable multimodal AI systems that bridge research and real-world applications.'
+  ]
+
+  var printProfile = 'Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies, focusing on Generative AI, Multimodal Learning, and Efficient AI - diffusion models, vision-language modeling, and efficient model design. First-author publications at ICPR and IEEE Access, with recent work on 3D multimodal generation using efficient vision-language encoders. Placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge, building an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.'
+
+//- ---------------------------------------------------------------------------
+//- Publications
+//-
+//- authors : full author list, in order. `me` marks which name to bold.
+//-           Leave the array empty to hide the author line.
+//- period  : when the research was carried out (not the publication date).
+//- venue   : full venue name shown on the web page.
+//- short   : compact venue name used in the print CV.
+//- detail  : volume / pages / publication month.
+//- links   : badge links. label is shown on the badge.
+//- ---------------------------------------------------------------------------
+-
+  var me = 'Juneyong Lee'
+
+  var publications = [
+    {
+      title: 'Multimodal Diffusion Transformer for 3D Brain Image Generation and Diagnostic Classification in Alzheimer\'s Disease Progression',
+      authors: [],
+      venue: 'IEEE/CVF Winter Conference on Applications of Computer Vision',
+      short: 'WACV 2027',
+      detail: 'WACV 2027',
+      status: 'submitted',
+      period: '1st Semester 2026',
+      printYear: '2027',
+      tags: ['3D Brain Image Generation', 'Alzheimer\'s Disease Progression', 'Multimodal Diffusion Transformer', 'Diagnostic Classification'],
+      links: [],
+      abstract: [
+        'Alzheimer\'s disease (AD) progression trajectories vary significantly depending on the timing of treatment, making the prediction of future anatomical changes crucial. However, due to the subtle, localized, and heterogeneous nature of AD-related neurodegeneration, this remains a uniquely challenging task. While previous studies have improved predictive generation performance by integrating patient information, they primarily focus on generation, rely on 2D models, have limited support for fused patient data, or lack robust interval-aware capabilities. To address these limitations, we propose ADP-DiT 3D, a multimodal framework that performs progression generation and diagnostic classification simultaneously. We propose contribution-matched activation for balanced joint optimization of generation and classification, initializing the newly activated classification-loss weight from the current mean weighted contribution of the generative objectives within an uncertainty-weighted joint objective. We further incorporate 3D rotary positional embeddings and interval-time embeddings to model volumetric spatial relationships and temporal progression, respectively. Furthermore, we compress the CLIP text encoder to alleviate computational complexity. In progression generation on multi-cohort data, ADP-DiT 3D achieved an SSIM of 0.885 and a PSNR of 24.7, corresponding to 3.9% higher SSIM and 7.1% higher PSNR than the state-of-the-art model.'
+      ]
+    },
+    {
+      title: 'Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction',
+      authors: ['Juneyong Lee', 'Jaeyoung Choi'],
+      venue: 'IEEE Access',
+      short: 'IEEE Access',
+      detail: 'September 2026',
+      status: 'published',
+      period: '1st Semester 2026',
+      printYear: '2026',
+      tags: ['Ultrasound Speckle Reduction', 'Uncertainty-Guided Null-Space Diffusion', 'Adaptive Range-Null Reconstruction', 'Label-Free Diffusion Restoration'],
+      links: [
+        { label: 'DOI', url: 'https://doi.org/10.1109/ACCESS.2026.3729696' },
+        { label: 'IEEE Xplore', url: 'https://ieeexplore.ieee.org/document/11675827' },
+        { label: 'Code', url: 'https://github.com/yousirong/UGNS' }
+      ],
+      abstract: [
+        'Ultrasound B-mode imaging commonly suffers from speckle noise and artifacts, requiring a delicate balance between contrast, resolution, and preservation of anatomical structures. Although recently developed despeckling methods have achieved some progress, supervised learning approaches remain fundamentally limited by the ground truth paradox, which arises from the absence of noise-free, ground truth reference images in in vivo scenarios. Existing unsupervised diffusion-based methods typically enforce data consistency directly in the nonlinear log-compressed domain, which can disproportionately amplify background artifacts when mapped back to the envelope domain. To overcome these limitations, we propose an uncertainty-guided null-space diffusion (UGNS) framework, a novel label-free solution that enforces consistency correction on a stabilized positive-envelope proxy obtained via inverse log compression. The proposed UGNS introduces several technical novelties: (a) extraction of a structural prior in the stabilized envelope domain to produce a robust signal envelope that preserves anatomical structure, (b) development of an adaptive range-null reconstruction mechanism that uses an adaptive weight mask to preserve tissue regions via range-space projection, and (c) introduction of uncertainty-guided fusion in an adaptive way to mitigate sampling variability. Extensive and comparative experiments were conducted using the PICMUS benchmark and in vivo datasets. The results demonstrate that UGNS achieves competitive generalized contrast-to-noise ratio (gCNR) values across diverse datasets. In addition, UGNS effectively suppresses speckle noise while preserving fine spatial resolution.'
+      ]
+    },
+    {
+      title: 'Transmit-Conditioned Single-Pass Null-Space Diffusion for High-Quality Restoration of Low-Quality Ultrasound Images',
+      authors: ['Juneyong Lee', 'Jae Young Choi'],
+      venue: 'Journal of Korea Multimedia Society',
+      short: 'J. Korea Multimedia Society',
+      detail: 'Vol. 29, No. 8, pp. 1127-1142, August 2026',
+      status: 'published',
+      period: '1st Semester 2026',
+      printYear: '2026',
+      tags: ['Sparse-Transmit Ultrasound Restoration', 'Null-Space Diffusion', 'Single-Pass Inference', 'Transmit-Conditioned Diffusion'],
+      links: [
+        { label: 'DOI', url: 'https://doi.org/10.9717/kmms.2026.29.8.1127' },
+        { label: 'Code', url: 'https://github.com/yousirong/TCNS' }
+      ],
+      abstract: [
+        'Ultrasound B-mode imaging using sparse-transmit delay-and-sum (DAS) beamforming can improve acquisition efficiency, but suffers from reduced contrast, unstable speckle statistics, and loss of anatomical detail with fewer transmit events. In this paper, we propose a transmit-conditioned single-pass null-space diffusion model for restoring sparse-transmit ultrasound images toward a 75Tx DAS reference. The proposed model learns a paired conditional restoration distribution from 1Tx/11Tx DAS inputs and a transmit-level condition map to a 75Tx DAS target. The inference stage is designed so that the low-frequency structural component of the current clean estimate is accumulated as an exponential moving average prior in the wavelet range space, while the high-frequency speckle component is regenerated by the diffusion prior within the same DDIM trajectory. The proposed model preserves anatomical structure without relying on ensemble sampling or a separate prior trajectory, significantly reducing computational cost. Extensive experiments on both phantom and preclinical murine FSA datasets show that the proposed method considerably improves perceptual fidelity and speckle-level matching to the 75Tx reference while reducing over-smoothing, compared with recently developed denoising methods.'
+      ]
+    },
+    {
+      title: 'ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer\'s Disease Progression',
+      authors: ['Juneyong Lee', 'Geonwoo Baek', 'Ikbeom Jang', 'for the Alzheimer\'s Disease Neuroimaging Initiative'],
+      note: 'Juneyong Lee and Geonwoo Baek contributed equally (co-first authors).',
+      venue: 'Pattern Recognition: 28th International Conference (ICPR 2026), Lyon, France',
+      short: 'ICPR 2026',
+      detail: 'Proceedings Part III, pp. 301-317, August 2026',
+      status: 'published',
+      period: '2nd Semester 2025',
+      printYear: '2026',
+      tags: ['Alzheimer\'s Disease', 'Disease Progression', 'Text-Guided Image Generation', 'Diffusion Transformer'],
+      links: [
+        { label: 'DOI', url: 'https://doi.org/10.1007/978-3-032-31654-7_21' },
+        { label: 'Code', url: 'https://github.com/labhai/ADP-DiT' }
+      ],
+      abstract: [
+        'Alzheimer\'s disease (AD) progresses heterogeneously across individuals, motivating subject-specific synthesis of follow-up magnetic resonance imaging (MRI) to support progression assessment. While Diffusion Transformers (DiT), an emerging transformer-based diffusion model, offer a scalable backbone for image synthesis, longitudinal AD MRI generation with clinically interpretable control over follow-up time and participant metadata remains underexplored.',
+        'We present ADP-DiT, an interval-aware, clinically text-conditioned diffusion transformer for longitudinal AD MRI synthesis. ADP-DiT encodes follow-up interval together with multi-domain demographic, diagnostic (CN/MCI/AD), and neuropsychological information as a natural-language prompt, enabling time-specific control beyond coarse diagnostic stages. To inject this conditioning effectively, we use dual text encoders - OpenCLIP for vision-language alignment and T5 for richer clinical-language understanding. Their embeddings are fused into DiT through cross-attention for fine-grained guidance and adaptive layer normalization for global modulation. We further enhance anatomical fidelity by applying rotary positional embeddings to image tokens and performing diffusion in a pretrained SDXL-VAE latent space to enable efficient high-resolution reconstruction.',
+        'On 3,321 longitudinal 3T T1-weighted scans from 712 participants (259,038 image slices), ADP-DiT achieves SSIM 0.8739 and PSNR 29.32 dB, improving over a DiT baseline by +0.1087 SSIM and +6.08 dB PSNR while capturing progression-related changes such as ventricular enlargement and shrinking hippocampus. These results suggest that integrating comprehensive, subject-specific clinical conditions with architectures can improve longitudinal AD MRI synthesis.'
+      ]
+    },
+    {
+      title: 'Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection',
+      authors: ['Juneyong Lee', 'Joon Kim', 'Junhui Park', 'Jongho Jo', 'Ikbeom Jang'],
+      venue: 'Journal of KIISE (Korean Institute of Information Scientists and Engineers)',
+      short: 'J. KIISE',
+      detail: 'Vol. 51, No. 11, pp. 987-995, November 2024',
+      status: 'published',
+      period: '1st Semester 2024',
+      printYear: '2024',
+      tags: ['Temporal Segment Network', 'Lightweight CNN Architecture', 'Assault Recognition', 'Abnormal Behavior'],
+      links: [
+        { label: 'DOI', url: 'https://doi.org/10.5626/JOK.2024.51.11.987' },
+        { label: 'Code', url: 'https://github.com/HUFSuperman/HUFS_SavingDriver' }
+      ],
+      abstract: [
+        'There has been an increasing number of driver assaults in transportation such as taxis and buses in the past years. It can be especially difficult to respond quickly to assaults on drivers by drunks late at night. To address this issue, our research team proposes a lightweight CNN-based Temporal Segment Network (TSN) model, which can detect driver assaults by passengers in real time. The TSN model efficiently processes videos by sampling a small number of image frames and is divided into two streams for learning: one for spatial information processing and the other for temporal information processing. Convolutional neural networks are employed in each stream. In this research, we apply a lightweight CNN architecture, MobileOne, significantly reducing the model size while demonstrating improved accuracy even with limited computing resources. The model is expected to contribute to a rapid response and prevention of hazardous situations for drivers by being integrated into vehicular driver monitoring systems.'
+      ]
+    },
+    {
+      title: 'Research on Developing a Responsive Web Interface for Small Businesses Using React',
+      authors: [],
+      venue: 'Collaboration with PeopleCat Co., Ltd.',
+      short: 'PeopleCat Co., Ltd.',
+      detail: '',
+      status: 'published',
+      period: '2nd Semester 2023',
+      printYear: '2023',
+      printGroup: 'activities',
+      tags: ['Responsive Web Interface', 'React', 'Asynchronous Processing', 'Information Architecture Design'],
+      links: [
+        { label: 'Code', url: 'https://github.com/yousirong/CAPSTONE_AWS' }
+      ],
+      abstract: [
+        'Although large corporations have established sales databases for efficient sales activities, small-scale entrepreneurs need a system that provides an interface that anyone can easily manage, offering diverse and complex information. This paper proposes the use of React technology, which can also operate on crawling servers that automatically collect store information. Furthermore, it suggests the development of a responsive web user interface that can be conveniently used in both mouse and keyboard-based desktop environments as well as touch-based smartphone environments, utilizing React technology for the effective delivery of various data. The proposed methods anticipate rapid retrieval of large volumes of data due to the adoption of asynchronous function processing in React technology, an improvement over traditional JavaScript methods.'
+      ]
+    }
+  ]
+
+//- ---------------------------------------------------------------------------
+//- Education / Awards / Projects / Skills
+//- ---------------------------------------------------------------------------
+-
+  var education = [
+    {
+      period: '2024.09 - Present',
+      school: 'Hankuk University of Foreign Studies',
+      degree: 'M.S. course, Computer Science and Engineering',
+      gpa: 'GPA 4.37 / 4.5',
+      printYear: 'Present'
+    },
+    {
+      period: '2018.03 - 2024.08',
+      school: 'Hankuk University of Foreign Studies',
+      degree: 'B.S., Computer & Electronic Systems Engineering',
+      gpa: 'GPA 3.50 / 4.5',
+      printYear: '2024'
+    }
+  ]
+
+  var awards = [
+    {
+      date: '2025',
+      title: '2025 Samsung AI Challenge',
+      rank: '3rd place',
+      org: 'Multi-AI Agent Collaboration (AI Co-Scientist)',
+      team: 'Team: 각자의 새벽',
+      url: 'https://github.com/samsung-man/Ai_Co_Sci_2025.git',
+      urlLabel: 'Code',
+      featured: true
+    },
+    {
+      date: '2025',
+      title: '2025 Samsung Collegiate Programming Challenge',
+      rank: '3rd place',
+      org: 'Multimodal QA on photo gallery',
+      team: 'Team: 각자의 새벽',
+      url: 'https://github.com/samsung-man/SCPC_2025_Code',
+      urlLabel: 'Code',
+      featured: true
+    },
+    {
+      date: '2025',
+      title: 'HAI! Hecto AI Challenge',
+      rank: '21st / 748',
+      org: 'Car model classification',
+      team: 'Team: 두더띠 (Dudotti)',
+      url: 'https://github.com/DACON-HAI',
+      urlLabel: 'Code',
+      featured: false
+    },
+    {
+      date: '2024',
+      title: 'LG Aimers 5th Class',
+      rank: '43rd / 740',
+      org: 'Product defect determination',
+      team: 'Team: 각자의 새벽',
+      url: 'https://github.com/LGAimers-junebrothers',
+      urlLabel: 'Code',
+      featured: false
+    },
+    {
+      date: '2024',
+      title: '토스 NEXT ML CHALLENGE',
+      rank: '64th / 2,580',
+      org: 'CTR (click-through rate) prediction',
+      team: 'Team: 가용성',
+      url: 'https://github.com/Toss-junebrothers',
+      urlLabel: 'Code',
+      featured: false
+    },
+    {
+      date: '2023',
+      title: 'Capstone Design Project Excellence Award',
+      rank: '',
+      org: 'Hankuk University of Foreign Studies, AI Education Institute',
+      team: '',
+      url: 'assets/capstone.pdf',
+      urlLabel: 'Certificate',
+      featured: true
+    }
+  ]
+
+  var certifications = [
+    '정보처리기사 (Engineer Information Processing)',
+    '빅데이터분석기사 (Engineer Big Data Analysis)'
+  ]
+
+  var projects = [
+    {
+      title: 'Lightweight Ultrasound Blind Zone Restoration using Denoising Diffusion Restoration Models (DDRM)',
+      body: 'Developed a <strong>lightweight Denoising Diffusion Restoration Model (DDRM)</strong> for <strong>real-time restoration</strong> of blind zones in ultrasound images (inference under 15 ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics by optimizing the diffusion process and model architecture for on-device efficiency.',
+      printBody: 'Real-time restoration (under 15 ms) with improved SSIM/PSNR via diffusion optimization for edge deployment.'
+    },
+    {
+      title: 'Large-Scale Oceanographic Data Restoration for East Asia using Recurrent Feature Reasoning (RFR)',
+      body: 'Successfully restored missing data in GOCI and UST21 satellite imagery across the <strong>entire East Asia region</strong>, expanding significantly beyond the initial Saemangeum and Nakdong River areas. Utilized a <strong>Recurrent Feature Reasoning (RFR) model</strong> for high-fidelity inpainting of Chlorophyll-a composite maps, enabling comprehensive environmental monitoring on a large geographical scale.',
+      printBody: 'Inpainted missing GOCI/UST21 Chlorophyll-a maps at regional scale for environmental monitoring.'
+    },
+    {
+      title: 'Application & Evaluation of DiffusionDet for Wave Overtopping Detection',
+      body: 'Applied and fine-tuned the <strong>DiffusionDet</strong> model for real-world <strong>breakwater wave overtopping detection</strong>, demonstrating <strong>superior robustness and accuracy</strong> over the conventional YOLO model, especially under varying resolution and lighting conditions.',
+      printBody: 'Fine-tuned for breakwater overtopping; more robust than YOLO under resolution/lighting changes.'
+    },
+    {
+      title: 'Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack',
+      body: 'Upgraded object detection from YOLO v7 to <strong>YOLO v9</strong> and replaced IOU Tracker with <strong>ByteTrack</strong> for wave overtopping. Demonstrated significant improvements in both detection and <strong>tracking accuracy (ID persistence)</strong> through rigorous quantitative comparison.',
+      printBody: 'Upgraded detector and tracker, improving detection and ID persistence.'
+    }
+  ]
+
+  var skillGroups = [
+    {
+      group: 'Programming Languages & Tools',
+      items: [
+        { name: 'Python', icon: 'py', url: 'https://www.python.org/' },
+        { name: 'PyTorch', icon: 'pytorch', url: 'https://pytorch.org/' },
+        { name: 'Linux', icon: 'linux', url: 'https://www.linux.org/' },
+        { name: 'Docker', icon: 'docker', url: 'https://www.docker.com/' },
+        { name: 'Kubernetes', icon: 'kubernetes', url: 'https://kubernetes.io/' },
+        { name: 'LaTeX', icon: 'latex', url: 'https://www.latex-project.org/' }
+      ]
+    },
+    {
+      group: 'Workspace',
+      items: [
+        { name: 'Git', icon: 'git', url: 'https://git-scm.com/' },
+        { name: 'VSCode', icon: 'vscode', url: 'https://code.visualstudio.com/' },
+        { name: 'AWS', icon: 'aws', url: 'https://aws.amazon.com/' },
+        { name: 'Figma', icon: 'figma', url: 'https://www.figma.com/' },
+        { name: 'Notion', icon: 'notion', url: 'https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf' },
+        { name: 'Discord', icon: 'discord', url: 'https://discord.com/' }
+      ]
+    }
+  ]
+
+  var printSkills = ['Python', 'PyTorch', 'Linux', 'Docker', 'Kubernetes', 'LaTeX', 'Git', 'VSCode', 'AWS', 'Figma', 'Notion', 'Slack']
+
+//- ---------------------------------------------------------------------------
+//- Derived counts for the hero stat block. These follow the arrays above, so
+//- adding a publication or award updates the numbers automatically.
+//- ---------------------------------------------------------------------------
+-
+  var publishedCount = publications.filter(function (p) { return p.status === 'published' }).length
+  var awardCount = awards.length
+
+  var stats = [
+    { value: String(publishedCount), label: 'Publications' },
+    { value: '2', label: 'Samsung challenge 3rd places' },
+    { value: 'AI', label: 'Generative · Multimodal · Efficient' }
+  ]
+
+  var navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'publications', label: 'Publications' },
+    { id: 'education', label: 'Education' },
+    { id: 'awards', label: 'Awards' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'contact', label: 'Contact' }
+  ]

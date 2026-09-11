@@ -1,0 +1,114 @@
+//
+// Top navigation
+//
+// Replaces the template's fixed left sidebar. A thin translucent bar that keeps
+// the page anchored without taking horizontal space from the content.
+//
+
+#topNav {
+    height: $navbar-base-height;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid $rule;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container {
+        max-width: $content-max-width;
+    }
+
+    .navbar-brand {
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        color: $gray-800;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: $muted;
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.3rem;
+        transition: color 0.15s ease, background-color 0.15s ease;
+
+        &:hover,
+        &:focus {
+            color: $ink;
+            text-decoration: none;
+        }
+
+        // Bootstrap ScrollSpy marks the section currently in view.
+        &.active {
+            color: $ink;
+            background-color: $surface;
+        }
+    }
+
+    .nav-print {
+        color: $ink;
+        border: 1px solid $rule;
+        margin-left: 0.35rem;
+
+        &:hover {
+            background-color: $surface;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: $rule;
+        padding: 0.25rem 0.5rem;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba($primary, 0.2);
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-image: escape-svg(
+            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$muted}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+        );
+    }
+}
+
+// The collapsed menu needs an opaque backdrop on small screens, where it drops
+// over page content rather than sitting inside the bar.
+@include media-breakpoint-down(lg) {
+    #topNav {
+        .navbar-collapse {
+            background-color: #fff;
+            border: 1px solid $rule;
+            border-radius: 0.4rem;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .navbar-nav {
+            align-items: stretch;
+        }
+
+        .nav-link {
+            padding: 0.55rem 0.7rem;
+        }
+
+        .nav-print {
+            margin-left: 0;
+            margin-top: 0.35rem;
+            text-align: center;
+        }
+    }
+}
+
+@media print {
+    #topNav {
+        display: none !important;
+    }
+}
