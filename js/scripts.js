@@ -5,16 +5,16 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
+    // Activate Bootstrap scrollspy on the top nav element
+    const topNav = document.body.querySelector('#topNav');
+    if (topNav) {
         new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            rootMargin: '0px 0px -40%',
+            target: '#topNav',
+            rootMargin: '-15% 0px -70%',
         });
     };
 
@@ -25,16 +25,18 @@ window.addEventListener('DOMContentLoaded', event => {
     );
     responsiveNavItems.map(function (responsiveNavItem) {
         responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+            if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
             }
         });
     });
 
     const btnPrint = document.body.querySelector('#btnPrint');
-    btnPrint.addEventListener('click', event => {
-        event.preventDefault();
-        window.print();
-    });
+    if (btnPrint) {
+        btnPrint.addEventListener('click', event => {
+            event.preventDefault();
+            window.print();
+        });
+    };
 
 });
