@@ -78,6 +78,30 @@
     margin: 0 0 0.4rem;
 }
 
+// What I personally owned on the project, shown beside the title.
+.project-role {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: $muted;
+    background-color: $surface;
+    border: 1px solid $rule;
+    border-radius: 999px;
+    vertical-align: middle;
+}
+
+// Funding number, partner and project years.
+.project-meta {
+    margin: 0 0 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: $primary;
+}
+
 .project-body {
     margin: 0;
     font-size: 0.92rem;

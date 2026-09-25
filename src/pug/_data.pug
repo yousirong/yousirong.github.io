@@ -187,7 +187,7 @@
       rank: '3rd place',
       org: 'Multi-AI Agent Collaboration (AI Co-Scientist)',
       team: 'Team: 각자의 새벽',
-      url: 'https://github.com/samsung-man/Ai_Co_Sci_2025.git',
+      url: 'https://github.com/samsung-man',
       urlLabel: 'Code',
       featured: true
     },
@@ -197,9 +197,19 @@
       rank: '3rd place',
       org: 'Multimodal QA on photo gallery',
       team: 'Team: 각자의 새벽',
-      url: 'https://github.com/samsung-man/SCPC_2025_Code',
+      url: 'https://github.com/samsung-man',
       urlLabel: 'Code',
       featured: true
+    },
+    {
+      date: '2025',
+      title: '토스 NEXT ML CHALLENGE',
+      rank: '64th / 2,580 (Top 2.5%)',
+      org: 'CTR (click-through rate) prediction',
+      team: 'Team: 가용성',
+      url: 'https://github.com/Toss-junebrothers',
+      urlLabel: 'Code',
+      featured: false
     },
     {
       date: '2025',
@@ -222,16 +232,6 @@
       featured: false
     },
     {
-      date: '2024',
-      title: '토스 NEXT ML CHALLENGE',
-      rank: '64th / 2,580 (Top 2.5%)',
-      org: 'CTR (click-through rate) prediction',
-      team: 'Team: 가용성',
-      url: 'https://github.com/Toss-junebrothers',
-      urlLabel: 'Code',
-      featured: false
-    },
-    {
       date: '2023',
       title: 'Capstone Design Project Excellence Award',
       rank: '',
@@ -250,24 +250,25 @@
 
   var projects = [
     {
-      title: 'Lightweight Ultrasound Blind Zone Restoration using Denoising Diffusion Restoration Models (DDRM)',
-      body: 'Developed a <strong>lightweight Denoising Diffusion Restoration Model (DDRM)</strong> for <strong>real-time restoration</strong> of blind zones in ultrasound images (inference under 15 ms on edge devices). Achieved superior perceptual quality and improved SSIM/PSNR metrics by optimizing the diffusion process and model architecture for on-device efficiency.',
-      printBody: 'Real-time restoration (under 15 ms) with improved SSIM/PSNR via diffusion optimization for edge deployment.'
+      title: 'Circular-Scan Ultrasound Blind Zone Removal',
+      role: 'Implementation · Experiments · Presentation',
+      meta: 'Industry collaboration with ENDOLFIN Co., Ltd. · 2025',
+      body: 'Removed the distorted blind zone at the centre of circular-scan ultrasound images on ENDOLFIN diagnostic hardware, where clean and degraded versions of the same scene cannot be captured and no supervised pairs exist. Reframing the blind zone as <strong>added distortion to be inverted rather than missing signal to be erased</strong> made <strong>pair-free training</strong> possible, with the prior learned from normal images alone. <strong>Ported to the production device</strong>, and the design carried forward into UGNS and TCNS.',
+      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, ported to the device.'
     },
     {
-      title: 'Large-Scale Oceanographic Data Restoration for East Asia using Recurrent Feature Reasoning (RFR)',
-      body: 'Successfully restored missing data in GOCI and UST21 satellite imagery across the <strong>entire East Asia region</strong>, expanding significantly beyond the initial Saemangeum and Nakdong River areas. Utilized a <strong>Recurrent Feature Reasoning (RFR) model</strong> for high-fidelity inpainting of Chlorophyll-a composite maps, enabling comprehensive environmental monitoring on a large geographical scale.',
-      printBody: 'Inpainted missing GOCI/UST21 Chlorophyll-a maps at regional scale for environmental monitoring.'
+      title: 'Ocean Satellite Missing-Data Restoration',
+      role: 'Implementation · Experiments · Presentation',
+      meta: 'National R&D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium',
+      body: 'Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products using <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, recovering reflectance at 443, 490 and 555 nm through to Chlorophyll-a composite fields. Because missing pixels have no ground truth, the substantive contribution was a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.',
+      printBody: 'National R&D RS-2021-KS211406 (years 4-5). RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.'
     },
     {
-      title: 'Application & Evaluation of DiffusionDet for Wave Overtopping Detection',
-      body: 'Applied and fine-tuned the <strong>DiffusionDet</strong> model for real-world <strong>breakwater wave overtopping detection</strong>, demonstrating <strong>superior robustness and accuracy</strong> over the conventional YOLO model, especially under varying resolution and lighting conditions.',
-      printBody: 'Fine-tuned for breakwater overtopping; more robust than YOLO under resolution/lighting changes.'
-    },
-    {
-      title: 'Wave Overtopping Detection & Tracking Experiment with YOLO v9 and ByteTrack',
-      body: 'Upgraded object detection from YOLO v7 to <strong>YOLO v9</strong> and replaced IOU Tracker with <strong>ByteTrack</strong> for wave overtopping. Demonstrated significant improvements in both detection and <strong>tracking accuracy (ID persistence)</strong> through rigorous quantitative comparison.',
-      printBody: 'Upgraded detector and tracker, improving detection and ID persistence.'
+      title: 'Wave Overtopping Detection and Tracking',
+      role: 'Implementation · Experiments',
+      meta: 'National R&D RS-2022-KS221567 · years 3-4',
+      body: 'Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet fine-tuned for lighting and resolution robustness, YOLOv9 for real-time detection, and ByteTrack for event identity across frames. Aggregated overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.',
+      printBody: 'National R&D RS-2022-KS221567 (years 3-4). DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.'
     }
   ]
 

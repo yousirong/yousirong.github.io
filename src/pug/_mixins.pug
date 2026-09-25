@@ -110,7 +110,12 @@ mixin awardPrint(item)
 //- written unescaped.
 mixin projectWeb(item)
   article.project
-    h3.project-title= item.title
+    h3.project-title
+      = item.title
+      if item.role
+        span.project-role= item.role
+    if item.meta
+      p.project-meta= item.meta
     p.project-body!= item.body
 
 mixin projectPrint(item)
