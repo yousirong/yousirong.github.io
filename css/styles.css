@@ -11358,6 +11358,28 @@ p.lead {
   margin: 0 0 0.4rem;
 }
 
+.project-role {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: #6b7480;
+  background-color: #f6f7f9;
+  border: 1px solid #e2e6ea;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.project-meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #173a52;
+}
+
 .project-body {
   margin: 0;
   font-size: 0.92rem;
