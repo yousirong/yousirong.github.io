@@ -195,7 +195,7 @@ html(lang='en')
             ul.print-list
               each item in awards
                 if item.featured
-                  +awardPrint(item)
+                  +awardPrint(item, true)
           .print-section
             h3 Research Projects
             ul.print-list
@@ -206,7 +206,7 @@ html(lang='en')
             ul.print-list
               each item in awards
                 if !item.featured
-                  +awardPrint(item)
+                  +awardPrint(item, true)
               each pub in publications
                 if pub.printGroup === 'activities'
                   +pubPrint(pub)

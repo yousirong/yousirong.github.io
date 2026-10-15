@@ -58,7 +58,7 @@ mixin pubPrint(pub)
     var pubParts = [pub.short]
     if (pub.detail && pub.detail !== pub.short) pubParts.push(pub.detail)
     var pubSub = pubParts.join(', ')
-    if (pub.status === 'submitted') pubSub += ' (submitted)'
+    if (pub.status === 'submitted') pubSub += ' (under review)'
   li
     .item-head
       span.item-title= pub.title
@@ -99,11 +99,14 @@ mixin awardWeb(item)
         .pub-links
           a.badge-link(href=item.url, target='_blank', rel='noopener noreferrer')= item.urlLabel
 
-mixin awardPrint(item)
+//- `showYear` adds the year column, matching the publication rows.
+mixin awardPrint(item, showYear)
   - var awardHead = item.rank ? item.title + ' - ' + item.rank : item.title
   li
     .item-head
       strong= awardHead
+      if showYear
+        span.item-year= item.date
     .item-sub= item.org
 
 //- Research project entry. `body` holds inline <strong> markup, so it is
