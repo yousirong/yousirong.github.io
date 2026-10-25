@@ -22,7 +22,10 @@ mixin authorLine(authors)
 mixin pubWeb(pub, idx)
   article.pub
     .pub-head
-      h3.pub-title= pub.title
+      h3.pub-title
+        = pub.title
+        if pub.authorRole
+          span.pub-role= pub.authorRole
       if pub.period
         span.pub-period= pub.period
     +authorLine(pub.authors)
@@ -59,6 +62,9 @@ mixin pubPrint(pub)
     if (pub.detail && pub.detail !== pub.short) pubParts.push(pub.detail)
     var pubSub = pubParts.join(', ')
     if (pub.status === 'submitted') pubSub += ' (under review)'
+    //- Authorship is the key signal on a publication list, so the print CV
+    //- carries the role even though it has no room for full author lists.
+    if (pub.authorRole) pubSub += ' | ' + pub.authorRole
   li
     .item-head
       span.item-title= pub.title

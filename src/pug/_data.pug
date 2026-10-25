@@ -12,7 +12,7 @@
     last: 'LEE',
     role: 'M.S. Student, Computer Science and Engineering',
     affiliation: 'Hankuk University of Foreign Studies',
-    tagline: 'Generative AI  ·  Multimodal Learning  ·  Efficient AI',
+    tagline: 'Medical Imaging AI  ·  Ultrasound Restoration  ·  Generative & Efficient Models',
     location: 'Seoul, Republic of Korea',
     phone: '+82 10-5384-7822',
     email: 'diziyong1523@gmail.com',
@@ -26,12 +26,12 @@
 
 -
   var about = [
-    'I am a Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies. My research focuses on <strong>Generative AI</strong>, <strong>Multimodal Learning</strong>, and <strong>Efficient AI</strong>, with particular interests in diffusion models, vision-language modeling, and efficient model design.',
-    'My research explores <strong>Diffusion Transformers</strong> and multimodal generative models, including text-conditioned image generation, image restoration, and model efficiency. I have published first-author work at <strong>ICPR</strong> and <strong>IEEE Access</strong>, and my recent work investigates 3D multimodal generation with efficient vision-language encoders.',
-    'Beyond academic research, I am interested in translating AI research into practical systems. I placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets. My goal is to develop efficient and deployable multimodal AI systems that bridge research and real-world applications.'
+    'I am a Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on <strong>Medical Imaging AI</strong> - diffusion-based image restoration and generative modelling for clinical imaging. <strong>Ultrasound</strong> is my core domain, and my work there runs from the acoustic signal chain through to code running on a diagnostic scanner.',
+    'My two first-author ultrasound papers attack the same obstacle from opposite ends. <strong>UGNS</strong> (IEEE Access) suppresses speckle with <strong>no clean reference image at all</strong>, enforcing data consistency on a stabilised envelope proxy rather than the log-compressed domain, and is validated by gCNR on the PICMUS benchmark and in vivo data. <strong>TCNS</strong> (Journal of Korea Multimedia Society) restores <strong>sparse-transmit DAS beamformed images</strong> toward a 75-transmit reference in a single diffusion pass, cutting acquisition cost without ensemble sampling. In an industry collaboration with <strong>ENDOLFIN Co., Ltd.</strong> I removed the circular-scan blind zone using pair-free training and <strong>ported the result to the production scanner</strong>.',
+    'Alongside ultrasound I publish on <strong>generative modelling for brain MRI</strong>, including first-author work at <strong>ICPR</strong> on a clinically text-conditioned Diffusion Transformer. I also placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.'
   ]
 
-  var printProfile = 'Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies, focusing on Generative AI, Multimodal Learning, and Efficient AI - diffusion models, vision-language modeling, and efficient model design. First-author publications at ICPR and IEEE Access, with recent work on 3D multimodal generation using efficient vision-language encoders. Placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge, building an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.'
+  var printProfile = 'Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on Medical Imaging AI with ultrasound as the core domain. Two first-author ultrasound papers: UGNS (IEEE Access) suppresses speckle with no clean reference image, validated by gCNR on PICMUS and in vivo data; TCNS (Journal of Korea Multimedia Society) restores sparse-transmit DAS beamformed images toward a 75-transmit reference in a single diffusion pass. In an ENDOLFIN Co., Ltd. collaboration, removed the circular-scan blind zone with pair-free training and ported it to the production scanner. Also publish on generative brain MRI modelling (ICPR) and placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge.'
 
 //- ---------------------------------------------------------------------------
 //- Publications
@@ -51,6 +51,7 @@
     {
       title: 'Multimodal Diffusion Transformer for 3D Brain Image Generation and Diagnostic Classification in Alzheimer\'s Disease Progression',
       authors: [],
+      authorRole: 'Co-first author',
       venue: 'Top-tier AI conference',
       short: 'Top-tier AI conference',
       detail: '',
@@ -66,6 +67,7 @@
     {
       title: 'Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction',
       authors: ['Juneyong Lee', 'Jaeyoung Choi'],
+      authorRole: 'First author',
       venue: 'IEEE Access',
       short: 'IEEE Access',
       detail: 'Vol. 14, pp. 140183-140197, September 2026',
@@ -85,6 +87,7 @@
     {
       title: 'Transmit-Conditioned Single-Pass Null-Space Diffusion for High-Quality Restoration of Low-Quality Ultrasound Images',
       authors: ['Juneyong Lee', 'Jae Young Choi'],
+      authorRole: 'First author',
       venue: 'Journal of Korea Multimedia Society',
       short: 'J. Korea Multimedia Society',
       detail: 'Vol. 29, No. 8, pp. 1127-1142, August 2026',
@@ -104,7 +107,8 @@
     {
       title: 'ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer\'s Disease Progression',
       authors: ['Juneyong Lee', 'Geonwoo Baek', 'Ikbeom Jang', 'for the Alzheimer\'s Disease Neuroimaging Initiative'],
-      note: 'Juneyong Lee and Geonwoo Baek contributed equally (co-first authors).',
+      authorRole: 'Co-first author',
+      note: 'Juneyong Lee and Geonwoo Baek contributed equally.',
       venue: 'Pattern Recognition: 28th International Conference (ICPR 2026), Lyon, France',
       short: 'ICPR 2026',
       detail: 'Proceedings Part III, pp. 301-317, August 2026',
@@ -126,6 +130,7 @@
     {
       title: 'Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection',
       authors: ['Juneyong Lee', 'Joon Kim', 'Junhui Park', 'Jongho Jo', 'Ikbeom Jang'],
+      authorRole: 'First author',
       venue: 'Journal of KIISE (Korean Institute of Information Scientists and Engineers)',
       short: 'J. KIISE',
       detail: 'Vol. 51, No. 11, pp. 987-995, November 2024',
@@ -145,6 +150,7 @@
     {
       title: 'Research on Developing a Responsive Web Interface for Small Businesses Using React',
       authors: [],
+      authorRole: 'First author',
       venue: 'Collaboration with PeopleCat Co., Ltd.',
       short: 'PeopleCat Co., Ltd.',
       detail: '',
@@ -256,21 +262,21 @@
       title: 'Circular-Scan Ultrasound Blind Zone Removal',
       role: 'Implementation · Experiments · Presentation',
       meta: 'Industry collaboration with ENDOLFIN Co., Ltd. · 2025',
-      body: 'Removed the distorted blind zone at the centre of circular-scan ultrasound images on ENDOLFIN diagnostic hardware, where clean and degraded versions of the same scene cannot be captured and no supervised pairs exist. Reframing the blind zone as <strong>added distortion to be inverted rather than missing signal to be erased</strong> made <strong>pair-free training</strong> possible, with the prior learned from normal images alone. <strong>Ported to the production device</strong>, and the design carried forward into UGNS and TCNS.',
-      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, ported to the device.'
+      body: 'Removed the distorted blind zone at the centre of circular-scan ultrasound images on ENDOLFIN diagnostic hardware, where clean and degraded versions of the same scene cannot be captured and no supervised pairs exist. Reframing the blind zone as <strong>added distortion to be inverted rather than missing signal to be erased</strong> made <strong>pair-free training</strong> possible, with the prior learned from normal images alone. The trained model was <strong>exported to TensorRT and ported to the production scanner, where it runs in real time at about 30 frames per second</strong>, and the pair-free design carried forward into UGNS and TCNS.',
+      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported to TensorRT and running on the scanner in real time at about 30 fps.'
     },
     {
       title: 'Ocean Satellite Missing-Data Restoration',
       role: 'Implementation · Experiments · Presentation',
       meta: 'National R&D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium',
-      body: 'Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products using <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, recovering reflectance at 443, 490 and 555 nm through to Chlorophyll-a composite fields. Because missing pixels have no ground truth, the substantive contribution was a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.',
+      body: 'Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products with <strong>Recurrent Feature Reasoning</strong>, and - because missing pixels have no ground truth - established a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.',
       printBody: 'National R&D RS-2021-KS211406 (years 4-5). RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.'
     },
     {
       title: 'Wave Overtopping Detection and Tracking',
       role: 'Implementation · Experiments',
       meta: 'National R&D RS-2022-KS221567 · years 3-4',
-      body: 'Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet fine-tuned for lighting and resolution robustness, YOLOv9 for real-time detection, and ByteTrack for event identity across frames. Aggregated overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.',
+      body: 'Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet, YOLOv9 and ByteTrack to aggregate overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.',
       printBody: 'National R&D RS-2022-KS221567 (years 3-4). DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.'
     }
   ]
@@ -281,6 +287,7 @@
       items: [
         { name: 'Python', icon: 'py', url: 'https://www.python.org/' },
         { name: 'PyTorch', icon: 'pytorch', url: 'https://pytorch.org/' },
+        { name: 'C++', icon: 'cpp', url: 'https://isocpp.org/' },
         { name: 'Linux', icon: 'linux', url: 'https://www.linux.org/' },
         { name: 'Docker', icon: 'docker', url: 'https://www.docker.com/' },
         { name: 'Kubernetes', icon: 'kubernetes', url: 'https://kubernetes.io/' },
@@ -300,7 +307,7 @@
     }
   ]
 
-  var printSkills = ['Python', 'PyTorch', 'Linux', 'Docker', 'Kubernetes', 'LaTeX', 'Git', 'VSCode', 'AWS', 'Figma', 'Notion', 'Slack']
+  var printSkills = ['Python', 'PyTorch', 'C++', 'Linux', 'Docker', 'Kubernetes', 'LaTeX', 'Git', 'VSCode', 'AWS', 'Figma', 'Notion']
 
 //- ---------------------------------------------------------------------------
 //- Derived counts for the hero stat block. These follow the arrays above, so
@@ -313,7 +320,7 @@
   var stats = [
     { value: String(publishedCount), label: 'Publications' },
     { value: '2', label: 'Samsung challenge 3rd places' },
-    { value: 'AI', label: 'Generative · Multimodal · Efficient' }
+    { value: '3', label: 'Ultrasound restoration projects' }
   ]
 
   var navItems = [

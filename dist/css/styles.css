@@ -11153,6 +11153,20 @@ p.lead {
   margin: 0;
 }
 
+.pub-role {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: #173a52;
+  background-color: rgba(23, 58, 82, 0.08);
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
 .pub-period {
   flex-shrink: 0;
   font-size: 0.78rem;
