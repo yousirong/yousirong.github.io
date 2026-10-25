@@ -45,7 +45,7 @@
               </h1>
               <p class="hero-role">M.S. Student, Computer Science and Engineering</p>
               <p class="hero-affil">Hankuk University of Foreign Studies</p>
-              <p class="hero-tagline">Generative AI  ·  Multimodal Learning  ·  Efficient AI</p>
+              <p class="hero-tagline">Medical Imaging AI  ·  Ultrasound Restoration  ·  Generative &amp; Efficient Models</p>
               <div class="hero-actions"><a class="btn-cta is-primary" href="#publications">View Publications</a><a class="btn-cta" href="mailto:diziyong1523@gmail.com">Email</a><a class="btn-cta" href="https://github.com/yousirong" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn-cta" href="https://scholar.google.com/citations?user=MkSbD78AAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">Scholar</a><a class="btn-cta" href="https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
             </div>
           </div>
@@ -59,8 +59,8 @@
               <div class="stat-label">Samsung challenge 3rd places</div>
             </div>
             <div class="stat">
-              <div class="stat-value">AI</div>
-              <div class="stat-label">Generative · Multimodal · Efficient</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Ultrasound restoration projects</div>
             </div>
           </div>
         </div>
@@ -70,9 +70,9 @@
         <div class="container">
           <h2 class="section-title">About</h2>
           <div class="about-body">
-            <p>I am a Master's student in Computer Science and Engineering at Hankuk University of Foreign Studies. My research focuses on <strong>Generative AI</strong>, <strong>Multimodal Learning</strong>, and <strong>Efficient AI</strong>, with particular interests in diffusion models, vision-language modeling, and efficient model design.</p>
-            <p>My research explores <strong>Diffusion Transformers</strong> and multimodal generative models, including text-conditioned image generation, image restoration, and model efficiency. I have published first-author work at <strong>ICPR</strong> and <strong>IEEE Access</strong>, and my recent work investigates 3D multimodal generation with efficient vision-language encoders.</p>
-            <p>Beyond academic research, I am interested in translating AI research into practical systems. I placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets. My goal is to develop efficient and deployable multimodal AI systems that bridge research and real-world applications.</p>
+            <p>I am a Master's student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on <strong>Medical Imaging AI</strong> - diffusion-based image restoration and generative modelling for clinical imaging. <strong>Ultrasound</strong> is my core domain, and my work there runs from the acoustic signal chain through to code running on a diagnostic scanner.</p>
+            <p>My two first-author ultrasound papers attack the same obstacle from opposite ends. <strong>UGNS</strong> (IEEE Access) suppresses speckle with <strong>no clean reference image at all</strong>, enforcing data consistency on a stabilised envelope proxy rather than the log-compressed domain, and is validated by gCNR on the PICMUS benchmark and in vivo data. <strong>TCNS</strong> (Journal of Korea Multimedia Society) restores <strong>sparse-transmit DAS beamformed images</strong> toward a 75-transmit reference in a single diffusion pass, cutting acquisition cost without ensemble sampling. In an industry collaboration with <strong>ENDOLFIN Co., Ltd.</strong> I removed the circular-scan blind zone using pair-free training and <strong>ported the result to the production scanner</strong>.</p>
+            <p>Alongside ultrasound I publish on <strong>generative modelling for brain MRI</strong>, including first-author work at <strong>ICPR</strong> on a clinically text-conditioned Diffusion Transformer. I also placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.</p>
           </div>
         </div>
       </section>
@@ -316,13 +316,13 @@
               <h3 class="project-title">Ocean Satellite Missing-Data Restoration<span class="project-role">Implementation · Experiments · Presentation</span>
               </h3>
               <p class="project-meta">National R&amp;D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium</p>
-              <p class="project-body">Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products using <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, recovering reflectance at 443, 490 and 555 nm through to Chlorophyll-a composite fields. Because missing pixels have no ground truth, the substantive contribution was a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.</p>
+              <p class="project-body">Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products with <strong>Recurrent Feature Reasoning</strong>, and - because missing pixels have no ground truth - established a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.</p>
             </article>
             <article class="project">
               <h3 class="project-title">Wave Overtopping Detection and Tracking<span class="project-role">Implementation · Experiments</span>
               </h3>
               <p class="project-meta">National R&amp;D RS-2022-KS221567 · years 3-4</p>
-              <p class="project-body">Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet fine-tuned for lighting and resolution robustness, YOLOv9 for real-time detection, and ByteTrack for event identity across frames. Aggregated overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.</p>
+              <p class="project-body">Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet, YOLOv9 and ByteTrack to aggregate overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.</p>
             </article>
           </div>
         </div>
@@ -335,6 +335,7 @@
           <ul class="list-inline dev-icons">
             <li class="list-inline-item"><a href="https://www.python.org/" title="Python" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=py" alt="Python" width="60" height="60"></a></li>
             <li class="list-inline-item"><a href="https://pytorch.org/" title="PyTorch" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" width="60" height="60"></a></li>
+            <li class="list-inline-item"><a href="https://isocpp.org/" title="C++" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" width="60" height="60"></a></li>
             <li class="list-inline-item"><a href="https://www.linux.org/" title="Linux" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="60" height="60"></a></li>
             <li class="list-inline-item"><a href="https://www.docker.com/" title="Docker" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="60" height="60"></a></li>
             <li class="list-inline-item"><a href="https://kubernetes.io/" title="Kubernetes" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes" width="60" height="60"></a></li>
@@ -404,6 +405,7 @@
           <ul class="print-list print-skills">
             <li>Python</li>
             <li>PyTorch</li>
+            <li>C++</li>
             <li>Linux</li>
             <li>Docker</li>
             <li>Kubernetes</li>
@@ -413,7 +415,6 @@
             <li>AWS</li>
             <li>Figma</li>
             <li>Notion</li>
-            <li>Slack</li>
           </ul>
         </div>
         <div class="print-main">
@@ -425,7 +426,7 @@
           </div>
           <div class="print-section">
             <h3>Profile</h3>
-            <p>Master's student in Computer Science and Engineering at Hankuk University of Foreign Studies, focusing on Generative AI, Multimodal Learning, and Efficient AI - diffusion models, vision-language modeling, and efficient model design. First-author publications at ICPR and IEEE Access, with recent work on 3D multimodal generation using efficient vision-language encoders. Placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge, building an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.</p>
+            <p>Master's student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on Medical Imaging AI with ultrasound as the core domain. Two first-author ultrasound papers: UGNS (IEEE Access) suppresses speckle with no clean reference image, validated by gCNR on PICMUS and in vivo data; TCNS (Journal of Korea Multimedia Society) restores sparse-transmit DAS beamformed images toward a 75-transmit reference in a single diffusion pass. In an ENDOLFIN Co., Ltd. collaboration, removed the circular-scan blind zone with pair-free training and ported it to the production scanner. Also publish on generative brain MRI modelling (ICPR) and placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge.</p>
           </div>
           <div class="print-section">
             <h3>Publications</h3>
