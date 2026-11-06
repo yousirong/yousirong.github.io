@@ -31,7 +31,7 @@
     'Alongside ultrasound I publish on <strong>Alzheimer\'s disease progression modelling</strong> - predicting a patient\'s future brain MRI from clinical text conditions such as diagnostic stage, follow-up interval and neuropsychological scores. <strong>ADP-DiT</strong> (ICPR 2026) does this with a text-conditioned Diffusion Transformer, and the 3D extension under review adds volumetric generation and diagnostic classification in one model. I also placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.'
   ]
 
-  var printProfile = 'Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on Medical Imaging AI with ultrasound as the core domain. Two first-author ultrasound papers: UGNS (IEEE Access) suppresses speckle with no clean reference image, validated by gCNR on PICMUS and in vivo data; TCNS (Journal of Korea Multimedia Society) restores sparse-transmit DAS beamformed images toward a 75-transmit reference in a single diffusion pass. In an ENDOLFIN Co., Ltd. collaboration, removed the circular-scan blind zone with pair-free training and ported it to the production scanner. Also publish on Alzheimer\'s disease progression modelling, predicting a patient\'s future brain MRI from clinical text conditions (ICPR 2026), and placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge.'
+  var printProfile = 'M.S. candidate in Computer Science and Engineering at Hankuk University of Foreign Studies, specialising in diffusion-based restoration for medical ultrasound. Four first-author publications (IEEE Access, ICPR, J. Korea Multimedia Society, Journal of KIISE) and one industry deployment: a pair-free blind-zone restoration model running on an ENDOLFIN scanner at about 30 fps via TensorRT.'
 
 //- ---------------------------------------------------------------------------
 //- Publications
@@ -45,7 +45,10 @@
 //- links   : badge links. label is shown on the badge.
 //- ---------------------------------------------------------------------------
 -
-  var me = 'Juneyong Lee'
+  //- `me` is the name the author line prints in bold, so it must match the
+  //- abbreviated form used in the author arrays. `fullName` is for the footer.
+  var me = 'J. Lee'
+  var fullName = 'Juneyong Lee'
 
   var publications = [
     {
@@ -66,7 +69,7 @@
     },
     {
       title: 'Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction',
-      authors: ['Juneyong Lee', 'Jaeyoung Choi'],
+      authors: ['J. Lee', 'J. Y. Choi'],
       authorRole: 'First author',
       venue: 'IEEE Access',
       short: 'IEEE Access',
@@ -86,7 +89,7 @@
     },
     {
       title: 'Transmit-Conditioned Single-Pass Null-Space Diffusion for High-Quality Restoration of Low-Quality Ultrasound Images',
-      authors: ['Juneyong Lee', 'Jae Young Choi'],
+      authors: ['J. Lee', 'J. Y. Choi'],
       authorRole: 'First author',
       venue: 'Journal of Korea Multimedia Society',
       short: 'J. Korea Multimedia Society',
@@ -106,9 +109,8 @@
     },
     {
       title: 'ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer\'s Disease Progression',
-      authors: ['Juneyong Lee', 'Geonwoo Baek', 'Ikbeom Jang', 'for the Alzheimer\'s Disease Neuroimaging Initiative'],
+      authors: ['J. Lee*', 'G. Baek*', 'I. Jang', 'for the Alzheimer\'s Disease Neuroimaging Initiative'],
       authorRole: 'Co-first author',
-      note: 'Juneyong Lee and Geonwoo Baek contributed equally.',
       venue: 'Pattern Recognition: 28th International Conference (ICPR 2026), Lyon, France',
       short: 'ICPR 2026',
       detail: 'Proceedings Part III, pp. 301-317, August 2026',
@@ -129,7 +131,7 @@
     },
     {
       title: 'Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection',
-      authors: ['Juneyong Lee', 'Joon Kim', 'Junhui Park', 'Jongho Jo', 'Ikbeom Jang'],
+      authors: ['J. Lee', 'J. Kim', 'J. Park', 'J. Jo', 'I. Jang'],
       authorRole: 'First author',
       venue: 'Journal of KIISE (Korean Institute of Information Scientists and Engineers)',
       short: 'J. KIISE',
@@ -203,7 +205,7 @@
     {
       date: '2025',
       title: 'Samsung Collegiate Programming Challenge',
-      rank: '3rd place',
+      rank: '3rd place of 10 AI-track winners',
       org: 'Multimodal QA on photo gallery',
       team: 'Team: 각자의 새벽',
       url: 'https://github.com/samsung-man',
@@ -212,7 +214,7 @@
     },
     {
       date: '2025',
-      title: '토스 NEXT ML CHALLENGE',
+      title: 'Toss NEXT ML Challenge',
       rank: '64th / 2,580 (Top 2.5%)',
       org: 'CTR (click-through rate) prediction',
       team: 'Team: 가용성',
@@ -262,52 +264,47 @@
       title: 'Circular-Scan Ultrasound Blind Zone Removal',
       role: 'Implementation · Experiments · Presentation',
       meta: 'Industry collaboration with ENDOLFIN Co., Ltd. · 2025',
-      body: 'Removed the distorted blind zone at the centre of circular-scan ultrasound images on ENDOLFIN diagnostic hardware, where clean and degraded versions of the same scene cannot be captured and no supervised pairs exist. Reframing the blind zone as <strong>added distortion to be inverted rather than missing signal to be erased</strong> made <strong>pair-free training</strong> possible, with the prior learned from normal images alone. The trained model was <strong>exported to TensorRT and ported to the production scanner, where it runs in real time at about 30 frames per second</strong>, and the pair-free design carried forward into UGNS and TCNS.',
+      bullets: [
+        'Removed the distorted blind zone at the centre of circular-scan images on ENDOLFIN diagnostic hardware, where the same scene cannot be captured in both clean and degraded conditions, so supervised training pairs do not exist.',
+        'Reframed the blind zone as <strong>added distortion to be inverted</strong> rather than missing signal to be erased, which makes <strong>pair-free training</strong> possible: the prior is learned from normal images alone and restoration runs as a separate stage, so no retraining is needed when device settings change.',
+        'Exported the model to <strong>TensorRT</strong> and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.'
+      ],
       printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported to TensorRT and running on the scanner in real time at about 30 fps.'
     },
     {
       title: 'Ocean Satellite Missing-Data Restoration',
       role: 'Implementation · Experiments · Presentation',
       meta: 'National R&D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium',
-      body: 'Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products with <strong>Recurrent Feature Reasoning</strong>, and - because missing pixels have no ground truth - established a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.',
+      bullets: [
+        'Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products, recovering remote-sensing reflectance at 443, 490 and 555 nm and carrying the result through to Chlorophyll-a composite fields.',
+        'Built the restoration on <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, which propagates known pixels inward instead of filling gaps in one pass.',
+        'Missing pixels have no ground truth, so the substantive contribution was a <strong>validation scheme cross-checked against NASA MODIS</strong>, with confidence intervals attached to every restored value.'
+      ],
       printBody: 'National R&D RS-2021-KS211406 (years 4-5). RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.'
     },
     {
       title: 'Wave Overtopping Detection and Tracking',
       role: 'Implementation · Experiments',
       meta: 'National R&D RS-2022-KS221567 · years 3-4',
-      body: 'Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet, YOLOv9 and ByteTrack to aggregate overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.',
+      bullets: [
+        'Turned breakwater monitoring from <strong>frame-level detection into event-level measurement</strong>, aggregating overtopping frequency and intensity into time series usable by coastal engineers.',
+        'Fine-tuned <strong>DiffusionDet</strong> for robustness to lighting and resolution shifts, ran <strong>YOLOv9</strong> for real-time detection, and added <strong>ByteTrack</strong> so one wave keeps a single identity across frames.',
+        'Kept the pipeline stable under mixed spray, foam and occlusion, the conditions that break frame-wise counting.'
+      ],
       printBody: 'National R&D RS-2022-KS221567 (years 3-4). DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.'
     }
   ]
 
+  //- Grouped as a recruiter reads them: what I write in, what I model with,
+  //- what I ship with. Plain strings rather than icon slugs, so tools without
+  //- an icon (TensorRT) sit alongside the rest.
   var skillGroups = [
-    {
-      group: 'Programming Languages & Tools',
-      items: [
-        { name: 'Python', icon: 'py', url: 'https://www.python.org/' },
-        { name: 'PyTorch', icon: 'pytorch', url: 'https://pytorch.org/' },
-        { name: 'C++', icon: 'cpp', url: 'https://isocpp.org/' },
-        { name: 'Linux', icon: 'linux', url: 'https://www.linux.org/' },
-        { name: 'Docker', icon: 'docker', url: 'https://www.docker.com/' },
-        { name: 'Kubernetes', icon: 'kubernetes', url: 'https://kubernetes.io/' },
-        { name: 'LaTeX', icon: 'latex', url: 'https://www.latex-project.org/' }
-      ]
-    },
-    {
-      group: 'Workspace',
-      items: [
-        { name: 'Git', icon: 'git', url: 'https://git-scm.com/' },
-        { name: 'VSCode', icon: 'vscode', url: 'https://code.visualstudio.com/' },
-        { name: 'AWS', icon: 'aws', url: 'https://aws.amazon.com/' },
-        { name: 'Figma', icon: 'figma', url: 'https://www.figma.com/' },
-        { name: 'Notion', icon: 'notion', url: 'https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf' },
-        { name: 'Discord', icon: 'discord', url: 'https://discord.com/' }
-      ]
-    }
+    { group: 'Languages', items: ['Python', 'C++'] },
+    { group: 'ML', items: ['PyTorch', 'Diffusion models', 'Generative modelling', 'Vision-language models'] },
+    { group: 'Deployment', items: ['TensorRT', 'Docker', 'Kubernetes', 'Linux', 'Git', 'AWS'] }
   ]
 
-  var printSkills = ['Python', 'PyTorch', 'C++', 'Linux', 'Docker', 'Kubernetes', 'LaTeX', 'Git', 'VSCode', 'AWS', 'Figma', 'Notion']
+  var printSkills = skillGroups
 
 //- ---------------------------------------------------------------------------
 //- Derived counts for the hero stat block. These follow the arrays above, so

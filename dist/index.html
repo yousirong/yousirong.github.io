@@ -80,6 +80,7 @@
       <section class="section" id="publications">
         <div class="container">
           <h2 class="section-title">Publications</h2>
+          <p class="pub-legend">* Equal contribution</p>
           <div class="pub-list">
             <article class="pub">
               <div class="pub-head">
@@ -106,7 +107,7 @@
                 <h3 class="pub-title">Null-Space Diffusion Restoration with Adaptive Uncertainty-Guided Fusion for Ultrasound Speckle Reduction<span class="pub-role">First author</span>
                 </h3><span class="pub-period">1st Semester 2026</span>
               </div>
-              <p class="pub-authors"><strong class="author-me">Juneyong Lee</strong>, Jaeyoung Choi</p>
+              <p class="pub-authors"><strong class="author-me">J. Lee</strong>, J. Y. Choi</p>
               <p class="pub-venue"><span class="pub-venue-name">IEEE Access</span><span class="pub-detail">Vol. 14, pp. 140183-140197, September 2026</span><span class="pub-status is-published">Published</span>
               </p>
               <ul class="pub-tags">
@@ -127,7 +128,7 @@
                 <h3 class="pub-title">Transmit-Conditioned Single-Pass Null-Space Diffusion for High-Quality Restoration of Low-Quality Ultrasound Images<span class="pub-role">First author</span>
                 </h3><span class="pub-period">1st Semester 2026</span>
               </div>
-              <p class="pub-authors"><strong class="author-me">Juneyong Lee</strong>, Jae Young Choi</p>
+              <p class="pub-authors"><strong class="author-me">J. Lee</strong>, J. Y. Choi</p>
               <p class="pub-venue"><span class="pub-venue-name">Journal of Korea Multimedia Society</span><span class="pub-detail">Vol. 29, No. 8, pp. 1127-1142, August 2026</span><span class="pub-status is-published">Published</span>
               </p>
               <ul class="pub-tags">
@@ -148,8 +149,7 @@
                 <h3 class="pub-title">ADP-DiT: Text-Guided Diffusion Transformer for Brain Image Generation in Alzheimer's Disease Progression<span class="pub-role">Co-first author</span>
                 </h3><span class="pub-period">2nd Semester 2025</span>
               </div>
-              <p class="pub-authors"><strong class="author-me">Juneyong Lee</strong>, Geonwoo Baek, Ikbeom Jang, for the Alzheimer's Disease Neuroimaging Initiative</p>
-              <p class="pub-note">Juneyong Lee and Geonwoo Baek contributed equally.</p>
+              <p class="pub-authors"><strong class="author-me">J. Lee*</strong>, G. Baek*, I. Jang, for the Alzheimer's Disease Neuroimaging Initiative</p>
               <p class="pub-venue"><span class="pub-venue-name">Pattern Recognition: 28th International Conference (ICPR 2026), Lyon, France</span><span class="pub-detail">Proceedings Part III, pp. 301-317, August 2026</span><span class="pub-status is-published">Published</span>
               </p>
               <ul class="pub-tags">
@@ -172,7 +172,7 @@
                 <h3 class="pub-title">Lightweight Temporal Segment Network for Video Scene Understanding: Validation in Driver Assault Detection<span class="pub-role">First author</span>
                 </h3><span class="pub-period">1st Semester 2024</span>
               </div>
-              <p class="pub-authors"><strong class="author-me">Juneyong Lee</strong>, Joon Kim, Junhui Park, Jongho Jo, Ikbeom Jang</p>
+              <p class="pub-authors"><strong class="author-me">J. Lee</strong>, J. Kim, J. Park, J. Jo, I. Jang</p>
               <p class="pub-venue"><span class="pub-venue-name">Journal of KIISE (Korean Institute of Information Scientists and Engineers)</span><span class="pub-detail">Vol. 51, No. 11, pp. 987-995, November 2024</span><span class="pub-status is-published">Published</span>
               </p>
               <ul class="pub-tags">
@@ -258,7 +258,7 @@
             <div class="timeline-item">
               <div class="timeline-date">2025</div>
               <div class="timeline-body">
-                <h3 class="timeline-title">Samsung Collegiate Programming Challenge<span class="timeline-rank">3rd place</span>
+                <h3 class="timeline-title">Samsung Collegiate Programming Challenge<span class="timeline-rank">3rd place of 10 AI-track winners</span>
                 </h3>
                 <div class="timeline-sub">Multimodal QA on photo gallery</div>
                 <p class="timeline-meta">Team: 각자의 새벽</p>
@@ -268,7 +268,7 @@
             <div class="timeline-item">
               <div class="timeline-date">2025</div>
               <div class="timeline-body">
-                <h3 class="timeline-title">토스 NEXT ML CHALLENGE<span class="timeline-rank">64th / 2,580 (Top 2.5%)</span>
+                <h3 class="timeline-title">Toss NEXT ML Challenge<span class="timeline-rank">64th / 2,580 (Top 2.5%)</span>
                 </h3>
                 <div class="timeline-sub">CTR (click-through rate) prediction</div>
                 <p class="timeline-meta">Team: 가용성</p>
@@ -316,19 +316,31 @@
               <h3 class="project-title">Circular-Scan Ultrasound Blind Zone Removal<span class="project-role">Implementation · Experiments · Presentation</span>
               </h3>
               <p class="project-meta">Industry collaboration with ENDOLFIN Co., Ltd. · 2025</p>
-              <p class="project-body">Removed the distorted blind zone at the centre of circular-scan ultrasound images on ENDOLFIN diagnostic hardware, where clean and degraded versions of the same scene cannot be captured and no supervised pairs exist. Reframing the blind zone as <strong>added distortion to be inverted rather than missing signal to be erased</strong> made <strong>pair-free training</strong> possible, with the prior learned from normal images alone. The trained model was <strong>exported to TensorRT and ported to the production scanner, where it runs in real time at about 30 frames per second</strong>, and the pair-free design carried forward into UGNS and TCNS.</p>
+              <ul class="project-bullets">
+                <li>Removed the distorted blind zone at the centre of circular-scan images on ENDOLFIN diagnostic hardware, where the same scene cannot be captured in both clean and degraded conditions, so supervised training pairs do not exist.</li>
+                <li>Reframed the blind zone as <strong>added distortion to be inverted</strong> rather than missing signal to be erased, which makes <strong>pair-free training</strong> possible: the prior is learned from normal images alone and restoration runs as a separate stage, so no retraining is needed when device settings change.</li>
+                <li>Exported the model to <strong>TensorRT</strong> and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.</li>
+              </ul>
             </article>
             <article class="project">
               <h3 class="project-title">Ocean Satellite Missing-Data Restoration<span class="project-role">Implementation · Experiments · Presentation</span>
               </h3>
               <p class="project-meta">National R&amp;D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium</p>
-              <p class="project-body">Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products with <strong>Recurrent Feature Reasoning</strong>, and - because missing pixels have no ground truth - established a <strong>validation scheme cross-checked against NASA MODIS</strong> with confidence intervals for the restored values.</p>
+              <ul class="project-bullets">
+                <li>Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products, recovering remote-sensing reflectance at 443, 490 and 555 nm and carrying the result through to Chlorophyll-a composite fields.</li>
+                <li>Built the restoration on <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, which propagates known pixels inward instead of filling gaps in one pass.</li>
+                <li>Missing pixels have no ground truth, so the substantive contribution was a <strong>validation scheme cross-checked against NASA MODIS</strong>, with confidence intervals attached to every restored value.</li>
+              </ul>
             </article>
             <article class="project">
               <h3 class="project-title">Wave Overtopping Detection and Tracking<span class="project-role">Implementation · Experiments</span>
               </h3>
               <p class="project-meta">National R&amp;D RS-2022-KS221567 · years 3-4</p>
-              <p class="project-body">Built a breakwater overtopping pipeline that turns <strong>frame-level detection into event-level measurement</strong>, combining DiffusionDet, YOLOv9 and ByteTrack to aggregate overtopping frequency and intensity into time series under mixed spray, foam and occlusion conditions.</p>
+              <ul class="project-bullets">
+                <li>Turned breakwater monitoring from <strong>frame-level detection into event-level measurement</strong>, aggregating overtopping frequency and intensity into time series usable by coastal engineers.</li>
+                <li>Fine-tuned <strong>DiffusionDet</strong> for robustness to lighting and resolution shifts, ran <strong>YOLOv9</strong> for real-time detection, and added <strong>ByteTrack</strong> so one wave keeps a single identity across frames.</li>
+                <li>Kept the pipeline stable under mixed spray, foam and occlusion, the conditions that break frame-wise counting.</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -337,25 +349,20 @@
       <section class="section" id="skills">
         <div class="container">
           <h2 class="section-title">Skills</h2>
-          <h3 class="subsection-title">Programming Languages &amp; Tools</h3>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item"><a href="https://www.python.org/" title="Python" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=py" alt="Python" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://pytorch.org/" title="PyTorch" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://isocpp.org/" title="C++" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://www.linux.org/" title="Linux" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=linux" alt="Linux" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://www.docker.com/" title="Docker" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://kubernetes.io/" title="Kubernetes" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://www.latex-project.org/" title="LaTeX" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=latex" alt="LaTeX" width="60" height="60"></a></li>
-          </ul>
-          <h3 class="subsection-title">Workspace</h3>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item"><a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=git" alt="Git" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://code.visualstudio.com/" title="VSCode" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://aws.amazon.com/" title="AWS" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=aws" alt="AWS" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://www.figma.com/" title="Figma" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=figma" alt="Figma" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://junetriver.notion.site/3270afd4e0c580ac824ec9519b200fcf" title="Notion" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=notion" alt="Notion" width="60" height="60"></a></li>
-            <li class="list-inline-item"><a href="https://discord.com/" title="Discord" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=discord" alt="Discord" width="60" height="60"></a></li>
-          </ul>
+          <div class="skill-grid">
+            <div class="skill-row">
+              <div class="skill-label">Languages</div>
+              <div class="skill-items">Python, C++</div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-label">ML</div>
+              <div class="skill-items">PyTorch, Diffusion models, Generative modelling, Vision-language models</div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-label">Deployment</div>
+              <div class="skill-items">TensorRT, Docker, Kubernetes, Linux, Git, AWS</div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Contact-->
@@ -408,19 +415,19 @@
             <li>빅데이터분석기사 (Engineer Big Data Analysis)</li>
           </ul>
           <h4>Skills</h4>
-          <ul class="print-list print-skills">
-            <li>Python</li>
-            <li>PyTorch</li>
-            <li>C++</li>
-            <li>Linux</li>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>LaTeX</li>
-            <li>Git</li>
-            <li>VSCode</li>
-            <li>AWS</li>
-            <li>Figma</li>
-            <li>Notion</li>
+          <ul class="print-list">
+            <li>
+              <div class="item-sub"><strong>Languages</strong> Python, C++
+              </div>
+            </li>
+            <li>
+              <div class="item-sub"><strong>ML</strong> PyTorch, Diffusion models, Generative modelling, Vision-language models
+              </div>
+            </li>
+            <li>
+              <div class="item-sub"><strong>Deployment</strong> TensorRT, Docker, Kubernetes, Linux, Git, AWS
+              </div>
+            </li>
           </ul>
         </div>
         <div class="print-main">
@@ -432,7 +439,7 @@
           </div>
           <div class="print-section">
             <h3>Profile</h3>
-            <p>Master's student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on Medical Imaging AI with ultrasound as the core domain. Two first-author ultrasound papers: UGNS (IEEE Access) suppresses speckle with no clean reference image, validated by gCNR on PICMUS and in vivo data; TCNS (Journal of Korea Multimedia Society) restores sparse-transmit DAS beamformed images toward a 75-transmit reference in a single diffusion pass. In an ENDOLFIN Co., Ltd. collaboration, removed the circular-scan blind zone with pair-free training and ported it to the production scanner. Also publish on Alzheimer's disease progression modelling, predicting a patient's future brain MRI from clinical text conditions (ICPR 2026), and placed 3rd in both the 2025 Samsung AI Challenge and Samsung Collegiate Programming Challenge.</p>
+            <p>M.S. candidate in Computer Science and Engineering at Hankuk University of Foreign Studies, specialising in diffusion-based restoration for medical ultrasound. Four first-author publications (IEEE Access, ICPR, J. Korea Multimedia Society, Journal of KIISE) and one industry deployment: a pair-free blind-zone restoration model running on an ENDOLFIN scanner at about 30 fps via TensorRT.</p>
           </div>
           <div class="print-section">
             <h3>Publications</h3>
@@ -468,7 +475,7 @@
                 <div class="item-sub">Multi-AI Agent Collaboration (AI Co-Scientist)</div>
               </li>
               <li>
-                <div class="item-head"><strong>Samsung Collegiate Programming Challenge - 3rd place</strong><span class="item-year">2025</span>
+                <div class="item-head"><strong>Samsung Collegiate Programming Challenge - 3rd place of 10 AI-track winners</strong><span class="item-year">2025</span>
                 </div>
                 <div class="item-sub">Multimodal QA on photo gallery</div>
               </li>
@@ -500,7 +507,7 @@
             <h3>Activities</h3>
             <ul class="print-list">
               <li>
-                <div class="item-head"><strong>토스 NEXT ML CHALLENGE - 64th / 2,580 (Top 2.5%)</strong><span class="item-year">2025</span>
+                <div class="item-head"><strong>Toss NEXT ML Challenge - 64th / 2,580 (Top 2.5%)</strong><span class="item-year">2025</span>
                 </div>
                 <div class="item-sub">CTR (click-through rate) prediction</div>
               </li>

@@ -5,6 +5,12 @@
 // abstract is collapsed by default so the whole list stays scannable.
 //
 
+.pub-legend {
+    margin: -1.25rem 0 1.75rem;
+    font-size: 0.78rem;
+    color: $muted;
+}
+
 .pub-list {
     display: flex;
     flex-direction: column;
@@ -191,6 +197,7 @@
 }
 
 @media print {
+    .pub-legend,
     .pub-list {
         display: none !important;
     }

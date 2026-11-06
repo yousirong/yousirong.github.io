@@ -3,7 +3,9 @@
 //- that both layouts read from the same arrays in _data.pug.
 //- ---------------------------------------------------------------------------
 
-//- Author list with the site owner's name in bold. The HTML is assembled in
+//- Author list with the site owner's name in bold. A trailing * marks equal
+//- contribution, so it is stripped before matching or the co-first papers lose
+//- the bold on the one name that matters most. The HTML is assembled in
 //- JavaScript rather than with an each-loop so that --pretty does not insert
 //- stray whitespace before each comma.
 mixin authorLine(authors)
@@ -12,9 +14,11 @@ mixin authorLine(authors)
       var escape = function (s) {
         return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
       }
+      var STAR = String.fromCharCode(42)
       var authorHtml = authors.map(function (name) {
         var safe = escape(name)
-        return name === me ? '<strong class="author-me">' + safe + '</strong>' : safe
+        var base = name.charAt(name.length - 1) === STAR ? name.slice(0, -1) : name
+        return base === me ? '<strong class="author-me">' + safe + '</strong>' : safe
       }).join(', ')
     p.pub-authors!= authorHtml
 
@@ -125,7 +129,12 @@ mixin projectWeb(item)
         span.project-role= item.role
     if item.meta
       p.project-meta= item.meta
-    p.project-body!= item.body
+    if item.bullets
+      ul.project-bullets
+        each line in item.bullets
+          li!= line
+    else if item.body
+      p.project-body!= item.body
 
 mixin projectPrint(item)
   li

@@ -109,6 +109,67 @@
     color: $gray-700;
 }
 
+// Project bullets: what was done, how, and the number it moved.
+.project-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: $gray-700;
+
+    li {
+        position: relative;
+        padding-left: 0.95rem;
+    }
+
+    li + li {
+        margin-top: 0.5rem;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 50%;
+        background-color: $primary;
+    }
+}
+
+//
+// Skills
+//
+// Label on the left, comma-separated values on the right, matching the
+// contact rows below.
+.skill-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.skill-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $muted;
+}
+
+.skill-items {
+    font-size: 0.92rem;
+    color: $gray-700;
+}
+
 //
 // Contact
 //
@@ -135,7 +196,8 @@
 }
 
 @include media-breakpoint-down(md) {
-    .timeline-item {
+    .timeline-item,
+    .skill-row {
         grid-template-columns: 1fr;
         gap: 0.3rem;
     }
@@ -144,7 +206,8 @@
 @media print {
     .timeline,
     .project-list,
-    .contact-grid {
+    .contact-grid,
+    .skill-grid {
         display: none !important;
     }
 }

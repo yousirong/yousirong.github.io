@@ -32,24 +32,8 @@
     }
 }
 
-// Skill icon rows
-.dev-icons {
-    margin: 0;
-
-    .list-inline-item {
-        margin-right: 0.6rem;
-        margin-bottom: 0.6rem;
-    }
-
-    img {
-        width: 2.6rem;
-        height: 2.6rem;
-    }
-}
-
 @media print {
-    .social-icons,
-    .dev-icons {
+    .social-icons {
         display: none !important;
     }
 }

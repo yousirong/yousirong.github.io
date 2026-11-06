@@ -75,6 +75,7 @@ html(lang='en')
       section#publications.section
         .container
           h2.section-title Publications
+          p.pub-legend * Equal contribution
           .pub-list
             each pub, idx in publications
               +pubWeb(pub, idx)
@@ -111,13 +112,11 @@ html(lang='en')
       section#skills.section
         .container
           h2.section-title Skills
-          each group in skillGroups
-            h3.subsection-title= group.group
-            ul.list-inline.dev-icons
-              each item in group.items
-                li.list-inline-item
-                  a(href=item.url, title=item.name, target='_blank', rel='noopener noreferrer')
-                    img(src='https://skillicons.dev/icons?i=' + item.icon, alt=item.name, width='60', height='60')
+          .skill-grid
+            each group in skillGroups
+              .skill-row
+                .skill-label= group.group
+                .skill-items= group.items.join(', ')
 
       // Contact
       section#contact.section
@@ -146,7 +145,7 @@ html(lang='en')
 
       footer.site-footer
         .container
-          p= me + '  ·  ' + profile.affiliation
+          p= fullName + '  ·  ' + profile.affiliation
 
     // Print-only CV (A4)
     #print-cv.print-cv
@@ -170,9 +169,12 @@ html(lang='en')
             each cert in certifications
               li= cert
           h4 Skills
-          ul.print-list.print-skills
-            each skill in printSkills
-              li= skill
+          ul.print-list
+            each group in printSkills
+              li
+                .item-sub
+                  strong= group.group
+                  = ' ' + group.items.join(', ')
         .print-main
           .print-hero
             h1

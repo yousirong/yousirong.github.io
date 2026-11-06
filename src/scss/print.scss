@@ -91,9 +91,12 @@
     margin-bottom: 1.4mm;
   }
 
-  .print-cv .print-sidebar .print-skills {
-    columns: 2;
-    column-gap: 6mm;
+  .print-cv .print-sidebar .item-sub strong {
+    display: block;
+    color: #fff;
+    font-size: 8.4pt;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
 
   .print-cv .print-sidebar .item-year,
