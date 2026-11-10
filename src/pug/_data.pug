@@ -27,7 +27,7 @@
 -
   var about = [
     'I am a Master\'s student in Computer Science and Engineering at Hankuk University of Foreign Studies, working on <strong>Medical Imaging AI</strong> - diffusion-based image restoration and generative modelling for clinical imaging. <strong>Ultrasound</strong> is my core domain, and my work there runs from the acoustic signal chain through to code running on a diagnostic scanner.',
-    'My two first-author ultrasound papers attack the same obstacle from opposite ends. <strong>UGNS</strong> (IEEE Access) suppresses speckle with <strong>no clean reference image at all</strong>, enforcing data consistency on a stabilised envelope proxy rather than the log-compressed domain, and is validated by gCNR on the PICMUS benchmark and in vivo data. <strong>TCNS</strong> (Journal of Korea Multimedia Society) restores <strong>sparse-transmit DAS beamformed images</strong> toward a 75-transmit reference in a single diffusion pass, cutting acquisition cost without ensemble sampling. In an industry collaboration with <strong>ENDOLFIN Co., Ltd.</strong> I removed the circular-scan blind zone using pair-free training and <strong>ported the result to the production scanner</strong>.',
+    'My two first-author ultrasound papers attack the same obstacle from opposite ends. <strong>UGNS</strong> (IEEE Access) suppresses speckle with <strong>no clean reference image at all</strong>, enforcing data consistency on a stabilised envelope proxy rather than the log-compressed domain, and is validated by gCNR on the PICMUS benchmark and in vivo data. <strong>TCNS</strong> (Journal of Korea Multimedia Society) restores <strong>sparse-transmit DAS beamformed images</strong> toward a 75-transmit reference in a single diffusion pass, cutting acquisition cost without ensemble sampling. In an industry collaboration with <strong>ENDOLFIN Co., Ltd.</strong> I removed the blind zone in radial endoscopic ultrasound (radial EUS) images using pair-free training and <strong>ported the result to the production scanner</strong>.',
     'Alongside ultrasound I publish on <strong>Alzheimer\'s disease progression modelling</strong> - predicting a patient\'s future brain MRI from clinical text conditions such as diagnostic stage, follow-up interval and neuropsychological scores. <strong>ADP-DiT</strong> (ICPR 2026) does this with a text-conditioned Diffusion Transformer, and the 3D extension under review adds volumetric generation and diagnostic classification in one model. I also placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.'
   ]
 
@@ -261,16 +261,16 @@
 
   var projects = [
     {
-      title: 'Circular-Scan Ultrasound Blind Zone Removal',
+      title: 'Radial Endoscopic Ultrasound (Radial EUS) Blind Zone Removal',
       role: 'Implementation · Experiments · Presentation',
       meta: 'Industry collaboration with ENDOLFIN Co., Ltd. · 2025.01 - 2025.12',
       bullets: [
-        'Removed the distorted blind zone at the centre of circular-scan images on ENDOLFIN diagnostic hardware, where the same scene cannot be captured in both clean and degraded conditions, so supervised training pairs do not exist.',
+        'Removed the distorted blind zone at the centre of radial endoscopic ultrasound (radial EUS) images on ENDOLFIN diagnostic hardware, where the same scene cannot be captured in both clean and degraded conditions, so supervised training pairs do not exist.',
         'Reframed the blind zone as <strong>added distortion to be inverted</strong> rather than missing signal to be erased, which makes <strong>pair-free training</strong> possible: the prior is learned from normal images alone and restoration runs as a separate stage, so no retraining is needed when device settings change.',
         'Exported the model to <strong>ONNX</strong>, built a <strong>TensorRT</strong> engine from it and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.'
       ],
       printPeriod: '2025.01 - 2025.12',
-      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported via ONNX to TensorRT and running on the scanner in real time at about 30 fps.'
+      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the radial EUS blind zone, exported via ONNX to TensorRT and running on the scanner in real time at about 30 fps.'
     },
     {
       title: 'Ocean Satellite Missing-Data Restoration',
