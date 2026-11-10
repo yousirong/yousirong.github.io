@@ -315,17 +315,17 @@
             <article class="project">
               <h3 class="project-title">Circular-Scan Ultrasound Blind Zone Removal<span class="project-role">Implementation · Experiments · Presentation</span>
               </h3>
-              <p class="project-meta">Industry collaboration with ENDOLFIN Co., Ltd. · 2025</p>
+              <p class="project-meta">Industry collaboration with ENDOLFIN Co., Ltd. · 2025.01 - 2025.12</p>
               <ul class="project-bullets">
                 <li>Removed the distorted blind zone at the centre of circular-scan images on ENDOLFIN diagnostic hardware, where the same scene cannot be captured in both clean and degraded conditions, so supervised training pairs do not exist.</li>
                 <li>Reframed the blind zone as <strong>added distortion to be inverted</strong> rather than missing signal to be erased, which makes <strong>pair-free training</strong> possible: the prior is learned from normal images alone and restoration runs as a separate stage, so no retraining is needed when device settings change.</li>
-                <li>Exported the model to <strong>TensorRT</strong> and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.</li>
+                <li>Exported the model to <strong>ONNX</strong>, built a <strong>TensorRT</strong> engine from it and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.</li>
               </ul>
             </article>
             <article class="project">
               <h3 class="project-title">Ocean Satellite Missing-Data Restoration<span class="project-role">Implementation · Experiments · Presentation</span>
               </h3>
-              <p class="project-meta">National R&amp;D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium</p>
+              <p class="project-meta">National R&amp;D RS-2021-KS211406 · 2024.02 - 2026.01 · GeoSystem Research consortium</p>
               <ul class="project-bullets">
                 <li>Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products, recovering remote-sensing reflectance at 443, 490 and 555 nm and carrying the result through to Chlorophyll-a composite fields.</li>
                 <li>Built the restoration on <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, which propagates known pixels inward instead of filling gaps in one pass.</li>
@@ -335,7 +335,7 @@
             <article class="project">
               <h3 class="project-title">Wave Overtopping Detection and Tracking<span class="project-role">Implementation · Experiments</span>
               </h3>
-              <p class="project-meta">National R&amp;D RS-2022-KS221567 · years 3-4</p>
+              <p class="project-meta">National R&amp;D RS-2022-KS221567 · 2024.02 - 2026.01</p>
               <ul class="project-bullets">
                 <li>Turned breakwater monitoring from <strong>frame-level detection into event-level measurement</strong>, aggregating overtopping frequency and intensity into time series usable by coastal engineers.</li>
                 <li>Fine-tuned <strong>DiffusionDet</strong> for robustness to lighting and resolution shifts, ran <strong>YOLOv9</strong> for real-time detection, and added <strong>ByteTrack</strong> so one wave keeps a single identity across frames.</li>
@@ -355,12 +355,12 @@
               <div class="skill-items">Python, C++</div>
             </div>
             <div class="skill-row">
-              <div class="skill-label">ML</div>
+              <div class="skill-label">AI/ML</div>
               <div class="skill-items">PyTorch, Diffusion models, Generative modelling, Vision-language models</div>
             </div>
             <div class="skill-row">
               <div class="skill-label">Deployment</div>
-              <div class="skill-items">TensorRT, Docker, Kubernetes, Linux, Git, AWS</div>
+              <div class="skill-items">ONNX, TensorRT, Docker, Kubernetes, Linux, Git, AWS</div>
             </div>
           </div>
         </div>
@@ -421,11 +421,11 @@
               </div>
             </li>
             <li>
-              <div class="item-sub"><strong>ML</strong> PyTorch, Diffusion models, Generative modelling, Vision-language models
+              <div class="item-sub"><strong>AI/ML</strong> PyTorch, Diffusion models, Generative modelling, Vision-language models
               </div>
             </li>
             <li>
-              <div class="item-sub"><strong>Deployment</strong> TensorRT, Docker, Kubernetes, Linux, Git, AWS
+              <div class="item-sub"><strong>Deployment</strong> ONNX, TensorRT, Docker, Kubernetes, Linux, Git, AWS
               </div>
             </li>
           </ul>
@@ -439,7 +439,7 @@
           </div>
           <div class="print-section">
             <h3>Profile</h3>
-            <p>M.S. candidate in Computer Science and Engineering at Hankuk University of Foreign Studies, specialising in diffusion-based restoration for medical ultrasound. Four first-author publications (IEEE Access, ICPR, J. Korea Multimedia Society, Journal of KIISE) and one industry deployment: a pair-free blind-zone restoration model running on an ENDOLFIN scanner at about 30 fps via TensorRT.</p>
+            <p>M.S. candidate in Computer Science and Engineering at Hankuk University of Foreign Studies, specialising in diffusion-based restoration for medical ultrasound. Four first-author publications (IEEE Access, ICPR, J. Korea Multimedia Society, Journal of KIISE) and one industry deployment: a pair-free blind-zone restoration model running on an ENDOLFIN scanner at about 30 fps via ONNX and TensorRT.</p>
           </div>
           <div class="print-section">
             <h3>Publications</h3>
@@ -490,16 +490,19 @@
             <h3>Research Projects</h3>
             <ul class="print-list">
               <li>
-                <div class="item-head"><strong>Circular-Scan Ultrasound Blind Zone Removal</strong></div>
-                <div class="item-sub">ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported to TensorRT and running on the scanner in real time at about 30 fps.</div>
+                <div class="item-head"><strong>Circular-Scan Ultrasound Blind Zone Removal</strong><span class="item-year">2025.01 - 2025.12</span>
+                </div>
+                <div class="item-sub">ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported via ONNX to TensorRT and running on the scanner in real time at about 30 fps.</div>
               </li>
               <li>
-                <div class="item-head"><strong>Ocean Satellite Missing-Data Restoration</strong></div>
-                <div class="item-sub">National R&amp;D RS-2021-KS211406 (years 4-5). RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.</div>
+                <div class="item-head"><strong>Ocean Satellite Missing-Data Restoration</strong><span class="item-year">2024.02 - 2026.01</span>
+                </div>
+                <div class="item-sub">National R&amp;D RS-2021-KS211406. RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.</div>
               </li>
               <li>
-                <div class="item-head"><strong>Wave Overtopping Detection and Tracking</strong></div>
-                <div class="item-sub">National R&amp;D RS-2022-KS221567 (years 3-4). DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.</div>
+                <div class="item-head"><strong>Wave Overtopping Detection and Tracking</strong><span class="item-year">2024.02 - 2026.01</span>
+                </div>
+                <div class="item-sub">National R&amp;D RS-2022-KS221567. DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.</div>
               </li>
             </ul>
           </div>
