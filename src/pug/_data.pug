@@ -31,7 +31,7 @@
     'Alongside ultrasound I publish on <strong>Alzheimer\'s disease progression modelling</strong> - predicting a patient\'s future brain MRI from clinical text conditions such as diagnostic stage, follow-up interval and neuropsychological scores. <strong>ADP-DiT</strong> (ICPR 2026) does this with a text-conditioned Diffusion Transformer, and the 3D extension under review adds volumetric generation and diagnostic classification in one model. I also placed <strong>3rd</strong> in both the <strong>2025 Samsung AI Challenge</strong> and <strong>Samsung Collegiate Programming Challenge</strong>, developing an autonomous multi-agent system and a lightweight multimodal VQA pipeline under constrained model budgets.'
   ]
 
-  var printProfile = 'M.S. candidate in Computer Science and Engineering at Hankuk University of Foreign Studies, specialising in diffusion-based restoration for medical ultrasound. Four first-author publications (IEEE Access, ICPR, J. Korea Multimedia Society, Journal of KIISE) and one industry deployment: a pair-free blind-zone restoration model running on an ENDOLFIN scanner at about 30 fps via TensorRT.'
+  var printProfile = 'M.S. candidate in Computer Science and Engineering at Hankuk University of Foreign Studies, specialising in diffusion-based restoration for medical ultrasound. Four first-author publications (IEEE Access, ICPR, J. Korea Multimedia Society, Journal of KIISE) and one industry deployment: a pair-free blind-zone restoration model running on an ENDOLFIN scanner at about 30 fps via ONNX and TensorRT.'
 
 //- ---------------------------------------------------------------------------
 //- Publications
@@ -263,35 +263,38 @@
     {
       title: 'Circular-Scan Ultrasound Blind Zone Removal',
       role: 'Implementation · Experiments · Presentation',
-      meta: 'Industry collaboration with ENDOLFIN Co., Ltd. · 2025',
+      meta: 'Industry collaboration with ENDOLFIN Co., Ltd. · 2025.01 - 2025.12',
       bullets: [
         'Removed the distorted blind zone at the centre of circular-scan images on ENDOLFIN diagnostic hardware, where the same scene cannot be captured in both clean and degraded conditions, so supervised training pairs do not exist.',
         'Reframed the blind zone as <strong>added distortion to be inverted</strong> rather than missing signal to be erased, which makes <strong>pair-free training</strong> possible: the prior is learned from normal images alone and restoration runs as a separate stage, so no retraining is needed when device settings change.',
-        'Exported the model to <strong>TensorRT</strong> and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.'
+        'Exported the model to <strong>ONNX</strong>, built a <strong>TensorRT</strong> engine from it and ported it to the production scanner, where it runs in real time at <strong>about 30 fps</strong>. The pair-free design carried forward into UGNS and TCNS.'
       ],
-      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported to TensorRT and running on the scanner in real time at about 30 fps.'
+      printPeriod: '2025.01 - 2025.12',
+      printBody: 'ENDOLFIN Co., Ltd. industry collaboration. Pair-free restoration of the circular-scan blind zone, exported via ONNX to TensorRT and running on the scanner in real time at about 30 fps.'
     },
     {
       title: 'Ocean Satellite Missing-Data Restoration',
       role: 'Implementation · Experiments · Presentation',
-      meta: 'National R&D RS-2021-KS211406 · years 4-5 completed · 2024-2026 · GeoSystem Research consortium',
+      meta: 'National R&D RS-2021-KS211406 · 2024.02 - 2026.01 · GeoSystem Research consortium',
       bullets: [
         'Restored missing values in Chollian ocean satellite (GOCI-I) and UST21 products, recovering remote-sensing reflectance at 443, 490 and 555 nm and carrying the result through to Chlorophyll-a composite fields.',
         'Built the restoration on <strong>Recurrent Feature Reasoning with attention and structure embedding</strong>, which propagates known pixels inward instead of filling gaps in one pass.',
         'Missing pixels have no ground truth, so the substantive contribution was a <strong>validation scheme cross-checked against NASA MODIS</strong>, with confidence intervals attached to every restored value.'
       ],
-      printBody: 'National R&D RS-2021-KS211406 (years 4-5). RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.'
+      printPeriod: '2024.02 - 2026.01',
+      printBody: 'National R&D RS-2021-KS211406. RFR-based restoration of GOCI-I/UST21 reflectance and Chl-a fields, cross-validated against NASA MODIS.'
     },
     {
       title: 'Wave Overtopping Detection and Tracking',
       role: 'Implementation · Experiments',
-      meta: 'National R&D RS-2022-KS221567 · years 3-4',
+      meta: 'National R&D RS-2022-KS221567 · 2024.02 - 2026.01',
       bullets: [
         'Turned breakwater monitoring from <strong>frame-level detection into event-level measurement</strong>, aggregating overtopping frequency and intensity into time series usable by coastal engineers.',
         'Fine-tuned <strong>DiffusionDet</strong> for robustness to lighting and resolution shifts, ran <strong>YOLOv9</strong> for real-time detection, and added <strong>ByteTrack</strong> so one wave keeps a single identity across frames.',
         'Kept the pipeline stable under mixed spray, foam and occlusion, the conditions that break frame-wise counting.'
       ],
-      printBody: 'National R&D RS-2022-KS221567 (years 3-4). DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.'
+      printPeriod: '2024.02 - 2026.01',
+      printBody: 'National R&D RS-2022-KS221567. DiffusionDet, YOLOv9 and ByteTrack turning frame-level detection into event-level overtopping statistics.'
     }
   ]
 
@@ -300,8 +303,8 @@
   //- an icon (TensorRT) sit alongside the rest.
   var skillGroups = [
     { group: 'Languages', items: ['Python', 'C++'] },
-    { group: 'ML', items: ['PyTorch', 'Diffusion models', 'Generative modelling', 'Vision-language models'] },
-    { group: 'Deployment', items: ['TensorRT', 'Docker', 'Kubernetes', 'Linux', 'Git', 'AWS'] }
+    { group: 'AI/ML', items: ['PyTorch', 'Diffusion models', 'Generative modelling', 'Vision-language models'] },
+    { group: 'Deployment', items: ['ONNX', 'TensorRT', 'Docker', 'Kubernetes', 'Linux', 'Git', 'AWS'] }
   ]
 
   var printSkills = skillGroups

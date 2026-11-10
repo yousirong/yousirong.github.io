@@ -140,4 +140,6 @@ mixin projectPrint(item)
   li
     .item-head
       strong= item.title
+      if item.printPeriod
+        span.item-year= item.printPeriod
     .item-sub= item.printBody
